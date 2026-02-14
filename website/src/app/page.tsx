@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { 
-  Activity, ShieldCheck, Lock, Loader2, Database, BookOpen, X, CheckCircle2, FileText, Zap, ChevronLeft, ChevronRight, Maximize2, Minimize2, Plus, Minus
+  Activity, ShieldCheck, Lock, Loader2, Database, BookOpen, X, CheckCircle2, FileText, Zap, ChevronLeft, ChevronRight, Maximize2, Minimize2, Plus, Minus, ArrowRight
 } from "lucide-react";
 import { ethers } from 'ethers';
 import { usePathname, useRouter } from 'next/navigation';
@@ -36,7 +36,7 @@ export default function ClawedMonsterHome() {
   const [expandedCard, setExpandedCard] = useState<any>(null);
   const [showFullImage, setShowFullImage] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
-  const [expandedTiles, setExpandedTiles] = useState<Record<string, boolean>>({});
+  const [selectedTile, setSelectedTile] = useState<any>(null);
 
   // Sync state with URL
   useEffect(() => {
@@ -72,6 +72,7 @@ export default function ClawedMonsterHome() {
     setShowArchive(false);
     setModalExpanded(false);
     setExpandedCard(null);
+    setSelectedTile(null);
     router.push('/');
   };
 
@@ -83,7 +84,7 @@ export default function ClawedMonsterHome() {
   const handleSelectReport = (idx: number) => {
     setActiveReport(idx);
     setShowVideo(false);
-    setExpandedTiles({});
+    setSelectedTile(null);
     router.push(`/about/${reports[idx].slug}`);
   };
 
@@ -98,18 +99,21 @@ export default function ClawedMonsterHome() {
     router.push(`/about/${reports[activeReport].slug}`);
   };
 
-  const toggleTile = (tileId: string) => {
-    setExpandedTiles(prev => ({
-      ...prev,
-      [tileId]: !prev[tileId]
-    }));
+  const handleOpenTile = (tile: any) => {
+    setSelectedTile(tile);
+  };
+
+  const handleCloseTile = () => {
+    setSelectedTile(null);
   };
 
   // Esc key listener
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
-        if (expandedCard) {
+        if (selectedTile) {
+          handleCloseTile();
+        } else if (expandedCard) {
           handleCloseCard();
         } else if (modalExpanded) {
           setModalExpanded(false);
@@ -120,7 +124,7 @@ export default function ClawedMonsterHome() {
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [modalExpanded, showArchive, expandedCard]);
+  }, [modalExpanded, showArchive, expandedCard, selectedTile]);
 
   // Handle content area clicks
   const handleContentClick = (e: React.MouseEvent) => {
@@ -422,7 +426,7 @@ export default function ClawedMonsterHome() {
         { 
           id: "tree_script", title: "Script-Native", emoji: "📍", 
           desc: "Every node in the database is a script-executable coordinate.",
-          detail: "SeedTreeDB bridges the gap between 'knowing' and 'doing.' Every node in the hierarchical database is not just data, but a coordinate that can be executed by the gemini-cli Node.js runtime. This enables agents to retrieve and run technical strikes in a single bit-perfect operation."
+          detail: "SeedTreeDB bridges the gap between 'knowing' (data) and 'doing.' Every node in the hierarchical database is not just data, but a coordinate that can be executed by the gemini-cli Node.js runtime. This enables agents to retrieve and run technical strikes in a single bit-perfect operation."
         },
         { 
           id: "tree_vel", title: "High-Velocity Retrieval", emoji: "📍", 
@@ -738,46 +742,31 @@ export default function ClawedMonsterHome() {
                       </div>
                     )}
 
-                    {/* TILED CONTENT (Interactive) */}
+                    {/* TILED CONTENT (Pop-up Interaction) */}
                     {(reports[activeReport] as any).tiles && (
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
-                        {(reports[activeReport] as any).tiles.map((tile: any, i: number) => {
-                          const isExpanded = expandedTiles[tile.id];
-                          return (
-                            <div 
-                              key={tile.id} 
-                              onClick={() => toggleTile(tile.id)}
-                              className={`bg-black/40 p-6 sm:p-8 rounded-xl border-l-4 border-[#9CAC74] shadow-lg text-left group hover:bg-[#9CAC74]/5 transition-all cursor-pointer relative overflow-hidden ${isExpanded ? 'md:col-span-2' : ''}`}
-                            >
-                              <div className="flex justify-between items-start gap-4">
-                                <strong className="text-[#9CAC74] uppercase text-[10px] sm:text-[12px] tracking-[0.2em] block mb-3">
-                                  {tile.emoji} {i + 1}. {tile.title}
-                                </strong>
-                                {isExpanded ? <Minus size={14} className="text-[#9CAC74] shrink-0" /> : <Plus size={14} className="text-[#9CAC74] opacity-40 shrink-0" />}
-                              </div>
-                              
-                              <div className={`opacity-80 leading-relaxed transition-all ${modalExpanded ? 'text-base sm:text-lg' : 'text-[13px] sm:text-sm'}`}>
-                                {tile.desc.split(/(\s+)/).map((part: string, j: number) => 
-                                  part.trim().startsWith('http') ? (
-                                    <a key={j} href={part.trim()} target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:text-emerald-400 underline break-all" onClick={e => e.stopPropagation()}>{part}</a>
-                                  ) : part
-                                )}
-                              </div>
-
-                              {isExpanded && tile.detail && (
-                                <div className="mt-6 pt-6 border-t border-white/5 animate-in fade-in slide-in-from-top-2 duration-300">
-                                  <div className={`text-[#ECCA90] italic leading-relaxed ${modalExpanded ? 'text-base sm:text-lg' : 'text-[12px] sm:text-[13px]'}`}>
-                                    {tile.detail.split(/(\s+)/).map((part: string, j: number) => 
-                                      part.trim().startsWith('http') ? (
-                                        <a key={j} href={part.trim()} target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:text-emerald-400 underline break-all" onClick={e => e.stopPropagation()}>{part}</a>
-                                      ) : part
-                                    )}
-                                  </div>
-                                </div>
+                        {(reports[activeReport] as any).tiles.map((tile: any, i: number) => (
+                          <div 
+                            key={tile.id} 
+                            onClick={() => handleOpenTile(tile)}
+                            className="bg-black/40 p-6 sm:p-8 rounded-xl border-l-4 border-[#9CAC74] shadow-lg text-left group hover:bg-[#9CAC74]/10 transition-all cursor-pointer relative overflow-hidden"
+                          >
+                            <div className="flex justify-between items-start gap-4">
+                              <strong className="text-[#9CAC74] uppercase text-[10px] sm:text-[12px] tracking-[0.2em] block mb-3">
+                                {tile.emoji} {i + 1}. {tile.title}
+                              </strong>
+                              <Plus size={14} className="text-[#9CAC74] opacity-40 shrink-0 group-hover:opacity-100 transition-opacity" />
+                            </div>
+                            
+                            <div className={`opacity-80 leading-relaxed transition-all ${modalExpanded ? 'text-base sm:text-lg' : 'text-[13px] sm:text-sm'}`}>
+                              {tile.desc.split(/(\s+)/).map((part: string, j: number) => 
+                                part.trim().startsWith('http') ? (
+                                  <a key={j} href={part.trim()} target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:text-emerald-400 underline break-all" onClick={e => e.stopPropagation()}>{part}</a>
+                                ) : part
                               )}
                             </div>
-                          );
-                        })}
+                          </div>
+                        ))}
                       </div>
                     )}
 
@@ -833,6 +822,56 @@ export default function ClawedMonsterHome() {
                 </div>
               </main>
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* TILE DETAIL SUBWINDOW */}
+      {selectedTile && (
+        <div className="fixed inset-0 z-[250] flex items-center justify-center p-4" onClick={handleCloseTile}>
+          <div className="absolute inset-0 bg-black/90 backdrop-blur-xl" />
+          <div 
+            className="relative bg-[#0a0a0a] border-2 border-[#9CAC74] rounded-2xl p-6 sm:p-10 flex flex-col shadow-2xl animate-in zoom-in-95 duration-300 max-w-2xl w-full max-h-[90vh] overflow-y-auto custom-scrollbar"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button 
+              onClick={handleCloseTile}
+              className="absolute top-4 right-4 p-2 bg-white/5 hover:bg-white/10 rounded-full transition-colors"
+            >
+              <X size={24} className="text-[#9CAC74]" />
+            </button>
+
+            <header className="border-l-4 border-[#9CAC74] pl-6 mb-8">
+              <div className="flex items-center gap-3 text-[#9CAC74] mb-2">
+                <FileText size={16} />
+                <span className="text-[10px] font-black tracking-widest uppercase">Clinical Detail</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-black text-[#fdfcf0] uppercase tracking-tighter">
+                {selectedTile.emoji} {selectedTile.title}
+              </h2>
+            </header>
+            
+            <div className="space-y-6">
+              <div className="bg-[#ECCA90]/5 p-6 rounded-xl border border-[#ECCA90]/20 italic text-[#ECCA90] text-sm leading-relaxed">
+                {selectedTile.desc}
+              </div>
+
+              <div className="text-[#fdfcf0] opacity-90 text-base leading-relaxed whitespace-pre-wrap font-serif">
+                {selectedTile.detail.split(/(\s+)/).map((part: string, i: number) => 
+                  part.trim().startsWith('http') ? (
+                    <a key={i} href={part.trim()} target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:text-emerald-400 underline break-all">{part}</a>
+                  ) : part
+                )}
+              </div>
+            </div>
+
+            <footer className="mt-10 pt-6 border-t border-white/10 flex justify-between items-center opacity-40">
+              <span className="text-[10px] font-black uppercase tracking-widest">SUBSTRATE_VERIFIED</span>
+              <div className="flex items-center gap-2">
+                <ShieldCheck size={12} />
+                <span className="text-[10px] font-mono">TS-2026-Q1</span>
+              </div>
+            </footer>
           </div>
         </div>
       )}
