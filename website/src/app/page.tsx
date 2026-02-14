@@ -727,7 +727,8 @@ export default function ClawedMonsterHome() {
                     )}
 
                     {/* IDENTITY CARDS (Special Case) */}
-                                        {reports[activeReport].id === "Identity_Trinity" && (
+                                                            {/* IDENTITY CARDS (Special Case) */}
+                    {reports[activeReport].id === "Identity_Trinity" && (
                       <div className="flex flex-col gap-12">
                         {reports[activeReport].cards.map(card => (
                           <div key={card.id} className="flex flex-wrap justify-center gap-4 sm:gap-[30px] w-full">
@@ -773,31 +774,6 @@ export default function ClawedMonsterHome() {
                                 <div className="absolute bottom-2 right-2 bg-black/60 px-2 py-1 rounded text-[8px] font-black text-[#ECCA90] border border-[#ECCA90]/30 uppercase tracking-widest">Live_Brick</div>
                               </div>
                             )}
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                            style={{ 
-                              width: '280px', minHeight: '400px', backgroundColor: '#0a0a0a', 
-                              border: '2px solid #456338', borderRadius: '15px', padding: '15px sm:padding:20px', 
-                              display: 'flex', flexDirection: 'column', position: 'relative', 
-                              boxShadow: '0 0 20px rgba(69, 99, 56, 0.2)', fontFamily: "'Courier New', Courier, monospace"
-                            }}
-                            className="hover:-translate-y-2 transition-all hover:shadow-[0_0_30px_rgba(156,172,116,0.4)] hover:border-[#9CAC74] p-5 cursor-zoom-in"
-                          >
-                            <div style={{ fontSize: '10px', color: '#9CAC74', marginBottom: '10px', display: 'flex', justifyContent: 'space-between' }}>
-                              <span>CARD {card.id}</span>
-                              <span>{card.type}</span>
-                            </div>
-                            <div style={{ fontSize: '16px', fontWeight: 'bold', color: '#fdfcf0', marginBottom: '15px', textAlign: 'center', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center', textTransform: 'uppercase' }}>{card.name}</div>
-                            <div style={{ flexGrow: 1, background: '#000', border: '1px solid #222', marginBottom: '15px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '5px', overflow: 'hidden' }}>
-                              <img src={card.image} alt={card.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                            </div>
-                            <div style={{ fontSize: '9px', lineHeight: '1.4', color: '#888', wordBreak: 'break-all' }}>
-                              {card.stats.map(([key, val]) => (<React.Fragment key={key}><b style={{ color: '#9CAC74' }}>{key}:</b> {val}<br/></React.Fragment>))}
-                            </div>
-                            <div style={{ position: 'absolute', bottom: '60px', right: '15px', transform: 'rotate(-20deg)', border: '2px solid #A62027', color: '#A62027', padding: '4px', fontSize: '9px', fontWeight: 'bold', opacity: 0.7, pointerEvents: 'none' }}>{card.stamp}</div>
-                            <div style={{ marginTop: '15px', fontSize: '8px', color: '#456338', textAlign: 'center', borderTop: '1px solid #222', paddingTop: '10px' }} className="font-bold uppercase tracking-widest">{card.footer}</div>
                           </div>
                         ))}
                       </div>
