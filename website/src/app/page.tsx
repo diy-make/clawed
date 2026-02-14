@@ -576,6 +576,11 @@ export default function ClawedMonsterHome() {
                       </div>
                     ) : (
                       <div className="flex flex-col gap-8 max-w-5xl">
+                        {(reports[activeReport].image || (reports[activeReport] as any).images) && (
+                          <div className="w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black">
+                            <img src={reports[activeReport].image || (reports[activeReport] as any).images[0]} alt={reports[activeReport].title} className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity" />
+                          </div>
+                        )}
                         <div className={`bg-black/40 p-6 sm:p-10 rounded-xl sm:rounded-2xl border border-white/5 whitespace-pre-wrap leading-relaxed opacity-80 transition-all text-left max-w-prose ${modalExpanded ? 'text-base sm:text-lg' : 'text-[13px] sm:text-sm'}`}>
                           {reports[activeReport].content.split(/(\s+)/).map((part, i) => 
                             part.trim().startsWith('http') ? (
@@ -583,16 +588,11 @@ export default function ClawedMonsterHome() {
                             ) : part
                           )}
                         </div>
-                        {(reports[activeReport].image || (reports[activeReport] as any).images) && (
+                        {(reports[activeReport] as any).images?.length > 1 && (
                           <div className="flex flex-col gap-4">
-                            {reports[activeReport].image && (
-                              <div className="w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black">
-                                <img src={reports[activeReport].image} alt={reports[activeReport].title} className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity" />
-                              </div>
-                            )}
-                            {(reports[activeReport] as any).images?.map((img: string, i: number) => (
+                            {(reports[activeReport] as any).images.slice(1).map((img: string, i: number) => (
                               <div key={i} className="w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black">
-                                <img src={img} alt={`${reports[activeReport].title} ${i+1}`} className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity" />
+                                <img src={img} alt={`${reports[activeReport].title} ${i+2}`} className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity" />
                               </div>
                             ))}
                           </div>
