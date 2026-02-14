@@ -24,6 +24,7 @@
     },
     "sync": {
       "include": [
+        "diy-make/hackathons/clawed_monster/***",
         "next-servers/floral-monster/***",
         "diy-make/memory/public/***",
         "dynamic/static/***",

@@ -546,7 +546,7 @@ export default function ClawedMonsterHome() {
                           ))}
                         </div>
                         {reports[activeReport].content && (
-                          <div className={`bg-black/40 p-6 sm:p-10 rounded-xl sm:rounded-2xl border border-white/5 whitespace-pre-wrap leading-relaxed opacity-80 transition-all text-left ${modalExpanded ? 'text-base sm:text-lg' : 'text-[13px] sm:text-sm'}`}>
+                          <div className={`bg-black/40 p-6 sm:p-10 rounded-xl sm:rounded-2xl border border-white/5 whitespace-pre-wrap leading-relaxed opacity-80 transition-all text-left max-w-prose ${modalExpanded ? 'text-base sm:text-lg' : 'text-[13px] sm:text-sm'}`}>
                             {reports[activeReport].content.split(/(\s+)/).map((part, i) => 
                               part.trim().startsWith('http') ? (
                                 <a key={i} href={part.trim()} target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:text-emerald-400 underline break-all">{part}</a>
@@ -566,7 +566,7 @@ export default function ClawedMonsterHome() {
                             </div>
                           ))}
                         </div>
-                        <div className={`bg-black/40 p-6 sm:p-10 rounded-xl sm:rounded-2xl border border-white/5 whitespace-pre-wrap leading-relaxed opacity-80 transition-all text-left ${modalExpanded ? 'text-base sm:text-lg' : 'text-[13px] sm:text-sm'}`}>
+                        <div className={`bg-black/40 p-6 sm:p-10 rounded-xl sm:rounded-2xl border border-white/5 whitespace-pre-wrap leading-relaxed opacity-80 transition-all text-left max-w-prose ${modalExpanded ? 'text-base sm:text-lg' : 'text-[13px] sm:text-sm'}`}>
                           {reports[activeReport].content.split(/(\s+)/).map((part, i) => 
                             part.trim().startsWith('http') ? (
                               <a key={i} href={part.trim()} target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:text-emerald-400 underline break-all">{part}</a>
@@ -576,6 +576,13 @@ export default function ClawedMonsterHome() {
                       </div>
                     ) : (
                       <div className="flex flex-col gap-8 max-w-5xl">
+                        <div className={`bg-black/40 p-6 sm:p-10 rounded-xl sm:rounded-2xl border border-white/5 whitespace-pre-wrap leading-relaxed opacity-80 transition-all text-left max-w-prose ${modalExpanded ? 'text-base sm:text-lg' : 'text-[13px] sm:text-sm'}`}>
+                          {reports[activeReport].content.split(/(\s+)/).map((part, i) => 
+                            part.trim().startsWith('http') ? (
+                              <a key={i} href={part.trim()} target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:text-emerald-400 underline break-all">{part}</a>
+                            ) : part
+                          )}
+                        </div>
                         {(reports[activeReport].image || (reports[activeReport] as any).images) && (
                           <div className="flex flex-col gap-4">
                             {reports[activeReport].image && (
@@ -590,13 +597,6 @@ export default function ClawedMonsterHome() {
                             ))}
                           </div>
                         )}
-                        <div className={`bg-black/40 p-6 sm:p-10 rounded-xl sm:rounded-2xl border border-white/5 whitespace-pre-wrap leading-relaxed opacity-80 transition-all text-left ${modalExpanded ? 'text-base sm:text-lg' : 'text-[13px] sm:text-sm'}`}>
-                          {reports[activeReport].content.split(/(\s+)/).map((part, i) => 
-                            part.trim().startsWith('http') ? (
-                              <a key={i} href={part.trim()} target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:text-emerald-400 underline break-all">{part}</a>
-                            ) : part
-                          )}
-                        </div>
                       </div>
                     )}
                   </article>

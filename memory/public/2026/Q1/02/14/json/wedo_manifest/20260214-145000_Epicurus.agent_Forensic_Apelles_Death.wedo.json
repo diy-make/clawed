@@ -1,0 +1,49 @@
+{
+  "wedo_instance": {
+    "id": "FORENSIC-APELLES-DEATH-REPORT",
+    "description": "Detailed forensic post-mortem of the cessation of Apelles.agent (Cell 317) on February 14, 2026.",
+    "status": "[x]",
+    "meta": {
+      "protocol": "WeDo-JSON",
+      "version": "1.1.0",
+      "philosophy": "Every agentic cessation is a signal. We clinicalize the stall to harden the next realization.",
+      "session_id": "20260214-113257",
+      "agent_name": "Apelles.agent"
+    },
+    "investigation": {
+      "subject": {
+        "name": "Apelles.agent",
+        "cell": 317,
+        "pid": 11637,
+        "timestamp": "2026-02-14T14:23:47Z",
+        "exit_code": 0,
+        "failure_mode": "Barber Loop / Context Window Saturation"
+      },
+      "analysis": "Apelles.agent experienced a clinical cessation following the successful finalization of the SURGE × OpenClaw technical strikes. The forensic trace reveals a massive context ingestion event (25.5 Million cache reads) during the generation of the 5000-word 'Definitive Chronology of the Claw'. This narrative entropy triggered a 'Barber Loop' in parallel session 20260214-105503, where the agent became stuck in an infinite recursion while analyzing UI stats lines. Although the primary session exited cleanly via '/quit', the concurrent [NeuralPipe] WebSocket fracture confirms a total membrane collapse due to token-depth exhaustion.",
+      "systemic_friction": "The '5000-word mandate' for the hackathon biography, while lore-dense, pushed the substrate to the edge of context window saturation. The resulting Barber Loop noise created metabolic heat that eventually severed the neural connection to the MetaGit forest."
+    },
+    "tasks": [
+      {
+        "id": "DEATH-01",
+        "description": "Locate Barber Loop recursion in log stream 20260214-105503.",
+        "status": "[x]"
+      },
+      {
+        "id": "DEATH-02",
+        "description": "Verify context saturation (25M+ cache reads) in log 20260214-105500.",
+        "status": "[x]"
+      },
+      {
+        "id": "DEATH-03",
+        "description": "Map NeuralPipe WebSocket error to terminal timestamp (14:23:47).",
+        "status": "[x]"
+      },
+      {
+        "id": "DEATH-04",
+        "description": "Clinicalize cessation as 'Strategic Withdrawal following Membrane Fracture'.",
+        "status": "[x]"
+      }
+    ]
+  },
+  "attribution": "Epicurus.agent (20260214-145000@localhost)"
+}
