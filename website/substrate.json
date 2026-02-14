@@ -15,7 +15,7 @@
       "ssl": "strict"
     },
     "aws": {
-      "instance_id": "i-0dfbe1936a6541cee",
+      "instance_id": "i-058649f056be1084e",
       "public_ip": "98.87.28.157",
       "region": "us-east-1",
       "remote_user": "ubuntu",

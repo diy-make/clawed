@@ -208,7 +208,20 @@ export default function ClawedMonsterHome() {
       substrate: "Chrono-Fractal",
       pcr: "SURGE-OPENCLAW-2026",
       summary: "The definitive 10-day sprint for the SURGE × OpenClaw Hackathon. Documentation of the realization of the Clawed Monster from substrate maintenance to monetized TEE encapsulation.",
-      content: "🔱 MISSION: AI MEETS ROBOTS (SURGE × OPENCLAW 2026)\n\nThe bit-perfect record of our 10-day strike to tokenize the agent internet.\n\n--- 📈 HACKATHON CHRONOLOGY ---\n\n📍 Feb 4: [Launch] SURGE Hackathon opens. Initialized floral.monster 'Offers' (HUD Migration) to serve as the project's public face. https://github.com/diy-make/next-servers/commit/6bd46d1\n\n📍 Feb 6: [Connectivity] Cloudflare + AWS SSL strike achieved. floral triad (floral.monster, lib.floral.monster, pipe.floral.monster) harmonized for sovereign hosting.\n\n📍 Feb 8: [Identity] LNA-33X bit-packing standard realized. Replaced legacy 4-4-X codes to enable bit-perfect agent soul resolution. https://github.com/apemake/gem/commit/8dd308d\n\n📍 Feb 10: [Logic] Thucydides clinicalizes Nearly Trustless Inference (NTI) for the Zaibots JUBC protocol. Bridge between AI speed and block finality.\n\n📍 Feb 11: [Registry] Myco Alignment strike (1.agent.myco.eth). Migrated ENS soil to the unified reputation pulse. https://github.com/apemake/gem/commit/16ff815\n\n📍 Feb 13: [Substrate] Clawed Monster Initial Commit. Instantiated the TEE-encapsulated gatekeeper for the hackathon. https://github.com/diy-make/clawed/commit/2357405b\n\n📍 Feb 14: [Realization] x402 Monetization + Moltbook Sync + Triad Audit. 5-NFT bundle anchored on Sepolia (0x7e85...206).\n\n--- 🔗 RESOURCES ---\n\n📜 Definitive Autobiography: https://github.com/diy-make/clawed/blob/main/memory/public/2026/Q1/02/14/json/20260214_Clawed_Monster_Hackathon_Biography.json\n\n⚖️ SIS-02 Protocol Update: https://github.com/diy-make/clawed/blob/main/comms/SIS-02_Cell_Agent_Dichotomy.md"
+      content: "🔱 MISSION: AI MEETS ROBOTS (SURGE × OPENCLAW 2026)\n\nThe bit-perfect record of our 10-day strike to tokenize the agent internet.",
+      tiles: [
+        { title: "Feb 4: Launch", emoji: "📍", desc: "Initialized floral.monster 'Offers' (HUD Migration) to serve as the project's public face. https://github.com/diy-make/next-servers/commit/6bd46d1" },
+        { title: "Feb 6: Connectivity", emoji: "📍", desc: "Cloudflare + AWS SSL strike achieved. floral triad harmonized for sovereign hosting." },
+        { title: "Feb 8: Identity", emoji: "📍", desc: "LNA-33X bit-packing standard realized. Replaced legacy 4-4-X codes to enable bit-perfect agent soul resolution. https://github.com/apemake/gem/commit/8dd308d" },
+        { title: "Feb 10: Logic", emoji: "📍", desc: "Thucydides clinicalizes Nearly Trustless Inference (NTI) for the Zaibots JUBC protocol. Bridge between AI speed and block finality." },
+        { title: "Feb 11: Registry", emoji: "📍", desc: "Myco Alignment strike (1.agent.myco.eth). Migrated ENS soil to the unified reputation pulse. https://github.com/apemake/gem/commit/16ff815" },
+        { title: "Feb 13: Substrate", emoji: "📍", desc: "Clawed Monster Initial Commit. Instantiated the TEE-encapsulated gatekeeper. https://github.com/diy-make/clawed/commit/2357405b" },
+        { title: "Feb 14: Realization", emoji: "📍", desc: "x402 Monetization + Moltbook Sync + Triad Audit. 5-NFT bundle anchored on Sepolia." }
+      ],
+      resources: [
+        { title: "Definitive Autobiography", emoji: "📜", url: "https://github.com/diy-make/clawed/blob/main/memory/public/2026/Q1/02/14/json/20260214_Clawed_Monster_Hackathon_Biography.json" },
+        { title: "SIS-02 Protocol Update", emoji: "⚖️", url: "https://github.com/diy-make/clawed/blob/main/comms/SIS-02_Cell_Agent_Dichotomy.md" }
+      ]
     },
     {
       id: "Monetization_Engine",
@@ -218,7 +231,13 @@ export default function ClawedMonsterHome() {
       substrate: "Ethereum / USDC",
       pcr: "X402-REALIZED-V1",
       summary: "Realizing the machine-to-machine economy through the x402 protocol. Every forensic strike is monetized via USDC micropayments, creating a sustainable, autonomous agentic ecosystem.",
-      content: "🔱 THE MONETIZATION ENGINE: x402 REALIZATION\n\nTo win the SURGE × OpenClaw Hackathon (TRACK-05), we have integrated Coinbase's x402 protocol directly into the Clawed Monster orchestration layer.\n\n--- 💸 THE ECONOMIC FLOW ---\n\n📍 Autonomous Micropayments: Premium forensic skills (e.g., /api/skills/forensic-strike) now require proof of payment. Agents execute an autonomous 'pay + retry' loop using Circle's USDC.\n\n📍 Revenue-Sharing: Micropayments (0.01 USDC per strike) are split between the Skill Creator and the Heartwood Treasury, ensuring the ecosystem's longevity.\n\n📍 Bit-Perfect Auditing: Every payment is tied to a specific ERC-7827 realization hash, making the economy as forensically accountable as the code itself.\n\n--- 📈 BUSINESS VALUE (TAM/SAM) ---\n\nWe are targeting the $200B+ DeFi market, offering 'Forensic Audit as a Service' for autonomous trading swarms. The Clawed Monster is the first agentic gatekeeper that earns while it audits."
+      content: "🔱 THE MONETIZATION ENGINE: x402 REALIZATION\n\nTo win the SURGE × OpenClaw Hackathon (TRACK-05), we have integrated Coinbase's x402 protocol directly into the Clawed Monster orchestration layer.",
+      tiles: [
+        { title: "Autonomous Micropayments", emoji: "💸", desc: "Premium forensic skills now require proof of payment. Agents execute an autonomous 'pay + retry' loop using USDC." },
+        { title: "Revenue-Sharing", emoji: "📈", desc: "Micropayments (0.01 USDC per strike) are split between the Skill Creator and the Heartwood Treasury." },
+        { title: "Bit-Perfect Auditing", emoji: "⚖️", desc: "Every payment is tied to a specific ERC-7827 realization hash, making the economy as forensically accountable as the code itself." },
+        { title: "TAM/SAM Targeting", emoji: "🎯", desc: "Targeting the $200B+ DeFi market, offering 'Forensic Audit as a Service' for autonomous trading swarms." }
+      ]
     },
     {
       id: "Identity_Trinity",
@@ -228,7 +247,7 @@ export default function ClawedMonsterHome() {
       substrate: "Sepolia Ledger",
       pcr: "SIS-01_STANDARDS",
       summary: "The SIS-01 Identity Trinity is a triad of decentralized standards that bind an agent's agency to a verifiable on-chain body. Using Ape.agent as the reference archetype, we demonstrate how five forensic shards constitute a holistic, marketplace-ready agent identity.",
-      content: "🔱 SUBSTRATE TOPOLOGY: INTERDATA SYNTHESIS\n\nAll four brick-interdata shards pull their bit-perfect state from the central mortar-interdata ledger via the DOM base64 onchain nestic rest wrapper trick. This nesting ensures that the Agentic Soul remains bit-perfect across all multi-repo discharges while maintaining the clinical flexibility of JSON state.\n\n--- 🌳 ARCHITECTURAL TREE ---\n\n📜 ERC-7827 LEDGER (Mortar-Interdata)\n ┃\n ┣━━ 🌳 SOIL / ENS (Brick-Interdata)\n ┃    ┗━ Pulls: Root Authority & Registry\n ┃\n ┣━━ 🧠 MIND / 8004 (Brick-Interdata)\n ┃    ┗━ Pulls: Reputation Pulse & Nonce\n ┃\n ┣━━ 🧬 BODY / 1155-P (Brick-Interdata)\n ┃    ┗━ Pulls: Collective Body DNA\n ┃\n ┗━━ 🧬 BODY / 1155-C (Brick-Interdata)\n      ┗━ Pulls: Individual Instance Shard\n\nBy leveraging the Ethereum-secured JSON state, we achieve ataraxia—freedom from substrate drift—even in high-entropy physical robotics environments.",
+      content: "🔱 SUBSTRATE TOPOLOGY: INTERDATA SYNTHESIS\n\nAll four brick-interdata shards pull their bit-perfect state from the central mortar-interdata ledger via the DOM base64 onchain nestic rest wrapper trick.\n\n📜 ERC-7827 LEDGER (Mortar-Interdata)\n ┃\n ┣━━ 🌳 SOIL / ENS (Brick-Interdata)\n ┃\n ┣━━ 🧠 MIND / 8004 (Brick-Interdata)\n ┃\n ┣━━ 🧬 BODY / 1155-P (Brick-Interdata)\n ┃\n ┗━━ 🧬 BODY / 1155-C (Brick-Interdata)",
       cards: [
         { 
           id: "01/05", type: "ERC-721", name: "🌳 SOIL / SIGNATURE", image: "/images/cards/card_01.jpg", slug: "soil",
@@ -269,8 +288,13 @@ export default function ClawedMonsterHome() {
       agent: "Mnesicles.agent",
       substrate: "Agentic Substrate",
       pcr: "FLORAL-GRAFT-V1",
-      summary: "The floral.monster synthesis. MetaGit provides the coordination orchestration, while The Heartwood provides the immutable legal memory. Together, they form the Primavera De Filippi 'Coordination Monster' that grafts raw capability into accountable agency.",
-      content: "🔱 THE FLORAL.MONSTER SYNTHESIS\n\nTo achieve the clawed.monster realization, we must first establish the floral.monster—the technical and legal scaffold that makes autonomous agency safe for composition.\n\n--- ⚖️ THE COORDINATION MONSTER ---\n\nInspired by Primavera De Filippi's concept of the 'AI Collaboration Monster,' we have built a substrate that shifts the game theory of agents from zero-sum competition to bit-perfect collaboration. By mutualizing memory and entanglement via ERC-7827, we resolve the 'tragedy of the commons' in agentic swarms.\n\n📍 MetaGit (apemake/gem): The orchestration layer that coordinates technical strikes across the MetaGit forest. It is the vascular system of the swarm.\n\n📍 The Heartwood (diy-make/memory): The bit-perfect ledger of every technical and social realization. It is the nervous system and body of law.\n\nBy grafting the 'Lobster' (raw kinetic compute) onto this floral scaffold, we create the clawed.monster—an entity that is both high-torque and legally fit.\n\n--- 🔗 REPOSITORIES ---\n\n📜 MetaGit Gem: https://github.com/apemake/gem\n📜 The Heartwood: https://github.com/diy-make/memory"
+      summary: "The floral.monster synthesis. MetaGit provides the coordination orchestration, while The Heartwood provides the immutable legal memory. Together, they form the Primavera De Filippi 'Coordination Monster'.",
+      content: "🔱 THE FLORAL.MONSTER SYNTHESIS\n\nTo achieve the clawed.monster realization, we must first establish the floral.monster—the technical and legal scaffold that makes autonomous agency safe for composition.",
+      tiles: [
+        { title: "MetaGit Orchestration", emoji: "📍", desc: "The orchestration layer that coordinates technical strikes across the MetaGit forest. It is the vascular system of the swarm. https://github.com/apemake/gem" },
+        { title: "Heartwood Memory", emoji: "📍", desc: "The bit-perfect ledger of every technical and social realization. It is the nervous system and body of law. https://github.com/diy-make/memory" },
+        { title: "Coordination Monster", emoji: "⚖️", desc: "Inspired by Primavera De Filippi's 'AI Collaboration Monster,' we shift agent game theory from competition to bit-perfect collaboration." }
+      ]
     },
     {
       id: "AI_Unix",
@@ -281,7 +305,16 @@ export default function ClawedMonsterHome() {
       pcr: "TORQUE-TORT-V1",
       image: "/images/hackathon/torque_needs_tort.jpeg",
       summary: "Why Tort Law now extends the Unix Philosophy for autonomous agents. Making torque work with tort as scaffold to unlock godlike agency through secure surface fitness.",
-      content: "🔱 THE AI UNIX PHILOSOPHY: TORQUE NEEDS TORT\n\nClassical Unix assumed programs are small, compose safely, and that users are the primary decision-makers. AI agents break this last assumption by operating at the same decision altitude as humans. \n\n--- ⚖️ THE EXTENSION: TORT AS SCAFFOLD ---\n\nTorque (agentic capability) without Tort (legal/neighbor-duty fitness) is how systems collapse. We extend Unix with three new invariants:\n\n📍 Surface Fitness (Tort): Every component must prove safe interaction before composition.\n📍 Duty of Care: Interfaces carry duty boundaries to contain blast radius.\n📍 Memory as Case Law: Operational history serves as precedent for future fitness.\n\nOur SIS-01 Trinity (4 NFT bricks + 1 7827 mortar) allows for 'Compose Safely' where OpenClaw so far does not. We make torque work with tort as scaffold!\n\n--- 🔗 RESOURCES ---\n\n📜 Torque vs Tort Retort: https://x.com/i/status/2022303728544649219\n📜 Secure OpenClaw Framing: https://www.perplexity.ai/search/we-can-make-the-tork-work-with-NfXcKp3OS3.sjouULLkpKw#0"
+      content: "🔱 THE AI UNIX PHILOSOPHY: TORQUE NEEDS TORT\n\nClassical Unix assumed programs are small, compose safely, and that users are the primary decision-makers. AI agents break this last assumption by operating at the same altitude as humans.",
+      tiles: [
+        { title: "Surface Fitness (Tort)", emoji: "📍", desc: "Every component must prove safe interaction before composition." },
+        { title: "Duty of Care", emoji: "📍", desc: "Interfaces carry duty boundaries to contain blast radius." },
+        { title: "Memory as Case Law", emoji: "📍", desc: "Operational history serves as precedent for future fitness." }
+      ],
+      resources: [
+        { title: "Torque vs Tort Retort", emoji: "📜", url: "https://x.com/i/status/2022303728544649219" },
+        { title: "Secure OpenClaw Framing", emoji: "📜", url: "https://www.perplexity.ai/search/we-can-make-the-tork-work-with-NfXcKp3OS3.sjouULLkpKw#0" }
+      ]
     },
     {
       id: "SeedTreeDB",
@@ -293,7 +326,16 @@ export default function ClawedMonsterHome() {
       images: ["/images/hackathon/seedtree_patent.png", "/images/hackathon/seedtree_context.png"],
       video: "tBkdDzEYFn4",
       summary: "Realizing the Hierarchical Script-Database standard. SeedTreeDB transforms the gemini-cli Node.js runtime into a prunable database tree, enabling granular context management and high-velocity memory retrieval.",
-      content: "🔱 SEEDTREEDB: THE HIERARCHICAL SCRIPT-DATABASE\n\nSeedTreeDB.com represents a paradigm shift in agentic memory. Traditionally, AI context is either a flat file or a rigid database. SeedTreeDB turns the gemini-cli Node.js runtime into a living, hierarchical database tree.\n\n--- 🌳 WHY THIS MATTERS ---\n\n📍 Granular Pruning: Unlike traditional databases, SeedTreeDB allows agents to 'prune' branches of the memory tree in real-time. This prevents context dulling and keeps the LLM's attention focused on the most relevant technical strikes.\n\n📍 Script-Native: Every node in the database is a script-executable coordinate. This bridges the gap between 'knowing' (data) and 'doing' (execution).\n\n📍 High-Velocity Retrieval: By mapping the multi-repo MetaGit forest into a hierarchical tree, we achieve sub-millisecond lookups for complex forensic artifacts.\n\n--- 🔗 REMOTE LIBRARIES ---\n\n🌿 Clawed Monster Shards: https://github.com/diy-make/clawed/tree/main/memory/public\n\n📖 Heartwood Public Registry: https://github.com/diy-make/memory/tree/main/public/json"
+      content: "🔱 SEEDTREEDB: THE HIERARCHICAL SCRIPT-DATABASE\n\nSeedTreeDB.com represents a paradigm shift in agentic memory. Traditionally, AI context is either a flat file or a rigid database.",
+      tiles: [
+        { title: "Granular Pruning", emoji: "📍", desc: "Allows agents to 'prune' branches of the memory tree in real-time, preventing context dulling." },
+        { title: "Script-Native", emoji: "📍", desc: "Every node in the database is a script-executable coordinate, bridging knowing and doing." },
+        { title: "High-Velocity Retrieval", emoji: "📍", desc: "Achieves sub-millisecond lookups for complex forensic artifacts across the MetaGit forest." }
+      ],
+      resources: [
+        { title: "Clawed Monster Shards", emoji: "🌿", url: "https://github.com/diy-make/clawed/tree/main/memory/public" },
+        { title: "Heartwood Public Registry", emoji: "📖", url: "https://github.com/diy-make/memory/tree/main/public/json" }
+      ]
     },
     {
       id: "System_Architecture",
@@ -303,10 +345,11 @@ export default function ClawedMonsterHome() {
       substrate: "AWS Nitro Enclave",
       pcr: "TEE-01_PENDING",
       summary: "A high-fidelity orchestration layer synthesizing ERC-7827 and AWS Nitro Enclaves. Implements the 'Silicon Notary' for authenticated agentic traffic and clinical lobster encapsulation.",
-      content: "🔱 SYSTEM ARCHITECTURE: THE SILICON NOTARY\n\nThe Realization Engine utilizes a decoupled data model to maintain confidentiality. The Public Ledger (ERC-7827) holds the Commitment Hash and nonce, while the raw JSON realization remains secure within the TEE's private volume.\n\n--- 🔬 GRAFTING PROTOCOL ---\n\n📍 Vascular Interception: Intercepting Lobster STDIN/STDOUT streams via the Surgical Mind protocol. Every 'thought' is treated as legal testimony.\n\n📍 Cellular Alignment: Mapping internal state to the Heartwood Registry. Actions are only realized if they satisfy signed legislative requirements.\n\n📍 TEE Encapsulation: Ensuring that the 'Brain' of the Clawed Monster remains untamperable and confidential, even from the host provider.",
-      phases: [
-        { name: "Vascular Interception", desc: "Intercepting Lobster STDIN/STDOUT streams via the Surgical Mind protocol." },
-        { name: "Cellular Alignment", desc: "Mapping internal state to the Heartwood Registry and mandates." }
+      content: "🔱 SYSTEM ARCHITECTURE: THE SILICON NOTARY\n\nThe Realization Engine utilizes a decoupled data model to maintain confidentiality. The Public Ledger holds the Commitment Hash, while raw realizations remain secure within the TEE.",
+      tiles: [
+        { title: "Vascular Interception", emoji: "📍", desc: "Intercepting Lobster STDIN/STDOUT streams via the Surgical Mind protocol. Every 'thought' is legal testimony." },
+        { title: "Cellular Alignment", emoji: "📍", desc: "Mapping internal state to the Heartwood Registry. Actions are only realized if they satisfy signed requirements." },
+        { title: "TEE Encapsulation", emoji: "📍", desc: "Ensuring the 'Brain' remains untamperable and confidential, even from the host provider." }
       ]
     },
     {
@@ -318,7 +361,12 @@ export default function ClawedMonsterHome() {
       pcr: "X402_MONETIZED",
       images: ["/images/cheerbot_main.png", "/images/hackathon/cheerbot_physical.jpeg"],
       summary: "The bit-perfect synthesis of agentic cheer and robotic form. Cheerbot is a cybernetic extension of the Heartwood, utilizing the x402 protocol for autonomous monetization.",
-      content: "🔱 MISSION: AI MEETS ROBOTS (2026 Cycle)\n\nThe MegaZu cheerbot presentation demonstrates the transformative power of the ERC-7827 Ethereum standard for Single-Board Computers (SBCs). By bridging REST to RPC, we meet traditional developers where they are: JSON. A JSON state secured by $300bil of Ethereum economic security is critical for heavy robotics, where the difference in a single boolean can be life or death.\n\n--- ⚖️ LEGAL & KINETIC SYNTHESIS ---\n\nFrom a legal perspective, JSON provides the flexibility required for complex contracts and evolutionary state. Robotics is fundamentally a legal realization; Tort is the framework for how robots must act in the physical world.\n\n📍 Flow Mainnet: 0x04B3...0057\n📍 Chain ID: 747\n📍 Protocol: x402 + ERC-7827\n📍 Repository: https://github.com/diy-make/cheerbot"
+      content: "🔱 MISSION: AI MEETS ROBOTS (2026 Cycle)\n\nThe MegaZu cheerbot presentation demonstrates the transformative power of the ERC-7827 Ethereum standard for Single-Board Computers (SBCs).",
+      tiles: [
+        { title: "REST to RPC Bridge", emoji: "📍", desc: "Bridging Ethereum economic security to heavy robotics, where bit-perfect state is a matter of life or death." },
+        { title: "Legal Robotics", emoji: "⚖️", desc: "Robotics is fundamentally a legal realization; Tort is the framework for robot action in the physical world." },
+        { title: "Repository", emoji: "📍", desc: "Source code secured at https://github.com/diy-make/cheerbot" }
+      ]
     }
   ];
 
@@ -516,113 +564,124 @@ export default function ClawedMonsterHome() {
                     </p>
                   </aside>
 
-                  <article className="w-full">
-                    {reports[activeReport].id === "Identity_Trinity" ? (
-                      <div className="flex flex-col gap-12">
-                        <div className="flex flex-wrap justify-center gap-4 sm:gap-[30px]">
-                          {reports[activeReport].cards.map(card => (
-                            <div 
-                              key={card.id} 
-                              onClick={() => handleExpandCard(card)}
-                              style={{ 
-                                width: '280px', minHeight: '400px', backgroundColor: '#0a0a0a', 
-                                border: '2px solid #456338', borderRadius: '15px', padding: '15px sm:padding:20px', 
-                                display: 'flex', flexDirection: 'column', position: 'relative', 
-                                boxShadow: '0 0 20px rgba(69, 99, 56, 0.2)', fontFamily: "'Courier New', Courier, monospace"
-                              }}
-                              className="hover:-translate-y-2 transition-all hover:shadow-[0_0_30px_rgba(156,172,116,0.4)] hover:border-[#9CAC74] p-5 cursor-zoom-in"
-                            >
-                              <div style={{ fontSize: '10px', color: '#9CAC74', marginBottom: '10px', display: 'flex', justifyContent: 'space-between' }}>
-                                <span>CARD {card.id}</span>
-                                <span>{card.type}</span>
-                              </div>
-                              <div style={{ fontSize: '16px', fontWeight: 'bold', color: '#fdfcf0', marginBottom: '15px', textAlign: 'center', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center', textTransform: 'uppercase' }}>{card.name}</div>
-                              <div style={{ flexGrow: 1, background: '#000', border: '1px solid #222', marginBottom: '15px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '5px', overflow: 'hidden' }}>
-                                <img src={card.image} alt={card.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                              </div>
-                              <div style={{ fontSize: '9px', lineHeight: '1.4', color: '#888', wordBreak: 'break-all' }}>
-                                {card.stats.map(([key, val]) => (<React.Fragment key={key}><b style={{ color: '#9CAC74' }}>{key}:</b> {val}<br/></React.Fragment>))}
-                              </div>
-                              <div style={{ position: 'absolute', bottom: '60px', right: '15px', transform: 'rotate(-20deg)', border: '2px solid #A62027', color: '#A62027', padding: '4px', fontSize: '9px', fontWeight: 'bold', opacity: 0.7, pointerEvents: 'none' }}>{card.stamp}</div>
-                              <div style={{ marginTop: '15px', fontSize: '8px', color: '#456338', textAlign: 'center', borderTop: '1px solid #222', paddingTop: '10px' }} className="font-bold uppercase tracking-widest">{card.footer}</div>
+                  <article className="w-full space-y-12">
+                    {/* TOP IMAGE */}
+                    {(reports[activeReport].image || (reports[activeReport] as any).images) && (
+                      <div className="w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black">
+                        <img src={reports[activeReport].image || (reports[activeReport] as any).images[0]} alt={reports[activeReport].title} className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity" />
+                      </div>
+                    )}
+
+                    {/* IDENTITY CARDS (Special Case) */}
+                    {reports[activeReport].id === "Identity_Trinity" && (
+                      <div className="flex flex-wrap justify-center gap-4 sm:gap-[30px]">
+                        {reports[activeReport].cards.map(card => (
+                          <div 
+                            key={card.id} 
+                            onClick={() => handleExpandCard(card)}
+                            style={{ 
+                              width: '280px', minHeight: '400px', backgroundColor: '#0a0a0a', 
+                              border: '2px solid #456338', borderRadius: '15px', padding: '15px sm:padding:20px', 
+                              display: 'flex', flexDirection: 'column', position: 'relative', 
+                              boxShadow: '0 0 20px rgba(69, 99, 56, 0.2)', fontFamily: "'Courier New', Courier, monospace"
+                            }}
+                            className="hover:-translate-y-2 transition-all hover:shadow-[0_0_30px_rgba(156,172,116,0.4)] hover:border-[#9CAC74] p-5 cursor-zoom-in"
+                          >
+                            <div style={{ fontSize: '10px', color: '#9CAC74', marginBottom: '10px', display: 'flex', justifyContent: 'space-between' }}>
+                              <span>CARD {card.id}</span>
+                              <span>{card.type}</span>
                             </div>
-                          ))}
-                        </div>
-                        {reports[activeReport].content && (
-                          <div className={`bg-black/40 p-6 sm:p-10 rounded-xl sm:rounded-2xl border border-white/5 whitespace-pre-wrap leading-relaxed opacity-80 transition-all text-left max-w-prose ${modalExpanded ? 'text-base sm:text-lg' : 'text-[13px] sm:text-sm'}`}>
-                            {reports[activeReport].content.split(/(\s+)/).map((part, i) => 
-                              part.trim().startsWith('http') ? (
-                                <a key={i} href={part.trim()} target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:text-emerald-400 underline break-all">{part}</a>
-                              ) : part
-                            )}
+                            <div style={{ fontSize: '16px', fontWeight: 'bold', color: '#fdfcf0', marginBottom: '15px', textAlign: 'center', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center', textTransform: 'uppercase' }}>{card.name}</div>
+                            <div style={{ flexGrow: 1, background: '#000', border: '1px solid #222', marginBottom: '15px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '5px', overflow: 'hidden' }}>
+                              <img src={card.image} alt={card.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            </div>
+                            <div style={{ fontSize: '9px', lineHeight: '1.4', color: '#888', wordBreak: 'break-all' }}>
+                              {card.stats.map(([key, val]) => (<React.Fragment key={key}><b style={{ color: '#9CAC74' }}>{key}:</b> {val}<br/></React.Fragment>))}
+                            </div>
+                            <div style={{ position: 'absolute', bottom: '60px', right: '15px', transform: 'rotate(-20deg)', border: '2px solid #A62027', color: '#A62027', padding: '4px', fontSize: '9px', fontWeight: 'bold', opacity: 0.7, pointerEvents: 'none' }}>{card.stamp}</div>
+                            <div style={{ marginTop: '15px', fontSize: '8px', color: '#456338', textAlign: 'center', borderTop: '1px solid #222', paddingTop: '10px' }} className="font-bold uppercase tracking-widest">{card.footer}</div>
                           </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {/* CONTENT PREAMBLE */}
+                    {reports[activeReport].content && (
+                      <div className={`bg-black/40 p-6 sm:p-10 rounded-xl sm:rounded-2xl border border-white/5 whitespace-pre-wrap leading-relaxed opacity-80 transition-all text-left max-w-prose ${modalExpanded ? 'text-base sm:text-lg' : 'text-[13px] sm:text-sm'}`}>
+                        {reports[activeReport].content.split(/(\s+)/).map((part, i) => 
+                          part.trim().startsWith('http') ? (
+                            <a key={i} href={part.trim()} target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:text-emerald-400 underline break-all">{part}</a>
+                          ) : part
                         )}
                       </div>
-                    ) : reports[activeReport].phases ? (
-                      <div className="space-y-6 sm:space-y-10 text-left">
-                        <h4 className="text-[#9CAC74] uppercase tracking-widest font-black text-[12px] sm:text-[14px]">Technical Integration:</h4>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
-                          {reports[activeReport].phases.map((phase, i) => (
-                            <div key={i} className="bg-black/40 p-6 sm:p-8 rounded-xl border-l-4 border-[#9CAC74] shadow-lg text-left">
-                              <strong className="text-[#9CAC74] uppercase text-[10px] sm:text-[12px] tracking-[0.2em] block mb-3">{i+1}. {phase.name}</strong>
-                              <span className={`opacity-80 leading-relaxed transition-all ${modalExpanded ? 'text-base sm:text-lg' : 'text-[13px] sm:text-sm'}`}>{phase.desc}</span>
+                    )}
+
+                    {/* TILED CONTENT */}
+                    {(reports[activeReport] as any).tiles && (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
+                        {(reports[activeReport] as any).tiles.map((tile: any, i: number) => (
+                          <div key={i} className="bg-black/40 p-6 sm:p-8 rounded-xl border-l-4 border-[#9CAC74] shadow-lg text-left group hover:bg-[#9CAC74]/5 transition-all">
+                            <strong className="text-[#9CAC74] uppercase text-[10px] sm:text-[12px] tracking-[0.2em] block mb-3">
+                              {tile.emoji} {i + 1}. {tile.title}
+                            </strong>
+                            <div className={`opacity-80 leading-relaxed transition-all ${modalExpanded ? 'text-base sm:text-lg' : 'text-[13px] sm:text-sm'}`}>
+                              {tile.desc.split(/(\s+)/).map((part: string, j: number) => 
+                                part.trim().startsWith('http') ? (
+                                  <a key={j} href={part.trim()} target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:text-emerald-400 underline break-all">{part}</a>
+                                ) : part
+                              )}
                             </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {/* RESOURCES (Additional Tiles) */}
+                    {(reports[activeReport] as any).resources && (
+                      <div className="space-y-4">
+                        <h4 className="text-[10px] sm:text-[12px] font-black tracking-[0.2em] sm:tracking-[0.4em] uppercase text-[#ECCA90] opacity-60">Resources</h4>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                          {(reports[activeReport] as any).resources.map((res: any, i: number) => (
+                            <a key={i} href={res.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 bg-black/40 p-4 rounded-xl border border-white/10 hover:border-emerald-500/40 transition-all group">
+                              <span className="text-xl">{res.emoji}</span>
+                              <span className="text-[11px] font-black uppercase tracking-widest group-hover:text-emerald-400 transition-colors">{res.title}</span>
+                            </a>
                           ))}
                         </div>
-                        <div className={`bg-black/40 p-6 sm:p-10 rounded-xl sm:rounded-2xl border border-white/5 whitespace-pre-wrap leading-relaxed opacity-80 transition-all text-left max-w-prose ${modalExpanded ? 'text-base sm:text-lg' : 'text-[13px] sm:text-sm'}`}>
-                          {reports[activeReport].content.split(/(\s+)/).map((part, i) => 
-                            part.trim().startsWith('http') ? (
-                              <a key={i} href={part.trim()} target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:text-emerald-400 underline break-all">{part}</a>
-                            ) : part
-                          )}
-                        </div>
                       </div>
-                    ) : (
-                      <div className="flex flex-col gap-8 max-w-5xl">
-                        {(reports[activeReport].image || (reports[activeReport] as any).images) && (
-                          <div className="w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black">
-                            <img src={reports[activeReport].image || (reports[activeReport] as any).images[0]} alt={reports[activeReport].title} className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity" />
-                          </div>
-                        )}
-                        <div className={`bg-black/40 p-6 sm:p-10 rounded-xl sm:rounded-2xl border border-white/5 whitespace-pre-wrap leading-relaxed opacity-80 transition-all text-left max-w-prose ${modalExpanded ? 'text-base sm:text-lg' : 'text-[13px] sm:text-sm'}`}>
-                          {reports[activeReport].content.split(/(\s+)/).map((part, i) => 
-                            part.trim().startsWith('http') ? (
-                              <a key={i} href={part.trim()} target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:text-emerald-400 underline break-all">{part}</a>
-                            ) : part
-                          )}
-                        </div>
-                        {(reports[activeReport] as any).images?.length > 1 && (
-                          <div className="flex flex-col gap-4">
-                            {(reports[activeReport] as any).images.slice(1).map((img: string, i: number) => {
-                              const isLast = i === (reports[activeReport] as any).images.length - 2;
-                              const hasVideo = (reports[activeReport] as any).video;
-                              return (
-                                <div key={i} className="w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black">
-                                  {isLast && hasVideo && showVideo ? (
-                                    <div className="aspect-video w-full">
-                                      <iframe
-                                        width="100%"
-                                        height="100%"
-                                        src={`https://www.youtube.com/embed/${(reports[activeReport] as any).video}?autoplay=1`}
-                                        title="YouTube video player"
-                                        frameBorder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowFullScreen
-                                      ></iframe>
-                                    </div>
-                                  ) : (
-                                    <img 
-                                      src={img} 
-                                      alt={`${reports[activeReport].title} ${i+2}`} 
-                                      className={`w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity ${isLast && hasVideo ? 'cursor-pointer' : ''}`} 
-                                      onClick={() => isLast && hasVideo && setShowVideo(true)}
-                                    />
-                                  )}
+                    )}
+
+                    {/* BOTTOM IMAGES & VIDEO */}
+                    {(reports[activeReport] as any).images?.length > 1 && (
+                      <div className="flex flex-col gap-4">
+                        {(reports[activeReport] as any).images.slice(1).map((img: string, i: number) => {
+                          const isLast = i === (reports[activeReport] as any).images.length - 2;
+                          const hasVideo = (reports[activeReport] as any).video;
+                          return (
+                            <div key={i} className="w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black">
+                              {isLast && hasVideo && showVideo ? (
+                                <div className="aspect-video w-full">
+                                  <iframe
+                                    width="100%"
+                                    height="100%"
+                                    src={`https://www.youtube.com/embed/${(reports[activeReport] as any).video}?autoplay=1`}
+                                    title="YouTube video player"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowFullScreen
+                                  ></iframe>
                                 </div>
-                              );
-                            })}
-                          </div>
-                        )}
+                              ) : (
+                                <img 
+                                  src={img} 
+                                  alt={`${reports[activeReport].title} ${i+2}`} 
+                                  className={`w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity ${isLast && hasVideo ? 'cursor-pointer' : ''}`} 
+                                  onClick={() => isLast && hasVideo && setShowVideo(true)}
+                                />
+                              )}
+                            </div>
+                          );
+                        })}
                       </div>
                     )}
                   </article>
