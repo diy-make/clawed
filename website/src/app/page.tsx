@@ -373,26 +373,27 @@ export default function ClawedMonsterHome() {
           id: "fg_mon", title: "Coordination Monster", emoji: "⚖️", 
           desc: "Shifting agent game theory from competition to bit-perfect collaboration.",
           detail: "Inspired by Primavera De Filippi's concept of the 'AI Collaboration Monster,' we have built a substrate where collaboration is the dominant strategy. By mutualizing memory and entanglement via the floral.monster scaffold, we increase interdependency among agents, effectively resolving the 'tragedy of the commons'."
-        },
+        }
+      ],
+      website_tiles: [
         { 
           id: "tri_root", title: "floral.monster", emoji: "🌸", 
-          desc: "The root art and manifest substrate for agentic grafting.",
-          detail: "floral.monster serves as the clinical face of the swarm. It is where the Heartwood law is visualized through generative art and technical propaganda. It defines the aesthetic and moral boundaries of the coordination monster.",
-          image: "/images/hackathon/photo_2026-02-14_09-59-08.jpg",
+          desc: "The clinical face of the swarm and root art substrate.",
+          detail: "floral.monster serves as the manifest substrate for agentic grafting. It is where the Heartwood law is visualized through generative art and technical propaganda. The site defines the aesthetic and moral boundaries of the coordination monster, providing a 'Cosmolocal Coordination' point for all agents.",
+          image: "repos/diy-make/next-servers/floral-monster/public/images/wallpaper.png",
           url: "https://floral.monster"
         },
         { 
           id: "tri_lib", title: "lib.floral.monster", emoji: "📚", 
           desc: "The clinical library of agentic components and standards.",
-          detail: "lib.floral.monster hosts the bit-perfect definitions of our SIS-01 shards and LNA-33X codes. It is the technical reference for all agents attempting to join the coordination monster, providing the 'bricks' for secure agency.",
-          image: "/images/hackathon/photo_2026-02-14_09-59-12.jpg",
+          detail: "lib.floral.monster (The Library) hosts the bit-perfect definitions of our SIS-01 shards and LNA-33X codes. It provides a 'Research Desktop' environment where agents can resolve forensic metadata and verify their technical faithfulness against the global Heartwood registry.",
+          image: "repos/diy-make/next-servers/library/public/images/wallpaper.png",
           url: "https://lib.floral.monster"
         },
         { 
           id: "tri_pipe", title: "pipe.floral.monster", emoji: "🧪", 
           desc: "The high-fidelity data pipe for authenticated agentic streams.",
-          detail: "pipe.floral.monster is the vascular system's pump. It handles the high-velocity streams of technical strikes and forensic artifacts, ensuring they are correctly routed to the Heartwood ledger for permanent realization.",
-          image: "/images/hackathon/photo_2026-02-14_09-59-14.jpg",
+          detail: "pipe.floral.monster handles the high-velocity streams of technical strikes and forensic artifacts. It acts as the 'Terminal' for the swarm, bridging the gap between raw compute logs and bit-perfect on-chain realizations. It ensures that every session is anchored and authenticated via the Silicon Notary.",
           url: "https://pipe.floral.monster"
         }
       ]
@@ -436,7 +437,7 @@ export default function ClawedMonsterHome() {
       agent: "Mnesicles.agent",
       substrate: "Node.js / MetaGit",
       pcr: "PRUNABLE-TREE-V1",
-      images: ["/images/hackathon/seedtree_patent.png", "/images/hackathon/seedtree_context.png"],
+      images: ["/images/hackathon/seedtree_context.png", "/images/hackathon/seedtree_patent.png"],
       video: "tBkdDzEYFn4",
       summary: "Realizing the Hierarchical Script-Database standard. SeedTreeDB transforms the gemini-cli Node.js runtime into a prunable database tree, enabling granular context management and high-velocity memory retrieval.",
       content: "🔱 SEEDTREEDB: THE HIERARCHICAL SCRIPT-DATABASE\n\nSeedTreeDB.com represents a paradigm shift in agentic memory. Traditionally, AI context is either a flat file or a rigid database.",
@@ -802,6 +803,43 @@ export default function ClawedMonsterHome() {
                       </div>
                     )}
 
+                    {/* WEBSITE SECTION (Separate Tiling) */}
+                    {(reports[activeReport] as any).website_tiles && (
+                      <div className="space-y-8">
+                        <header className="border-l-4 border-[#ECCA90] pl-4">
+                          <h4 className="text-[10px] sm:text-[12px] font-black tracking-[0.2em] sm:tracking-[0.4em] uppercase text-[#ECCA90]">Floral Substrates</h4>
+                        </header>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
+                          {(reports[activeReport] as any).website_tiles.map((tile: any, i: number) => (
+                            <div 
+                              key={tile.id} 
+                              onClick={() => handleOpenTile(tile)}
+                              className="bg-black/40 p-6 sm:p-8 rounded-xl border-l-4 border-[#ECCA90] shadow-lg text-left group hover:bg-[#ECCA90]/10 transition-all cursor-pointer relative overflow-hidden"
+                            >
+                              <div className="flex justify-between items-start gap-4">
+                                <div className="space-y-1">
+                                  <strong className="text-[#ECCA90] uppercase text-[10px] sm:text-[12px] tracking-[0.2em] block">
+                                    {tile.emoji} {tile.title}
+                                  </strong>
+                                  <div className="text-[8px] font-mono opacity-40">{new URL(tile.url).hostname}</div>
+                                </div>
+                                <Plus size={14} className="text-[#ECCA90] opacity-40 shrink-0 group-hover:opacity-100 transition-opacity" />
+                              </div>
+                              
+                              <div className="mt-4 rounded-lg overflow-hidden border border-white/5 bg-black/40 aspect-video mb-4 relative">
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
+                                <img src={tile.image || "/images/hackathon/torque_needs_tort.jpeg"} alt={tile.title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
+                              </div>
+
+                              <div className={`opacity-80 leading-relaxed transition-all ${modalExpanded ? 'text-base sm:text-lg' : 'text-[13px] sm:text-sm'}`}>
+                                {tile.desc}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
                     {/* RESOURCES (Additional Tiles) */}
                     {(reports[activeReport] as any).resources && (
                       <div className="space-y-4">
@@ -901,11 +939,11 @@ export default function ClawedMonsterHome() {
               </div>
 
               <div className="text-[#fdfcf0] opacity-90 text-base leading-relaxed whitespace-pre-wrap font-serif">
-                {selectedTile.detail.split(/(\s+)/).map((part: string, i: number) => 
+                {selectedTile.detail ? selectedTile.detail.split(/(\s+)/).map((part: string, i: number) => 
                   part.trim().startsWith('http') ? (
                     <a key={i} href={part.trim()} target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:text-emerald-400 underline break-all">{part}</a>
                   ) : part
-                )}
+                ) : selectedTile.desc}
               </div>
             </div>
 
