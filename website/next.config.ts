@@ -4,6 +4,11 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: ".",
   },
+  devIndicators: {
+    appIsrStatus: false,
+    buildActivity: false,
+    buildActivityPosition: 'bottom-right'
+  }
 };
 
 export default nextConfig;
