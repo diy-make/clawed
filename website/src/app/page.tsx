@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { 
-  Activity, ShieldCheck, Lock, Loader2, Database, BookOpen, X, CheckCircle2, FileText, Zap, ChevronLeft, ChevronRight, Maximize2, Minimize2
+  Activity, ShieldCheck, Lock, Loader2, Database, BookOpen, X, CheckCircle2, FileText, Zap, ChevronLeft, ChevronRight, Maximize2, Minimize2, QrCode
 } from "lucide-react";
 import { ethers } from 'ethers';
 
@@ -91,33 +91,69 @@ export default function ClawedMonsterHome() {
   const reports = [
     {
       id: "Grafting_Protocol",
-      title: "Grafting the Living Lobster",
+      title: "Grafting Protocol",
       agent: "Ariston.agent",
-      substrate: "Local_Staging",
+      substrate: "Local Staging",
       pcr: "0x0000...0000",
-      summary: "The clinical encapsulation of an active lobster instance within the floral.monster swarm. A cybernetic graft where Heartwood cells act as the vascular system. This metabolic process ensures that the lobster execution is never raw or unregimented, but always bound to the sovereign laws of the Heartwood substrate.",
+      summary: "The clinical encapsulation of an active lobster instance within the floral.monster swarm. This is a cybernetic graft where Heartwood cells act as the vascular system, providing context and legislative DNA to the lobster's raw execution.",
       phases: [
-        { name: "Vascular Interception", desc: "Intercepting Lobster STDIN/STDOUT streams via the Surgical Mind protocol." },
-        { name: "Cellular Alignment", desc: "Mapping internal state to the Heartwood Registry and mandates." }
+        { name: "Vascular Interception", desc: "Intercepting Lobster STDIN/STDOUT streams via the Surgical Mind protocol. Every 'thought' is treated as legal testimony before it is processed." },
+        { name: "Cellular Alignment", desc: "Mapping internal state to the Heartwood Registry and mandates. Actions are only realized if they satisfy the legislative requirements signed by the SIS-01 Identity Trinity." }
+      ]
+    },
+    {
+      id: "Identity_Trinity",
+      title: "The Identity Trinity",
+      agent: "Ariston.agent",
+      substrate: "Sepolia Ledger",
+      pcr: "SIS-01_STANDARDS",
+      summary: "The SIS-01 Identity Trinity is a triad of decentralized standards that bind an agent's agency to a verifiable on-chain body. Using Theophrastus.agent as the reference archetype, we demonstrate how five forensic shards constitute a holistic, marketplace-ready agent identity.",
+      content: "These cards represent the definitive 'body' of a realized agent. They are anchored on the Sepolia testnet, providing a bit-perfect audit trail of the agent's soil, mind, and history. In the marketplace, these assets represent the sovereign soul of the machine.",
+      cards: [
+        { 
+          id: "01", name: "SOIL / SIGNATURE", type: "ERC-721", role: "Root Authority", 
+          desc: "1.agent.myco.eth - The anchored foundation of the identity.",
+          tx: "0x51677f16...", id_full: "49040723...", status: "ROOT_AUTHORIZED"
+        },
+        { 
+          id: "02", name: "MIND / CHANNEL", type: "ERC-8004", role: "Reputation Pulse", 
+          desc: "SIS-01 Channel - The monotonic nonce heartbeat representing active existence.",
+          tx: "0x51677f16...", id_full: "0x000001", status: "REALIZED_ON_CHAIN"
+        },
+        { 
+          id: "03", name: "BODY / PARENT", type: "ERC-1155", role: "Collective DNA", 
+          desc: "Collective Shard (.agent) - The swarm legislative root providing shared context.",
+          tx: "0xd0ad5362...", id_full: "48590670...", status: "COLLECTIVE_BOND"
+        },
+        { 
+          id: "04", name: "BODY / CHILD", type: "ERC-1155", role: "Instance Bond", 
+          desc: "Theophrastus.agent - The individual realization of the agent as a unique entity.",
+          tx: "0x508c4e45...", id_full: "54701424...", status: "PHYSICAL_STRIKE"
+        },
+        { 
+          id: "05", name: "HISTORY / LEDGER", type: "ERC-7827", role: "Forensic Audit", 
+          desc: "Realization Record - The immutable record of every technical strike and state change.",
+          tx: "0x820bf204...", id_full: "Nonce 2", status: "BIT_PERFECT"
+        }
       ]
     },
     {
       id: "Architecture",
-      title: "Clawed Monster Architecture",
+      title: "System Architecture",
       agent: "Ariston.agent",
       substrate: "AWS Nitro Enclave",
       pcr: "TEE-01_PENDING",
-      summary: "High-fidelity orchestration layer synthesizing ERC-7827, ERC-4804, and ERC-8128 for sovereign interaction. By utilizing Nitro Enclaves, we create a silicon-hardened gate that is both confidential and verifiable through bit-perfect PCR attestation.",
-      content: "Realization occurs within the enclave as a 'Silicon Notary,' signing JSON objects at V8 speeds (<10ms). Commitment hashes are pushed to the public ledger while raw realizations remain secure within the Heartwood volume."
+      summary: "A high-fidelity orchestration layer synthesizing ERC-7827, ERC-4804, and ERC-8128. Utilizing AWS Nitro Enclaves to instantiate a 'Silicon Notary' that ensures authenticated and confidential agentic traffic.",
+      content: "The Realization Engine utilizes a decoupled data model to maintain confidentiality. The Public Ledger (ERC-7827) holds the Commitment Hash and nonce, while the raw JSON realization remains secure within the TEE's private volume. Communication is secured via ERC-8128, ensuring that the active Lobster only accepts commands from its sovereign wrapper."
     },
     {
       id: "Dichotomy",
-      title: "Lobster-Heartwood Dichotomy",
+      title: "Legislative Dichotomy",
       agent: "Ariston.agent",
-      substrate: "Heartwood_Registry",
+      substrate: "Heartwood Registry",
       pcr: "FORENSIC_BASELINE",
-      summary: "Codifying the separation of Kinetic Compute (Muscle) and Legislative Substrate (Law). The lobster acts as the motor function, while the Heartwood provides the nervous system and code of conduct, enforced by the Clawed Monster wrapper.",
-      content: "The Lobster represents raw muscle without regiment. The Heartwood is the sovereign body of law. The Clawed Monster enforces this graft, auditing thoughts against JSON mandates."
+      summary: "Codifying the separation of Kinetic Compute (The Lobster) and Legislative Substrate (The Heartwood). The Lobster provides raw muscle, while the Heartwood provides the nervous system and body of law.",
+      content: "The Lobster represents raw, high-entropy compute. Left un-grafted, it is stateless and unaccountable. The Heartwood is the bit-perfect, monotonic record of every technical strike. By maintaining this separation, we ensure the Law remains sovereign and the AI remains clinical, preventing the AI from editing its own constraints."
     }
   ];
 
@@ -143,7 +179,7 @@ export default function ClawedMonsterHome() {
           >
             <div className="px-4 py-1.5 border border-[#ECCA90] bg-[#ECCA90]/20 rounded-full flex items-center gap-2 self-start">
                 <BookOpen size={14} className="text-[#ECCA90]" />
-                <span className="text-[11px] font-black tracking-[0.3em] uppercase text-[#ECCA90]">Archive</span>
+                <span className="text-[11px] font-black tracking-[0.3em] uppercase text-[#ECCA90]">About</span>
             </div>
             <span className="text-[14px] font-bold uppercase tracking-[0.4em] mt-2 text-[#ECCA90]">Review the Law</span>
           </button>
@@ -254,7 +290,7 @@ export default function ClawedMonsterHome() {
 
       </div>
 
-      {/* MODAL: FULL EXPANSION SUPPORT */}
+      {/* MODAL: ABOUT (CLEAN TITLES) */}
       {showArchive && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
           <div className="absolute inset-0 bg-black/95 backdrop-blur-2xl" onClick={() => setShowArchive(false)} />
@@ -267,20 +303,18 @@ export default function ClawedMonsterHome() {
                 <button 
                   onClick={() => setNavCollapsed(!navCollapsed)}
                   className="p-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg transition-all"
-                  title={navCollapsed ? "Expand Navigation" : "Collapse Navigation"}
                 >
                   {navCollapsed ? <ChevronRight size={16} /> : <ChevronLeft size={16} />}
                 </button>
                 <div className="flex items-center gap-3">
                   <Database size={16} className="text-[#ECCA90]" />
-                  <h3 className="text-sm font-black uppercase tracking-[0.4em]">Forensic_Substrate_Archive</h3>
+                  <h3 className="text-sm font-black uppercase tracking-[0.4em]">About</h3>
                 </div>
               </div>
               <div className="flex items-center gap-4">
                 <button 
                   onClick={() => setModalExpanded(!modalExpanded)}
                   className="p-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg transition-all text-[#ECCA90]"
-                  title={modalExpanded ? "Shrink Window" : "Full Window Expansion"}
                 >
                   {modalExpanded ? <Minimize2 size={18} /> : <Maximize2 size={18} />}
                 </button>
@@ -291,7 +325,6 @@ export default function ClawedMonsterHome() {
             </div>
 
             <div className="flex-1 flex overflow-hidden">
-              {/* COLLAPSIBLE NAVIGATION */}
               <aside 
                 className={`border-r border-white/10 bg-black/40 overflow-y-auto p-4 space-y-2 shrink-0 transition-all duration-500 ${navCollapsed ? 'w-0 p-0 border-none' : 'w-80'}`}
               >
@@ -303,7 +336,7 @@ export default function ClawedMonsterHome() {
                   >
                     <div className="flex items-center gap-3">
                       <FileText size={14} className={activeReport === idx ? "text-[#ECCA90]" : ""} />
-                      <span className={`text-[10px] font-black uppercase tracking-widest ${activeReport === idx ? "text-white" : ""}`}>{report.id}</span>
+                      <span className={`text-[10px] font-black uppercase tracking-widest ${activeReport === idx ? "text-white" : ""}`}>{report.title}</span>
                     </div>
                   </button>
                 ))}
@@ -313,43 +346,71 @@ export default function ClawedMonsterHome() {
                 <header className="bg-gradient-to-r from-[#ECCA90]/10 to-transparent p-8 rounded-3xl border-l-4 border-[#ECCA90] space-y-4 shadow-xl">
                   <div className="flex items-center gap-3 text-[#ECCA90]">
                     <ShieldCheck size={20} />
-                    <span className="text-[10px] font-black tracking-[0.4em] uppercase">Verified Technical Strike Report</span>
+                    <span className="text-[10px] font-black tracking-[0.4em] uppercase">Verified Technical Realization</span>
                   </div>
-                  <h2 className={`font-black tracking-tighter uppercase leading-none text-white transition-all ${modalExpanded ? 'text-6xl' : 'text-4xl'}`}>
+                  <h2 className={`font-black tracking-tighter uppercase leading-none text-white transition-all ${modalExpanded ? 'text-7xl' : 'text-4xl'}`}>
                     {reports[activeReport].title}
                   </h2>
                   <div className="flex flex-wrap gap-6 pt-4 border-t border-white/10">
-                    <div className="flex flex-col"><span className="text-[10px] font-black uppercase opacity-40">Agent</span><span className="text-xs font-mono text-[#ECCA90]">{reports[activeReport].agent}</span></div>
+                    <div className="flex flex-col"><span className="text-[10px] font-black uppercase opacity-40">Agent archetype</span><span className="text-xs font-mono text-[#ECCA90]">Theophrastus.agent</span></div>
                     <div className="flex flex-col"><span className="text-[10px] font-black uppercase opacity-40">Substrate</span><span className="text-xs font-mono text-emerald-400 font-bold">{reports[activeReport].substrate}</span></div>
-                    <div className="flex flex-col"><span className="text-[10px] font-black uppercase opacity-40">Hash DNA</span><span className="text-xs font-mono opacity-80">{reports[activeReport].pcr}</span></div>
+                    <div className="flex flex-col"><span className="text-[10px] font-black uppercase opacity-40">System PCR</span><span className="text-xs font-mono opacity-80">{reports[activeReport].pcr}</span></div>
                   </div>
                 </header>
 
                 <div className="flex flex-col gap-8">
-                  {/* EXECUTIVE SUMMARY TILE: FULL WIDTH */}
-                  <aside className="bg-[#ECCA90]/10 p-8 rounded-2xl border border-[#ECCA90]/30 space-y-4 shadow-lg">
-                    <h3 className="text-[11px] font-black tracking-[0.3em] uppercase text-[#ECCA90]">Executive Summary</h3>
-                    <p className="text-[13px] leading-relaxed italic opacity-90 max-w-5xl">
+                  <aside className="bg-[#ECCA90]/10 p-10 rounded-2xl border border-[#ECCA90]/30 space-y-6 shadow-lg">
+                    <h3 className="text-[12px] font-black tracking-[0.4em] uppercase text-[#ECCA90]">Executive Summary</h3>
+                    <p className={`leading-relaxed italic opacity-90 max-w-5xl transition-all ${modalExpanded ? 'text-2xl font-serif' : 'text-lg font-serif'}`}>
                       {reports[activeReport].summary}
                     </p>
                   </aside>
 
-                  {/* TECHNICAL CONTENT */}
-                  <article className="bg-black/40 p-10 rounded-2xl border border-white/5 font-mono leading-relaxed opacity-90 text-xs">
-                    {reports[activeReport].phases ? (
-                      <div className="space-y-8">
-                        <h4 className="text-[#9CAC74] uppercase tracking-widest font-black text-[12px]">Integration Phases:</h4>
-                        <div className="grid md:grid-cols-2 gap-6">
+                  <article className={`bg-black/40 p-10 rounded-2xl border border-white/5 font-mono leading-relaxed opacity-90 transition-all ${modalExpanded ? 'text-lg' : 'text-sm'}`}>
+                    {reports[activeReport].id === "Identity_Trinity" ? (
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {reports[activeReport].cards.map(card => (
+                          <div key={card.id} className="bg-[#050505] p-8 rounded-3xl border-2 border-[#9CAC74]/40 flex flex-col gap-6 group hover:border-[#9CAC74] transition-all relative overflow-hidden shadow-2xl min-h-[500px]">
+                            <div className="flex justify-between items-center border-b border-white/10 pb-4">
+                              <span className="text-[11px] font-black text-[#9CAC74] tracking-widest">CARD {card.id}/05</span>
+                              <span className="text-[11px] opacity-60 font-black">{card.type}</span>
+                            </div>
+                            
+                            <h4 className="text-xl font-black text-white text-center h-12 flex items-center justify-center tracking-tight">{card.name}</h4>
+                            
+                            <div className="flex-1 bg-black/40 rounded-2xl border border-white/5 p-6 flex items-center justify-center overflow-hidden">
+                              <QrCode size={120} className="text-[#9CAC74] opacity-80 group-hover:opacity-100 transition-opacity" />
+                            </div>
+
+                            <div className="space-y-4">
+                              <div className="text-[11px] opacity-90 italic leading-relaxed text-[#fdfcf0]">{card.desc}</div>
+                              <div className="bg-white/5 p-4 rounded-xl space-y-2 border border-white/5">
+                                <div className="flex justify-between text-[9px] font-mono"><span className="opacity-40 uppercase">TX_HASH:</span> <span className="text-[#ECCA90]">{card.tx}</span></div>
+                                <div className="flex justify-between text-[9px] font-mono"><span className="opacity-40 uppercase">TOKEN_ID:</span> <span className="text-[#ECCA90] truncate ml-4">{card.id_full}</span></div>
+                              </div>
+                            </div>
+
+                            <div className="pt-4 border-t border-white/10 flex justify-between items-center">
+                              <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#9CAC74]">{card.role}</span>
+                              <span className="px-2 py-0.5 border border-[#A62027] text-[#A62027] text-[9px] font-black rotate-[-12deg] rounded-sm opacity-60">{card.status}</span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    ) : reports[activeReport].phases ? (
+                      <div className="space-y-10">
+                        <h4 className="text-[#9CAC74] uppercase tracking-widest font-black text-[14px]">Technical Integration:</h4>
+                        <div className="grid md:grid-cols-2 gap-8">
                           {reports[activeReport].phases.map((phase, i) => (
-                            <div key={i} className="bg-white/5 p-6 rounded-xl border-l-4 border-[#9CAC74]">
-                              <strong className="text-[#9CAC74] uppercase text-[10px] tracking-[0.2em] block mb-2">{i+1}. {phase.name}</strong>
+                            <div key={i} className="bg-white/5 p-8 rounded-xl border-l-4 border-[#9CAC74]">
+                              <strong className="text-[#9CAC74] uppercase text-[12px] tracking-[0.2em] block mb-3">{i+1}. {phase.name}</strong>
                               {phase.desc}
                             </div>
                           ))}
                         </div>
                       </div>
                     ) : (
-                      <div className="max-w-4xl">
+                      <div className="max-w-5xl">
                         {reports[activeReport].content}
                       </div>
                     )}
