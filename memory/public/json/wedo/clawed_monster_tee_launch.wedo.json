@@ -46,6 +46,7 @@
       "lobster_source": "third_party/lobster",
       "security_model": "md/sovereign_deployment_note.md",
       "technical_report": "memory/public/2026/Q1/02/13/md/session_forensic/20260213-210755_Ariston_Clawed_Monster_Technical_Architecture.md",
+      "dichotomy_report": "memory/public/2026/Q1/02/13/md/session_forensic/20260213-210755_Ariston_Lobster_Heartwood_Dichotomy.md",
       "standards": "ERC-8004 / ERC-7827 / ERC-4804 / ERC-8128"
     }
   },
