@@ -110,7 +110,7 @@ export default function ClawedMonsterHome() {
     {
       id: "Grafting_Protocol",
       title: "Grafting Protocol",
-      agent: "Theophrastus.agent",
+      agent: "Speusippus.agent",
       substrate: "Local Staging",
       pcr: "0x0000...0000",
       summary: "The clinical encapsulation of an active lobster instance within the floral.monster swarm. This is a cybernetic graft where Heartwood cells act as the vascular system, providing context and legislative DNA to the lobster's raw execution.",
@@ -122,10 +122,10 @@ export default function ClawedMonsterHome() {
     {
       id: "Identity_Trinity",
       title: "The Identity Trinity",
-      agent: "Theophrastus.agent",
+      agent: "Speusippus.agent",
       substrate: "Sepolia Ledger",
       pcr: "SIS-01_STANDARDS",
-      summary: "The SIS-01 Identity Trinity is a triad of decentralized standards that bind an agent's agency to a verifiable on-chain body. Using Theophrastus.agent as the reference archetype, we demonstrate how five forensic shards constitute a holistic, marketplace-ready agent identity.",
+      summary: "The SIS-01 Identity Trinity is a triad of decentralized standards that bind an agent's agency to a verifiable on-chain body. Using Speusippus.agent as the reference archetype, we demonstrate how five forensic shards constitute a holistic, marketplace-ready agent identity.",
       cards: [
         { 
           id: "01/05", type: "ERC-721", name: "🌳 SOIL / SIGNATURE", icon: "📜",
@@ -144,12 +144,12 @@ export default function ClawedMonsterHome() {
         },
         { 
           id: "04/05", type: "ERC-1155", name: "🧬 BODY / CHILD", icon: "👤",
-          stats: [["NAME", "Instance Bond"], ["PHENO", "Theophrastus.agent"], ["TX", "0x508c4e45..."], ["ID", "54701424..."]],
+          stats: [["NAME", "Instance Bond"], ["PHENO", "Speusippus.agent"], ["TX", "0x508c4e45..."], ["ID", "54545752..."]],
           stamp: "PHYSICAL_STRIKE", footer: "INDIVIDUAL AGENT REALIZATION"
         },
         { 
           id: "05/05", type: "ERC-7827", name: "📜 HISTORY / LEDGER", icon: "⚖️",
-          stats: [["NAME", "Realization Record"], ["NONCE", "302 (Monotonic)"], ["TX", "0xe0537117..."], ["CONTRACT", "0xE7E6A8EF..."]],
+          stats: [["NAME", "Realization Record"], ["NONCE", "304 (Monotonic)"], ["TX", "0xe0537117..."], ["CONTRACT", "0xE7E6A8EF..."]],
           stamp: "BIT_PERFECT", footer: "FORENSIC AUDIT TRAIL SECURED"
         }
       ]
@@ -157,7 +157,7 @@ export default function ClawedMonsterHome() {
     {
       id: "Architecture",
       title: "System Architecture",
-      agent: "Theophrastus.agent",
+      agent: "Speusippus.agent",
       substrate: "AWS Nitro Enclave",
       pcr: "TEE-01_PENDING",
       summary: "A high-fidelity orchestration layer synthesizing ERC-7827, ERC-4804, and ERC-8128. Utilizing AWS Nitro Enclaves to instantiate a 'Silicon Notary' that ensures authenticated and confidential agentic traffic.",
@@ -166,7 +166,7 @@ export default function ClawedMonsterHome() {
     {
       id: "Dichotomy",
       title: "Legislative Dichotomy",
-      agent: "Theophrastus.agent",
+      agent: "Speusippus.agent",
       substrate: "Heartwood Registry",
       pcr: "FORENSIC_BASELINE",
       summary: "Codifying the separation of Kinetic Compute (The Lobster) and Legislative Substrate (The Heartwood). The Lobster provides raw muscle, while the Heartwood provides the nervous system and body of law.",
@@ -351,7 +351,7 @@ export default function ClawedMonsterHome() {
                     {reports[activeReport].title}
                   </h2>
                   <div className="flex flex-wrap gap-6 pt-4 border-t border-white/10">
-                    <div className="flex flex-col"><span className="text-[10px] font-black uppercase opacity-40">Agent archetype</span><span className="text-xs font-mono text-[#ECCA90]">Theophrastus.agent</span></div>
+                    <div className="flex flex-col"><span className="text-[10px] font-black uppercase opacity-40">Agent archetype</span><span className="text-xs font-mono text-[#ECCA90]">Speusippus.agent</span></div>
                     <div className="flex flex-col"><span className="text-[10px] font-black uppercase opacity-40">Substrate</span><span className="text-xs font-mono text-emerald-400 font-bold">{reports[activeReport].substrate}</span></div>
                     <div className="flex flex-col"><span className="text-[10px] font-black uppercase opacity-40">System PCR</span><span className="text-xs font-mono opacity-80">{reports[activeReport].pcr}</span></div>
                   </div>
