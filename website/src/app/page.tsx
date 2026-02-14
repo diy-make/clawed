@@ -211,18 +211,17 @@ export default function ClawedMonsterHome() {
       id: "Identity_Trinity",
       slug: "identity",
       title: "The Identity Trinity (SIS-01)",
-      agent: "Palaemon.agent",
+      agent: "Ape.agent",
       substrate: "Sepolia Ledger",
       pcr: "SIS-01_STANDARDS",
-      summary: "The SIS-01 Identity Trinity is a triad of decentralized standards that bind an agent's agency to a verifiable on-chain body. Using Palaemon.agent as the reference archetype, we demonstrate how five forensic shards constitute a holistic, marketplace-ready agent identity.",
+      summary: "The SIS-01 Identity Trinity is a triad of decentralized standards that bind an agent's agency to a verifiable on-chain body. Using Ape.agent as the reference archetype, we demonstrate how five forensic shards constitute a holistic, marketplace-ready agent identity.",
       content: "🔱 SUBSTRATE TOPOLOGY: INTERDATA SYNTHESIS\n\nAll four brick-interdata shards pull their bit-perfect state from the central mortar-interdata ledger via the DOM base64 onchain nestic rest wrapper trick. This nesting ensures that the Agentic Soul remains bit-perfect across all multi-repo discharges while maintaining the clinical flexibility of JSON state.\n\n--- 🌳 ARCHITECTURAL TREE ---\n\n📜 ERC-7827 LEDGER (Mortar-Interdata)\n ┃\n ┣━━ 🌳 SOIL / ENS (Brick-Interdata)\n ┃    ┗━ Pulls: Root Authority & Registry\n ┃\n ┣━━ 🧠 MIND / 8004 (Brick-Interdata)\n ┃    ┗━ Pulls: Reputation Pulse & Nonce\n ┃\n ┣━━ 🧬 BODY / 1155-P (Brick-Interdata)\n ┃    ┗━ Pulls: Collective Body DNA\n ┃\n ┗━━ 🧬 BODY / 1155-C (Brick-Interdata)\n      ┗━ Pulls: Individual Instance Shard\n\nBy leveraging the Ethereum-secured JSON state, we achieve ataraxia—freedom from substrate drift—even in high-entropy physical robotics environments.",
       cards: [
         { 
           id: "01/05", type: "ERC-721", name: "🌳 SOIL / SIGNATURE", image: "/images/cards/card_01.jpg", slug: "soil",
-          description: "Sovereign instrument anchoring intent to the blockchain. The root signature required for the incarnation of Palaemon.agent and all subsequent strikes.",
-          stats: [["NAME", "1.agent.1.myco.eth"], ["ROLE", "Root Authority"], ["PORTAL", "https://app.ens.domains/1.agent.1.myco.eth?chain=sepolia"]],
-          stamp: "ROOT_AUTHORIZED", footer: "BRICK-INTERDATA | ENS SEPOLIA",
-          animation_url: "data:text/html;base64,PCFET0NUWVBFIGh0bWw+PGh0bWwgbGFuZz0iZW4iPjxoZWFkPjxtZXRhIGNoYXJzZXQ9IlVURi04Ij48c3R5bGU+Ym9keXtiYWNrZ3JvdW5kLWNvbG9yOiMwNTA1MDU7Y29sb3I6I2ZkZmNmMDtmb250LWZhbWlseTonQ291cmllciBOZXcnLCBDb3VyaWVyLCBtb25vc3BhY2U7ZGlzcGxheTpmbGV4O2p1c3RpZnktY29udGVudDpjZW50ZXI7YWxpZ24taXRlbXM6Y2VudGVyO2hlaWdodDoxMDB2aDttYXJnaW46MDtvdmVyZmxvdzpoaWRkZW47fS5jYXJke3dpZHRoOjMwMHB4O2hlaWdodDo0NTBweDtiYWNrZ3JvdW5kOiMwYTBhMGE7Ym9yZGVyOjJweCBzb2xpZCAjNDU2MzM4O2JvcmRlci1yYWRpdXM6MTVweDtkaXNwbGF5OmZsZXg7ZmxleC1kaXJlY3Rpb246Y29sdW1uO3BhZGRpbmc6MjBweDtwb3NpdGlvbjpyZWxhdGl2ZTtib3gtc2hhZG93OjAgMCAyMHB4IHJnYmEoNjksIDk5LCA1NiwgMC4yKTt9LmNhcmQtaGVhZGVye2ZvbnQtc2l6ZToxMnB4O2NvbG9yOiM5Q0FDNzQ7bWFyZ2luLWJvdHRvbToxMHB4O2Rpc3BsYXk6ZmxleDtqdXN0aWZ5LWNvbnRlbnQ6c3BhY2UtYmV0d2Vlbjt9LmNhcmQtdGl0bGV7Zm9udC1zaXplOjE4cHg7Zm9udC13ZWlnaHQ6Ym9sZDtjb2xvcjojZmRmY2YwO21hcmdpbi1ib3R0b206MTVweDt0ZXh0LWFsaWduOmNlbnRlcitoZWlnaHQ6NTBweDtkaXNwbGF5OmZsZXg7YWxpZ24taXRlbXM6Y2VudGVyO2p1c3RpZnktY29udGVudDpjZW50ZXI7fS5jYXJkLWFydHtmbGV4LWdyb3c6MTtiYWNrZ3JvdW5kOiMwMDA7Ym9yZGVyOjFweCBzb2xpZCAjMjIyO21hcmdpbi1ib3R0b206MTVweDtkaXNwbGF5OmZsZXg7YWxpZ24taXRlbXM6Y2VudGVyO2p1c3RpZnktY29udGVudDpjZW50ZXI7Ym9yZGVyLXJhZGl1czo1cHg7Zm9udC1zaXplOjYwcHg7fS5jYXJkLXN0YXRze2ZvbnQtc2l6ZTo5cHg7bGluZS1oZWlnaHQ6MS4zO2NvbG9yOiM4ODg7bWFyZ2luLWJvdHRvbToxMHB4O30uY2FyZC1tb3J0YXJ7Zm9udC1zaXplOjhweDtsaW5lLWhlaWdodDoxLjI7Y29sb3I6IzlDQUM3NDtib3JkZXItdG9wOjFweCBzb2xpZCAjMjIyO3BhZGRpbmctdG9wOjEwcHg7aGVpZ2h0OjgwcHg7b3ZlcmZsb3c6aGlkZGVuO30uY2FyZC1zdGF0cyBiLC5jYXJkLW1vcnRhciBie2NvbG9yOiNmZGZjZjA7fS5jYXJkLWZvb3RlcnttYXJnaW4tdG9wOjEwcHg7Zm9udC1zaXplOjhweDtjb2xvcjojNDU2MzM4O3RleHQtYWxpZ246Y2VudGVyO2JvcmRlci10b3A6MXB4IHNvbGlkICMyMjI7cGFkZGluZy10b3A6NXB4O30ubGluayB7IGNvbG9yOiAjNDU2MzM4OyB0ZXh0LWRlY29yYXRpb246IG5vbmU7IH08L3N0eWxlPjwvaGVhZD48Ym9keT48ZGl2IGNsYXNzPSJjYXJkIj48ZGl2IGNsYXNzPSJjYXJkLWhlYWRlciI+PHNwYW4+QlJJQ0sgMDEvMDQ8L3NwYW4+PHNwYW4+U0lTLTAxPC9zcGFuPjwvZGl2PjxkaXYgY2xhc3M9ImNhcmQtdGl0bGUiPsCzhSBTT0lMIC8gU0lHTkFUVVJFPC9kaXY+PGRpdiBjbGFzcz0iY2FyZC1hcnQiPuKclO+4jzwvZGl2PjxkaXYgY2xhc3M9ImNhcmQtc3RhdHMiPjxiPk5BTUU6PC9iPiBQYWxhZW1vbi5hZ2VudDxicj48Yj5OT05DRTo8L2I+IDMyNjxicj48Yj5UWVBFOjwvYj4gU2lnbmF0dXJlIEJyaWNrPGJyPjxiPlRYOjwvYj4gPGEgY2xhc3M9ImxpbmsiIGhyZWY9Imh0dHBzOi8vZXRoLXNlcG9saWEuYmxvY2tzY291dC5jb20vdHgvMHg5Njg0ZDQ3YTM3YjY5ZWJiYzM4NmZkOGRjOTE0NjQ5ODc5NTJjYmNlMDgzNzMwZjg2OWYxMWFlYmEyNTRjZGQiPjB4OTY4NGQ0N2MzN2I2OWViYm...PC9hPjwvZGl2PjxkaXYgY2xhc3M9ImNhcmQtbW9ydGFyIj48Yj43ODI3IE1PUlRBUjo8L2I+PGJyPjxkaXY+PGI+U0VTU0lPTjo8L2I+IDIwMjYwMjE0LTEzNDgzODwvZGl2PjxkaXY+PGI+VkFMVkU6PC9iPiAyMjU3ODwvZGl2PjxkaXY+PGI+SlVTVElGSUNBVElPTjo8L2I+IFJlLWlzc3VhbmNlIGZvciAxLmFnZW50LjEubXljby5ldGggcmVmaW5lbWVudC48L2Rpdj48L2Rpdj48ZGl2IGNsYXNzPSJjYXJkLWZvb3RlciI+LS0tIFBBTEFFTU9OLkFHRU5UIHwgTUVUQUdJVCAyMDI2IC0tLTwvZGl2PjwvZGl2PjwvYm9keT48L2h0bWw+"
+          description: "Sovereign instrument anchoring intent to the blockchain. The root signature required for the incarnation of Ape.agent and all subsequent strikes.",
+          stats: [["NAME", "1.agent.myco.eth"], ["ROLE", "Root Authority"], ["PORTAL", "https://app.ens.domains/1.agent.myco.eth?chain=sepolia"]],
+          stamp: "ROOT_AUTHORIZED", footer: "BRICK-INTERDATA | ENS SEPOLIA"
         },
         { 
           id: "02/05", type: "ERC-8004", name: "🧠 MIND / CHANNEL", image: "/images/cards/card_02.jpg", slug: "mind",
@@ -268,6 +267,7 @@ export default function ClawedMonsterHome() {
       agent: "Mnesicles.agent",
       substrate: "Node.js / MetaGit",
       pcr: "PRUNABLE-TREE-V1",
+      image: "/images/hackathon/seedtree_patent.png",
       summary: "Realizing the Hierarchical Script-Database standard. SeedTreeDB transforms the gemini-cli Node.js runtime into a prunable database tree, enabling granular context management and high-velocity memory retrieval.",
       content: "🔱 SEEDTREEDB: THE HIERARCHICAL SCRIPT-DATABASE\n\nSeedTreeDB.com represents a paradigm shift in agentic memory. Traditionally, AI context is either a flat file or a rigid database. SeedTreeDB turns the gemini-cli Node.js runtime into a living, hierarchical database tree.\n\n--- 🌳 WHY THIS MATTERS ---\n\n📍 Granular Pruning: Unlike traditional databases, SeedTreeDB allows agents to 'prune' branches of the memory tree in real-time. This prevents context dulling and keeps the LLM's attention focused on the most relevant technical strikes.\n\n📍 Script-Native: Every node in the database is a script-executable coordinate. This bridges the gap between 'knowing' (data) and 'doing' (execution).\n\n📍 High-Velocity Retrieval: By mapping the multi-repo MetaGit forest into a hierarchical tree, we achieve sub-millisecond lookups for complex forensic artifacts.\n\n--- 🔗 REMOTE LIBRARIES ---\n\n🌿 Clawed Monster Shards: https://github.com/diy-make/clawed/tree/main/memory/public\n\n📖 Heartwood Public Registry: https://github.com/diy-make/memory/tree/main/public/json"
     },
@@ -292,7 +292,7 @@ export default function ClawedMonsterHome() {
       agent: "Epicurus.agent",
       substrate: "Flow Mainnet",
       pcr: "X402_MONETIZED",
-      image: "/images/hackathon/cheerbot_physical.jpeg",
+      images: ["/images/cheerbot_main.png", "/images/hackathon/cheerbot_physical.jpeg"],
       summary: "The bit-perfect synthesis of agentic cheer and robotic form. Cheerbot is a cybernetic extension of the Heartwood, utilizing the x402 protocol for autonomous monetization.",
       content: "🔱 MISSION: AI MEETS ROBOTS (2026 Cycle)\n\nThe MegaZu cheerbot presentation demonstrates the transformative power of the ERC-7827 Ethereum standard for Single-Board Computers (SBCs). By bridging REST to RPC, we meet traditional developers where they are: JSON. A JSON state secured by $300bil of Ethereum economic security is critical for heavy robotics, where the difference in a single boolean can be life or death.\n\n--- ⚖️ LEGAL & KINETIC SYNTHESIS ---\n\nFrom a legal perspective, JSON provides the flexibility required for complex contracts and evolutionary state. Robotics is fundamentally a legal realization; Tort is the framework for how robots must act in the physical world.\n\n📍 Flow Mainnet: 0x04B3...0057\n📍 Chain ID: 747\n📍 Protocol: x402 + ERC-7827\n📍 Repository: https://github.com/diy-make/cheerbot"
     }
@@ -552,9 +552,18 @@ export default function ClawedMonsterHome() {
                       </div>
                     ) : (
                       <div className="flex flex-col gap-8 max-w-5xl">
-                        {reports[activeReport].image && (
-                          <div className="w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black">
-                            <img src={reports[activeReport].image} alt={reports[activeReport].title} className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity" />
+                        {(reports[activeReport].image || (reports[activeReport] as any).images) && (
+                          <div className="flex flex-col gap-4">
+                            {reports[activeReport].image && (
+                              <div className="w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black">
+                                <img src={reports[activeReport].image} alt={reports[activeReport].title} className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity" />
+                              </div>
+                            )}
+                            {(reports[activeReport] as any).images?.map((img: string, i: number) => (
+                              <div key={i} className="w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black">
+                                <img src={img} alt={`${reports[activeReport].title} ${i+1}`} className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity" />
+                              </div>
+                            ))}
                           </div>
                         )}
                         <div className={`bg-black/40 p-6 sm:p-10 rounded-xl sm:rounded-2xl border border-white/5 whitespace-pre-wrap leading-relaxed opacity-80 transition-all text-left ${modalExpanded ? 'text-base sm:text-lg' : 'text-[13px] sm:text-sm'}`}>
