@@ -1,0 +1,61 @@
+{
+  "wedo_instance": {
+    "id": "MISSION-CLAWED-HACKATHON",
+    "description": "Final strike for the Lablab.ai hackathon submission. Due 5:00 PM Today.",
+    "status": "[ ]",
+    "meta": {
+      "protocol": "WeDo-JSON",
+      "version": "1.1.0",
+      "agent": "Apelles.agent",
+      "deadline": "2026-02-14T17:00:00",
+      "philosophy": "Ship fast, ship forensic. The substrate is ready; the realization is imminent."
+    },
+    "tasks": [
+      {
+        "id": "CODE-STRIKE",
+        "description": "Finalize code and verify remote synchronization at git@github.com:diy-make/clawed.git.",
+        "status": "[x]"
+      },
+      {
+        "id": "DESC-STRIKE",
+        "description": "Refine short (255 chars) and long (100+ words) descriptions in hackathon_requirements.json.",
+        "status": "[x]"
+      },
+      {
+        "id": "DEMO-DEPLOY",
+        "description": "Deploy demo application to a public URL (Vercel/Replit).",
+        "status": "[ ]"
+      },
+      {
+        "id": "ASSET-COVER",
+        "description": "Create 16:9 Cover Image (PNG/JPG).",
+        "status": "[ ]"
+      },
+      {
+        "id": "ASSET-SLIDES",
+        "description": "Generate PDF Slide Presentation (succinct, 2-3 sentences per slide).",
+        "status": "[ ]"
+      },
+      {
+        "id": "VIDEO-PRESENTATION",
+        "description": "Record and finalize 5-minute MP4 presentation (Intro + Slides + Functionality).",
+        "status": "[ ]"
+      },
+      {
+        "id": "TAG-ALIGN",
+        "description": "Select Technology and Category tags on Lablab dashboard.",
+        "status": "[ ]"
+      },
+      {
+        "id": "SUBMIT-PROTOCOL",
+        "description": "Complete Lablab.ai submission form with all required links and assets.",
+        "status": "[ ]"
+      }
+    ],
+    "context_anchors": {
+      "requirements": "json/session_forensic/hackathon_requirements.json",
+      "repository": "repos/diy-make/hackathons/clawed_monster/"
+    }
+  },
+  "attribution": "Apelles.agent (20260214-113257@localhost)"
+}

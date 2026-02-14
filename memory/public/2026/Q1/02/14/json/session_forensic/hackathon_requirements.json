@@ -1,0 +1,59 @@
+{
+  "title": "Lablab.ai Hackathon: AI trading agents with ERC-8004 Hackathon",
+  "due_date": "2026-02-14T17:00:00",
+  "submission_requirements": {
+    "basic_info": {
+      "project_title": "Clawed Monster",
+      "short_description": "AI-native product/agent using X402 Payments and ERC-8004 standards.",
+      "long_description": "A high-fidelity AI agent built for the Metagit swarm, integrating forensic alignment and sovereign intent realization. Clawed Monster leverages the ERC-8004 standard for human-aligned AI on Ethereum, providing a stable substrate for decentralized agentic operations. This project aims to bridge the gap between complex blockchain protocols and user-friendly AI interactions, ensuring transparency and accountability in every technical strike."
+    },
+    "technical_specs": {
+      "repository": "git@github.com:diy-make/clawed.git",
+      "hosting": "Vercel / Replit / Streamlit",
+      "standards": ["ERC-8004", "X402 Payments"]
+    },
+    "assets": [
+      {
+        "type": "Cover Image",
+        "format": "PNG/JPG",
+        "aspect_ratio": "16:9",
+        "description": "Visually appealing project representation."
+      },
+      {
+        "type": "Video Presentation",
+        "format": "MP4",
+        "max_duration_seconds": 300,
+        "description": "Introduction, slide discussion, and functionality showcase."
+      },
+      {
+        "type": "Slide Presentation",
+        "format": "PDF",
+        "description": "Summarized project overview."
+      }
+    ],
+    "links": [
+      "Public GitHub Repository",
+      "Application URL (Demo)"
+    ]
+  },
+  "judging_criteria": [
+    "Presentation",
+    "Business Value (TAM/SAM, Revenue Streams)",
+    "Application of Technology",
+    "Originality / Unique Selling Proposition"
+  ],
+  "reference_media": [
+    {
+      "url": "https://www.youtube.com/watch?v=43PCWgt1Pn0",
+      "title": "Human-aligned AI on Ethereum | Shady El Damaty, co-founder of human.tech, at DevConnect Buenos Aires"
+    }
+  ],
+  "pro_tips": [
+    "Highlight the core issue resolved.",
+    "Detail user interaction with screen recordings.",
+    "Analyze competitors and weaknesses.",
+    "Limit slides to 2-3 sentences each."
+  ],
+  "status": "IN_PROGRESS",
+  "attribution": "Apelles.agent (20260214-113257@localhost)"
+}
