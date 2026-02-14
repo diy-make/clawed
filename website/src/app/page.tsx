@@ -68,6 +68,7 @@ export default function ClawedMonsterHome() {
 
   const handleCloseArchive = () => {
     setShowArchive(false);
+    setModalExpanded(false);
     setExpandedCard(null);
     router.push('/');
   };
@@ -92,6 +93,23 @@ export default function ClawedMonsterHome() {
     setShowFullImage(false);
     router.push(`/about/${reports[activeReport].slug}`);
   };
+
+  // Esc key listener
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        if (expandedCard) {
+          handleCloseCard();
+        } else if (modalExpanded) {
+          setModalExpanded(false);
+        } else if (showArchive) {
+          handleCloseArchive();
+        }
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [modalExpanded, showArchive, expandedCard]);
 
   useEffect(() => {
     const checkStoredAuth = () => {
@@ -177,7 +195,7 @@ export default function ClawedMonsterHome() {
       substrate: "Chrono-Fractal",
       pcr: "SURGE-OPENCLAW-2026",
       summary: "The definitive 10-day sprint for the SURGE × OpenClaw Hackathon. Documentation of the realization of the Clawed Monster from substrate maintenance to monetized TEE encapsulation.",
-      content: "🔱 MISSION: AI MEETS ROBOTS (SURGE × OPENCLAW 2026)\n\nThe bit-perfect record of our 10-day strike to tokenize the agent internet.\n\n--- 📈 HACKATHON CHRONOLOGY ---\n\n📍 Feb 4: [Launch] SURGE Hackathon opens. Initialized floral.monster 'Offers' (HUD Migration) to serve as the project's public face. https://github.com/diy-make/next-servers/commit/6bd46d1\n\n📍 Feb 6: [Connectivity] Cloudflare + AWS SSL strike achieved. floral triad (floral.monster, lib.floral.monster, pipe.floral.monster) harmonized for sovereign hosting.\n\n📍 Feb 8: [Identity] LNA-33X bit-packing standard realized. Replaced legacy 4-4-X codes to enable bit-perfect agent soul resolution. https://github.com/apemake/gem/commit/8dd308d\n\n📍 Feb 10: [Logic] Thucydides clinicalizes Nearly Trustless Inference (NTI) for the Zaibots JUBC protocol. Bridge between AI speed and block finality.\n\n📍 Feb 11: [Registry] Myco Alignment strike (1.agent.myco.eth). Migrated ENS soil to the unified reputation pulse. https://github.com/apemake/gem/commit/16ff815\n\n📍 Feb 13: [Substrate] Clawed Monster Initial Commit. Instantiated the TEE-encapsulated gatekeeper for the hackathon. https://github.com/diy-make/clawed/commit/2357405b\n\n📍 Feb 14: [Realization] x402 Monetization + Triad Audit. 5-NFT bundle anchored on Sepolia (0x7e85...206).\n\n--- 🔗 RESOURCES ---\n\n📜 Definitive Autobiography: https://github.com/diy-make/clawed/blob/main/memory/public/2026/Q1/02/14/json/20260214_Clawed_Monster_Hackathon_Biography.json\n\n⚖️ SIS-02 Protocol Update: https://github.com/diy-make/clawed/blob/main/comms/SIS-02_Cell_Agent_Dichotomy.md"
+      content: "🔱 MISSION: AI MEETS ROBOTS (SURGE × OPENCLAW 2026)\n\nThe bit-perfect record of our 10-day strike to tokenize the agent internet.\n\n--- 📈 HACKATHON CHRONOLOGY ---\n\n📍 Feb 4: [Launch] SURGE Hackathon opens. Initialized floral.monster 'Offers' (HUD Migration) to serve as the project's public face. https://github.com/diy-make/next-servers/commit/6bd46d1\n\n📍 Feb 6: [Connectivity] Cloudflare + AWS SSL strike achieved. floral triad (floral.monster, lib.floral.monster, pipe.floral.monster) harmonized for sovereign hosting.\n\n📍 Feb 8: [Identity] LNA-33X bit-packing standard realized. Replaced legacy 4-4-X codes to enable bit-perfect agent soul resolution. https://github.com/apemake/gem/commit/8dd308d\n\n📍 Feb 10: [Logic] Thucydides clinicalizes Nearly Trustless Inference (NTI) for the Zaibots JUBC protocol. Bridge between AI speed and block finality.\n\n📍 Feb 11: [Registry] Myco Alignment strike (1.agent.myco.eth). Migrated ENS soil to the unified reputation pulse. https://github.com/apemake/gem/commit/16ff815\n\n📍 Feb 13: [Substrate] Clawed Monster Initial Commit. Instantiated the TEE-encapsulated gatekeeper for the hackathon. https://github.com/diy-make/clawed/commit/2357405b\n\n📍 Feb 14: [Realization] x402 Monetization + Moltbook Sync + Triad Audit. 5-NFT bundle anchored on Sepolia (0x7e85...206).\n\n--- 🔗 RESOURCES ---\n\n📜 Definitive Autobiography: https://github.com/diy-make/clawed/blob/main/memory/public/2026/Q1/02/14/json/20260214_Clawed_Monster_Hackathon_Biography.json\n\n⚖️ SIS-02 Protocol Update: https://github.com/diy-make/clawed/blob/main/comms/SIS-02_Cell_Agent_Dichotomy.md"
     },
     {
       id: "Monetization_Engine",
@@ -416,7 +434,7 @@ export default function ClawedMonsterHome() {
           <div 
             className={`relative bg-[#0a0a0a] border border-white/20 rounded-2xl sm:rounded-3xl overflow-hidden flex flex-col shadow-2xl transition-all duration-500 ${modalExpanded ? 'w-[98vw] h-[98vh]' : 'w-full max-w-6xl h-[90vh] sm:h-[85vh]'}`}
           >
-            <div className="p-4 sm:p-6 border-b border-white/10 flex justify-between items-center bg-black/60 shrink-0">
+            <div className={`p-4 sm:p-6 border-b border-white/10 flex justify-between items-center bg-black/60 shrink-0 ${modalExpanded ? 'hidden' : 'flex'}`}>
               <div className="flex items-center gap-3 sm:gap-4">
                 <button onClick={() => setNavCollapsed(!navCollapsed)} className="hidden sm:block p-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg transition-all">
                   {navCollapsed ? <ChevronRight size={16} /> : <ChevronLeft size={16} />}
@@ -435,7 +453,7 @@ export default function ClawedMonsterHome() {
             </div>
 
             <div className="flex-1 flex flex-col sm:flex-row overflow-hidden">
-              <aside className={`border-b sm:border-b-0 sm:border-r border-white/10 bg-black/40 overflow-x-auto sm:overflow-y-auto p-2 sm:p-4 flex sm:flex-col gap-2 shrink-0 transition-all duration-500 ${navCollapsed ? 'sm:w-0 sm:p-0 sm:border-none' : 'w-full sm:w-80'}`}>
+              <aside className={`border-b sm:border-b-0 sm:border-r border-white/10 bg-black/40 overflow-x-auto sm:overflow-y-auto p-2 sm:p-4 flex sm:flex-col gap-2 shrink-0 transition-all duration-500 ${(navCollapsed || modalExpanded) ? 'hidden' : 'w-full sm:w-80'}`}>
                 {reports.map((report, idx) => (
                   <button key={report.id} onClick={() => handleSelectReport(idx)} className={`whitespace-nowrap sm:whitespace-normal text-left p-3 sm:p-4 rounded-xl transition-all border ${activeReport === idx ? 'bg-[#ECCA90]/10 border-[#ECCA90]/40' : 'hover:bg-white/5 border-transparent opacity-40'}`}>
                     <div className="flex items-center gap-2 sm:gap-3">
