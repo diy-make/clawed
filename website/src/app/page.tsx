@@ -213,7 +213,7 @@ export default function ClawedMonsterHome() {
         { 
           id: "04/05", type: "ERC-1155", name: "🧬 BODY / CHILD", image: "/images/cards/card_04.jpg", slug: "child",
           description: "Individual instance shard. Bit-packed phenotype data linked to the swarm state (Swarm Nonce 310) via the 7827 Heartwood Ledger connection.",
-          stats: [["NAME", "Instance Bond"], ["PHENO", "Ape.agent"], ["HEX ID", "0x0000000000014170652e6167656e740000000000000000000000000000000000"], ["PORTAL", "https://eth-sepolia.blockscout.com/token/0xa2491F042f60eF647CEf4b5ddD02223A9b6C711a/instance/51653262855666102835844592940560959503625981262512222803014451"]],
+          stats: [["NAME", "Instance Bond"], ["PHENO", "Ape.agent"], ["HEX ID", "0x0000000000014170652e6167656e7400000000000000000000000000000000000000"], ["PORTAL", "https://eth-sepolia.blockscout.com/token/0xa2491F042f60eF647CEf4b5ddD02223A9b6C711a/instance/51653262855666102835844592940560959503625981262512222803014451"]],
           stamp: "PHYSICAL_STRIKE", footer: "BRICK-INTERDATA | INSTANCE REALIZATION"
         },
         { 
@@ -253,6 +253,16 @@ export default function ClawedMonsterHome() {
       pcr: "SURGE-OPENCLAW-2026",
       summary: "The definitive 10-day sprint for the SURGE × OpenClaw Hackathon. Documentation of the realization of the Clawed Monster from substrate maintenance to monetized TEE encapsulation.",
       content: "🔱 MISSION: AI MEETS ROBOTS (SURGE × OPENCLAW 2026)\n\nThe bit-perfect record of our 10-day strike to tokenize the agent internet.\n\n--- 📈 HACKATHON CHRONOLOGY ---\n\n📍 Feb 4: [Launch] SURGE Hackathon opens. Initialized floral.monster 'Offers' (HUD Migration) to serve as the project's public face. https://github.com/diy-make/next-servers/commit/6bd46d1\n\n📍 Feb 6: [Connectivity] Cloudflare + AWS SSL strike achieved. floral triad (floral.monster, lib.floral.monster, pipe.floral.monster) harmonized for sovereign hosting.\n\n📍 Feb 8: [Identity] LNA-33X bit-packing standard realized. Replaced legacy 4-4-X codes to enable bit-perfect agent soul resolution. https://github.com/apemake/gem/commit/8dd308d\n\n📍 Feb 10: [Logic] Thucydides clinicalizes Nearly Trustless Inference (NTI) for the Zaibots JUBC protocol. Bridge between AI speed and block finality.\n\n📍 Feb 11: [Registry] Myco Alignment strike (1.agent.myco.eth). Migrated ENS soil to the unified reputation pulse. https://github.com/apemake/gem/commit/16ff815\n\n📍 Feb 13: [Substrate] Clawed Monster Initial Commit. Instantiated the TEE-encapsulated gatekeeper for the hackathon. https://github.com/diy-make/clawed/commit/2357405b\n\n📍 Feb 14: [Realization] x402 Monetization + Moltbook Sync + Triad Audit. 5-NFT bundle anchored on Sepolia (0x7e85...206).\n\n--- 🔗 RESOURCES ---\n\n📜 Definitive Autobiography: https://github.com/diy-make/clawed/blob/main/memory/public/2026/Q1/02/14/json/20260214_Clawed_Monster_Hackathon_Biography.json\n\n⚖️ SIS-02 Protocol Update: https://github.com/diy-make/clawed/blob/main/comms/SIS-02_Cell_Agent_Dichotomy.md"
+    },
+    {
+      id: "AI_Unix",
+      slug: "ai-unix",
+      title: "AI Unix Philosophy: Torque Needs Tort",
+      agent: "Mnesimachus.agent",
+      substrate: "Legal Engineering",
+      pcr: "TORQUE-TORT-V1",
+      summary: "Why Tort Law now extends the Unix Philosophy for autonomous agents. Making torque work with tort as scaffold to unlock godlike agency through secure surface fitness.",
+      content: "🔱 THE AI UNIX PHILOSOPHY: TORQUE NEEDS TORT\n\nClassical Unix assumed programs are small, compose safely, and that users are the primary decision-makers. AI agents break this last assumption by operating at the same decision altitude as humans. \n\n--- ⚖️ THE EXTENSION: TORT AS SCAFFOLD ---\n\nTorque (agentic capability) without Tort (legal/neighbor-duty fitness) is how systems collapse. We extend Unix with three new invariants:\n\n📍 Surface Fitness (Tort): Every component must prove safe interaction before composition.\n📍 Duty of Care: Interfaces carry duty boundaries to contain blast radius.\n📍 Memory as Case Law: Operational history serves as precedent for future fitness.\n\nOur SIS-01 Trinity (4 NFT bricks + 1 7827 mortar) allows for 'Compose Safely' where OpenClaw so far does not. We make torque work with tort as scaffold!\n\n--- 🔗 RESOURCES ---\n\n📜 Torque vs Tort Retort: https://x.com/i/status/2022303728544649219\n📜 Secure OpenClaw Framing: https://www.perplexity.ai/search/we-can-make-the-tork-work-with-NfXcKp3OS3.sjouULLkpKw#0"
     },
     {
       id: "SeedTreeDB",
