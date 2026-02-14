@@ -1084,3 +1084,18 @@ https://nextjs.org/docs/messages/module-not-found
  GET /about/mind [32m200[39m in 75ms[2m (compile: 46ms, render: 29ms)[22m
  GET /about/identity [32m200[39m in 84ms[2m (compile: 55ms, render: 29ms)[22m
  GET /about/parent [32m200[39m in 74ms[2m (compile: 47ms, render: 26ms)[22m
+[32m[1m✓[22m[39m Compiled in 96ms
+[32m[1m✓[22m[39m Compiled in 38ms
+[32m[1m✓[22m[39m Compiled in 39ms
+[32m[1m✓[22m[39m Compiled in 110ms
+ GET /about/parent [32m200[39m in 437ms[2m (compile: 210ms, render: 228ms)[22m
+[32m[1m✓[22m[39m Compiled in 65ms
+ GET /about/identity [32m200[39m in 220ms[2m (compile: 173ms, render: 47ms)[22m
+ GET /about/soil [32m200[39m in 70ms[2m (compile: 40ms, render: 29ms)[22m
+ GET /about/identity [32m200[39m in 90ms[2m (compile: 51ms, render: 39ms)[22m
+ GET /about/mind [32m200[39m in 77ms[2m (compile: 51ms, render: 25ms)[22m
+ GET /about/identity [32m200[39m in 86ms[2m (compile: 51ms, render: 35ms)[22m
+ GET / [32m200[39m in 156ms[2m (compile: 119ms, render: 37ms)[22m
+ GET /about [32m200[39m in 121ms[2m (compile: 65ms, render: 56ms)[22m
+ GET /about/identity [32m200[39m in 53ms[2m (compile: 29ms, render: 24ms)[22m
+ GET / [32m200[39m in 160ms[2m (compile: 18ms, render: 142ms)[22m

@@ -34,6 +34,7 @@ export default function ClawedMonsterHome() {
   const [navCollapsed, setNavCollapsed] = useState(false);
   const [modalExpanded, setModalExpanded] = useState(false);
   const [expandedCard, setExpandedCard] = useState<any>(null);
+  const [showFullImage, setShowFullImage] = useState(false);
 
   // Sync state with URL
   useEffect(() => {
@@ -88,6 +89,7 @@ export default function ClawedMonsterHome() {
 
   const handleCloseCard = () => {
     setExpandedCard(null);
+    setShowFullImage(false);
     router.push(`/about/${reports[activeReport].slug}`);
   };
 
@@ -520,8 +522,9 @@ export default function ClawedMonsterHome() {
             </p>
 
             <div 
-              className="bg-[#000] border border-[#222] rounded-lg overflow-hidden mb-8 aspect-[4/5] sm:aspect-square flex items-center justify-center cursor-zoom-in relative group"
-              onClick={() => window.open(expandedCard.image, '_blank')}
+              className="bg-[#000] border border-[#222] rounded-lg overflow-hidden mb-8 flex items-center justify-center cursor-zoom-in relative group"
+              onClick={() => setShowFullImage(true)}
+              style={{ width: '100%', aspectRatio: '1/1', minHeight: '300px' }}
             >
               <img src={expandedCard.image} alt={expandedCard.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
@@ -560,6 +563,27 @@ export default function ClawedMonsterHome() {
                 {expandedCard.footer}
               </div>
             </div>
+
+            {showFullImage && (
+              <div 
+                className="fixed inset-0 z-[210] flex items-center justify-center bg-black/95 animate-in fade-in duration-200"
+                onClick={(e) => { e.stopPropagation(); setShowFullImage(false); }}
+              >
+                <div className="relative w-full h-full flex items-center justify-center p-4">
+                  <img 
+                    src={expandedCard.image} 
+                    alt={expandedCard.name} 
+                    className="max-w-full max-h-full object-contain shadow-2xl animate-in zoom-in-90 duration-300"
+                  />
+                  <button 
+                    onClick={() => setShowFullImage(false)}
+                    className="absolute top-6 right-6 p-3 bg-white/10 hover:bg-white/20 rounded-full transition-all text-white border border-white/20"
+                  >
+                    <X size={32} />
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       )}
