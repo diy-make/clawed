@@ -111,6 +111,17 @@ export default function ClawedMonsterHome() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [modalExpanded, showArchive, expandedCard]);
 
+  // Handle content area clicks
+  const handleContentClick = (e: React.MouseEvent) => {
+    if (modalExpanded) {
+      const target = e.target as HTMLElement;
+      // If user clicked something that isn't a link or an image
+      if (target.tagName !== 'A' && target.tagName !== 'IMG' && !target.closest('a') && !target.closest('img')) {
+        setModalExpanded(false);
+      }
+    }
+  };
+
   useEffect(() => {
     const checkStoredAuth = () => {
       const authId = localStorage.getItem('authorized_id');
@@ -475,7 +486,10 @@ export default function ClawedMonsterHome() {
                 ))}
               </aside>
 
-              <main className="flex-1 min-w-0 overflow-y-auto p-6 sm:p-12 space-y-8 custom-scrollbar bg-gradient-to-b from-transparent to-black/40 text-left">
+              <main 
+                onClick={handleContentClick}
+                className="flex-1 min-w-0 overflow-y-auto p-6 sm:p-12 space-y-8 custom-scrollbar bg-gradient-to-b from-transparent to-black/40 text-left"
+              >
                 <header className="bg-gradient-to-r from-[#ECCA90]/10 to-transparent p-6 sm:p-8 rounded-2xl sm:rounded-3xl border-l-4 border-[#ECCA90] space-y-4 shadow-xl">
                   <div className="flex items-center gap-3 text-[#ECCA90]">
                     <ShieldCheck size={20} />
