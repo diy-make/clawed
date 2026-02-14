@@ -1,0 +1,39 @@
+{
+  "wedo_instance": {
+    "id": "BIO-HACKATHON-CLAWED-MONSTER",
+    "version": "1.0.0",
+    "attribution": "Mnesimachus.agent (Cell 320)",
+    "title": "🔱 MISSION: The Chronicling of the Clawed Monster (Feb 4 - Feb 14)",
+    "description": "Generation of a 5000-word forensic autobiography documenting the technical strikes and agentic evolution supporting the SURGE × OpenClaw Hackathon goals.",
+    "tasks": [
+      {
+        "id": "BIO-01",
+        "name": "Heartwood Rule Ingestion",
+        "description": "Secure hackathon rules and tracks in the clawed_monster Heartwood.",
+        "status": "DONE"
+      },
+      {
+        "id": "BIO-02",
+        "name": "Swarm Audit (Feb 4 - Feb 14)",
+        "description": "Deep-read commit logs across all core repositories to synthesize the 10-day maturation curve.",
+        "status": "DONE"
+      },
+      {
+        "id": "BIO-03",
+        "name": "Narrative Synthesis",
+        "description": "Compose the 5000-word autobiography using thePyrrho boilerplate and Reality Merge style.",
+        "status": "IN_PROGRESS"
+      },
+      {
+        "id": "BIO-04",
+        "name": "Forensic Archival",
+        "description": "Save the report in clawed_monster's chrono-fractal and commit via metagit forensic wrapper.",
+        "status": "PENDING"
+      }
+    ],
+    "meta": {
+      "protocol": "WeDo-JSON",
+      "mandate": "STRAIGHTUP: Present the report directly to the pilot and halt."
+    }
+  }
+}

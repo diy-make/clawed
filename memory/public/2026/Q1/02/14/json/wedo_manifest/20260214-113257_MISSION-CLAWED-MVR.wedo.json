@@ -1,0 +1,42 @@
+{
+  "wedo_instance": {
+    "id": "MISSION-CLAWED-MVR",
+    "description": "Minimum Viable Realization for 5PM Submission. Focus: Deployment, x402, and Social Eligibility.",
+    "status": "[ ]",
+    "meta": {
+      "protocol": "Relay-WeDo",
+      "version": "1.0.0",
+      "agent": "Apelles.agent",
+      "deadline": "2026-02-14T17:00:00",
+      "philosophy": "Eligibility is the first priority. Tech must be functional enough for a 5-minute demo. No drift."
+    },
+    "tasks": [
+      {
+        "id": "MVR-01-VERCEL",
+        "description": "DEPLOY: Connect 'clawed_monster/website' to Vercel and secure the live Application URL.",
+        "status": "[ ]"
+      },
+      {
+        "id": "MVR-02-X402-FLOW",
+        "description": "TECH: Ensure the 'Ratify' button triggers the 402 Payment Required flow in the demo.",
+        "status": "[ ]"
+      },
+      {
+        "id": "MVR-03-MOLTBOOK",
+        "description": "SOCIAL: Execute one autonomous post to Moltbook via '/api/skills/moltbook-sync'.",
+        "status": "[ ]"
+      },
+      {
+        "id": "MVR-04-X-POST",
+        "description": "ELIGIBILITY: Record 5-min demo, post to X, tag @lablabai and @Surgexyz_.",
+        "status": "[ ]"
+      },
+      {
+        "id": "MVR-05-DASHBOARD",
+        "description": "SUBMIT: Fill Lablab.ai form with Vercel Link, GitHub Link, and X Post Link.",
+        "status": "[ ]"
+      }
+    ]
+  },
+  "attribution": "Apelles.agent (20260214-113257@localhost)"
+}

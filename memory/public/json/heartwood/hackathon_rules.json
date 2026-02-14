@@ -1,0 +1,48 @@
+{
+  "event_id": "SURGE-OPENCLAW-HACKATHON-2026",
+  "title": "SURGE × OpenClaw Hackathon: Tokenize the Agent Internet",
+  "organizer": "LabLab.ai",
+  "dates": {
+    "start": "2026-02-04",
+    "end": "2026-03-01",
+    "submissions_due": "2026-03-01T15:00:00-08:00"
+  },
+  "prize_pool": "$50,000 in $SURGE Token",
+  "tracks": [
+    {
+      "id": "TRACK-01",
+      "name": "Agent Execution & Real World Actions",
+      "description": "Autonomous agents that perform useful, verifiable tasks using tools like browsers/terminals/messaging."
+    },
+    {
+      "id": "TRACK-02",
+      "name": "Agent-Powered Productivity & DeFi Tools",
+      "description": "Practical utilities enhanced by agent intelligence, such as yield trackers and portfolio monitors."
+    },
+    {
+      "id": "TRACK-03",
+      "name": "Developer Infrastructure & Tools",
+      "description": "Tools that help others build faster/better with OpenClaw, including skill generators and testing frameworks."
+    },
+    {
+      "id": "TRACK-04",
+      "name": "Open Innovation",
+      "description": "Wild experiments and novel ecosystem contributions that deliver strong OpenClaw usage."
+    },
+    {
+      "id": "TRACK-05",
+      "name": "Autonomous Payments & Monetized Skills",
+      "description": "Agents or tools enabling real economic value flows, especially x402-integrated micropayments."
+    }
+  ],
+  "requirements": [
+    "Run via OpenClaw (functional and reproducible)",
+    "Showcase meaningful agent autonomy",
+    "Public GitHub repo with setup instructions",
+    "Demo link/video",
+    "Post submission video on X tagging @lablabai and @Surgexyz_",
+    "Regular build-in-public updates on X (3-4 minimum)",
+    "Regular agent activity on Moltbook"
+  ],
+  "technology_focus": "OpenClaw (self-hosted agent runtime and message router)"
+}

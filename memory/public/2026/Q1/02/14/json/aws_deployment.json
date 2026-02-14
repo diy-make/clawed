@@ -1,0 +1,27 @@
+{
+  "substrate": {
+    "aws": {
+      "instance_id": "i-02b246be61081608b",
+      "public_ip": "98.87.28.157",
+      "remote_user": "ubuntu",
+      "remote_path": "~/gemini",
+      "key_path": "~/.ssh/eustathius-key.pem"
+    },
+    "sync": {
+      "include": [
+        "diy-make/hackathons/clawed_monster",
+        "diy-make/memory",
+        "diy-make/next-servers/aws",
+        "diy-make/next-servers/floral-monster"
+      ]
+    },
+    "deployment": {
+      "zone": "floral.monster",
+      "subdomain": "clawed",
+      "port": 3000
+    },
+    "commands": {
+      "restart": "cd ~/gemini/repos/diy-make/hackathons/clawed_monster/website && npm install && npm run build && pm2 restart clawed-monster || pm2 start npm --name 'clawed-monster' -- run start"
+    }
+  }
+}

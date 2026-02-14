@@ -1,0 +1,47 @@
+{
+  "wedo_instance": {
+    "id": "MISSION-CLAWED-HACKATHON-VELOCITY",
+    "description": "High-velocity strike for Lablab.ai. Focusing on x402 monetized skills and Heartwood persistent memory.",
+    "status": "[ ]",
+    "meta": {
+      "protocol": "Relay-WeDo",
+      "version": "1.6.0",
+      "agent": "Apelles.agent",
+      "deadline": "2026-02-14T17:00:00",
+      "philosophy": "Speed over complexity. Realize the economic flow, secure the memory, and ship the video. WIPO validation deferred to Post-Submission cycle."
+    },
+    "tasks": [
+      {
+        "id": "VEL-01-X402-PORT",
+        "description": "TECHNICAL: Finalize the 402 Payment flow in '/api/skills/forensic-strike'. Ensure micro-payments trigger technical strikes.",
+        "status": "[ ]"
+      },
+      {
+        "id": "VEL-02-CHRONO-MAPPING",
+        "description": "TECHNICAL: Anchor OpenClaw task state into the Feb 14 Chrono-Fractal node (memory/public/).",
+        "status": "[x]"
+      },
+      {
+        "id": "VEL-03-VERCEL-STRIKE",
+        "description": "INFRASTRUCTURE: Deploy 'clawed_monster/website' to Vercel. Secure the mandatory Application URL.",
+        "status": "[ ]"
+      },
+      {
+        "id": "VEL-04-NARRATIVE-STRIKE",
+        "description": "MULTIMEDIA: Record 5-min technical video. Focus on the 'Clawed Monster' HUD and x402 monetization.",
+        "status": "[ ]"
+      },
+      {
+        "id": "VEL-05-SOCIAL-SUBMIT",
+        "description": "SUBMISSION: Post to X (@lablabai @Surgexyz_), post to Moltbook, and complete the Lablab dashboard.",
+        "status": "[ ]"
+      }
+    ],
+    "context_anchors": {
+      "cheerbot_x402": "repos/cheerbotme/webmonetization/",
+      "deployment": "https://vercel.com",
+      "memory_root": "repos/diy-make/hackathons/clawed_monster/memory/"
+    }
+  },
+  "attribution": "Apelles.agent (20260214-113257@localhost)"
+}

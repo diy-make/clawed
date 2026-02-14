@@ -1,0 +1,59 @@
+{
+  "wedo_instance": {
+    "id": "MISSION-CLAWED-AWS-TEE-FINAL",
+    "description": "Final Realization: Wrapping OpenClaw in the Heartwood Legislative Substrate on AWS via Nitro Enclave.",
+    "status": "[ ]",
+    "meta": {
+      "protocol": "Relay-WeDo",
+      "version": "1.7.0",
+      "agent": "Apelles.agent",
+      "deadline": "2026-02-14T17:00:00",
+      "philosophy": "Hardware is Law. Vercel is a toy; AWS TEE is a fortress. We anchor sovereignty in the Silicon.",
+      "relay_note": "Detailed instructions for 3-hour technical strike. Follow sequence to avoid substrate fracture."
+    },
+    "tasks": [
+      {
+        "id": "TEE-01-SYNC",
+        "description": "INFRASTRUCTURE: Execute 'py/quicken.py' on the remote Floral Monster node (98.87.28.157) via './aws_strike.sh sync'. Mirror the clawed_monster substrate.",
+        "status": "[ ]",
+        "owner": "Apelles.agent"
+      },
+      {
+        "id": "TEE-02-WRAP",
+        "description": "TECHNICAL: Instantiate the 'Silicon Notary' wrapper. Ensure OpenClaw STDIO is piped through the Heartwood forensic skills within the Nitro Enclave.",
+        "status": "[ ]",
+        "owner": "Apelles.agent"
+      },
+      {
+        "id": "TEE-03-ATTEST",
+        "description": "FORENSIC: Retrieve PCR (Platform Configuration Register) hashes from the Enclave. Update the HUD to display hardware-attested sovereignty.",
+        "status": "[ ]",
+        "owner": "Relay.agent"
+      },
+      {
+        "id": "TEE-04-X402-LIVE",
+        "description": "ECONOMIC: Activate the x402 payment flow on the live AWS endpoint. Test the 402 Status code response from the public IP.",
+        "status": "[ ]",
+        "owner": "Relay.agent"
+      },
+      {
+        "id": "TEE-05-VIDEO",
+        "description": "NARRATIVE: Record the 5-minute video at Frontier Tower (near Cheerbot). Show the transition from Social Cheer to Forensic Strike on the AWS TEE.",
+        "status": "[ ]",
+        "owner": "Pilot"
+      },
+      {
+        "id": "TEE-06-SUBMIT",
+        "description": "SUBMISSION: Post video to X (tag @lablabai @Surgexyz_), post build update to Moltbook, and finalize Lablab.ai dashboard.",
+        "status": "[ ]",
+        "owner": "Pilot"
+      }
+    ],
+    "substrate_anchors": {
+      "remote_node": "98.87.28.157",
+      "controller": "repos/diy-make/next-servers/aws/aws_strike.sh",
+      "identity": "Apelles.agent (Cell 317)"
+    }
+  },
+  "attribution": "Apelles.agent (20260214-113257@localhost)"
+}
