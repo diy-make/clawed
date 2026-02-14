@@ -28,7 +28,7 @@ export default function ClawedMonsterHome() {
   
   // Modal Interaction State
   const [navCollapsed, setNavCollapsed] = useState(false);
-  const [summaryExpanded, setSummaryExpanded] = useState(false);
+  const [modalExpanded, setModalExpanded] = useState(false);
 
   useEffect(() => {
     const checkStoredAuth = () => {
@@ -122,7 +122,7 @@ export default function ClawedMonsterHome() {
   ];
 
   return (
-    <div className="h-screen w-full bg-[#050505] text-[#fdfcf0] font-sans selection:bg-emerald-500/30 relative overflow-hidden flex flex-col p-4 md:p-8">
+    <div className="min-h-screen w-full bg-[#050505] text-[#fdfcf0] font-sans selection:bg-emerald-500/30 relative flex flex-col p-4 md:p-6 overflow-y-auto custom-scrollbar">
       
       {/* 🖼️ THE SUBSTRATE */}
       <div className="fixed inset-0 z-0">
@@ -133,7 +133,7 @@ export default function ClawedMonsterHome() {
         <div className="absolute inset-0 bg-black/50" />
       </div>
 
-      <div className="relative z-20 flex-1 flex flex-col overflow-hidden">
+      <div className="relative z-20 flex-1 flex flex-col">
         
         {/* TOP BAR TILES */}
         <nav className="flex justify-between items-start gap-4 mb-4 shrink-0">
@@ -158,31 +158,31 @@ export default function ClawedMonsterHome() {
         </nav>
 
         {/* CONTENT FIELD */}
-        <div className="flex-1 overflow-hidden flex flex-col">
+        <div className="flex-1 flex flex-col justify-center">
           {!isAuthorized ? (
-            <div className="flex-1 flex flex-col items-center justify-center text-center space-y-8 py-4">
+            <div className="flex flex-col items-center justify-center text-center space-y-6 py-2">
               <button 
                 disabled={loading}
                 onClick={connectWallet}
-                className="group relative w-64 h-64 md:w-80 md:h-80 bg-black/40 border border-white/20 rounded-full flex flex-col items-center justify-center gap-4 transition-all duration-700 hover:border-red-600/50 hover:shadow-[0_0_80px_rgba(220,38,38,0.3)] overflow-hidden backdrop-blur-md shrink-0"
+                className="group relative w-56 h-56 md:w-64 md:h-64 bg-black/40 border border-white/20 rounded-full flex flex-col items-center justify-center gap-4 transition-all duration-700 hover:border-red-600/50 hover:shadow-[0_0_80px_rgba(220,38,38,0.3)] overflow-hidden backdrop-blur-md shrink-0"
               >
                 <div className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-30 transition-opacity duration-700 grayscale" style={{ backgroundImage: "url('/images/claw_03.jpg')" }} />
-                {loading ? <Loader2 size={56} className="text-[#ECCA90] animate-spin" /> : <Lock size={64} className="text-white/40 group-hover:text-red-600 transition-colors" />}
-                <span className="text-[11px] font-black uppercase tracking-[0.5em] text-white/40 group-hover:text-white">Initiate Strike</span>
+                {loading ? <Loader2 size={48} className="text-[#ECCA90] animate-spin" /> : <Lock size={56} className="text-white/40 group-hover:text-red-600 transition-colors" />}
+                <span className="text-[10px] font-black uppercase tracking-[0.5em] text-white/40 group-hover:text-white">Initiate Strike</span>
               </button>
-              <div className="space-y-2">
-                <h2 className="text-6xl md:text-8xl font-black tracking-tighter uppercase text-white">Sovereign Gate</h2>
+              <div className="space-y-1 px-4">
+                <h2 className="text-5xl md:text-7xl font-black tracking-tighter uppercase text-white leading-tight py-1">Sovereign Gate</h2>
                 <p className="text-[10px] font-black tracking-[1em] uppercase text-red-600 animate-pulse">Attestation Required</p>
               </div>
             </div>
           ) : (
-            <div className="flex-1 grid grid-cols-1 lg:grid-cols-4 gap-4 items-stretch overflow-hidden py-2">
-              <div className="bg-black/40 p-5 rounded-xl border border-white/10 backdrop-blur-xl flex flex-col gap-4 overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 items-start py-2">
+              <div className="bg-black/40 p-5 rounded-xl border border-white/10 backdrop-blur-xl flex flex-col gap-4">
                 <div className="flex items-center gap-2 opacity-60">
                   <Activity size={14} className="text-[#9CAC74]" />
                   <h3 className="text-[9px] font-black tracking-[0.3em] uppercase">Metrics</h3>
                 </div>
-                <div className="space-y-3 overflow-y-auto custom-scrollbar">
+                <div className="space-y-3">
                   {[["Heat", "Nominal"], ["Orch", "MetaGit"], ["Sub", "Heartwood"]].map(([k,v]) => (
                     <div key={k} className="flex justify-between border-b border-white/5 pb-1">
                       <span className="text-[8px] uppercase opacity-40">{k}</span>
@@ -192,15 +192,15 @@ export default function ClawedMonsterHome() {
                 </div>
               </div>
 
-              <article className="lg:col-span-2 bg-black/40 p-8 rounded-2xl border border-white/10 backdrop-blur-md shadow-2xl flex flex-col gap-6 overflow-hidden">
+              <article className="lg:col-span-2 bg-black/40 p-8 rounded-2xl border border-white/10 backdrop-blur-md shadow-2xl flex flex-col gap-6">
                 <header className="border-l-4 border-emerald-500 pl-4 shrink-0">
                   <h2 className="text-3xl font-black tracking-tighter uppercase text-white">Grafting Lobster</h2>
                 </header>
-                <div className="flex-1 overflow-y-auto custom-scrollbar pr-2">
-                  <p className="text-[14px] italic font-serif opacity-80 leading-relaxed mb-6">
+                <div className="space-y-6">
+                  <p className="text-[14px] italic font-serif opacity-80 leading-relaxed">
                     {reports[0].summary}
                   </p>
-                  <div className="grid grid-cols-3 gap-3 text-center mb-6">
+                  <div className="grid grid-cols-3 gap-3 text-center">
                     {["The Claw", "The Bloom", "The Root"].map(t => (
                       <div key={t} className="p-3 rounded-lg bg-red-950/20 border border-red-900/30 text-[9px] font-black uppercase">{t}</div>
                     ))}
@@ -208,12 +208,12 @@ export default function ClawedMonsterHome() {
                 </div>
               </article>
 
-              <div className="bg-[#ECCA90]/5 p-5 rounded-xl border border-[#ECCA90]/20 flex flex-col gap-4 overflow-hidden">
+              <div className="bg-[#ECCA90]/5 p-5 rounded-xl border border-[#ECCA90]/20 flex flex-col gap-4">
                 <div className="flex items-center gap-2 opacity-60">
                   <Zap size={14} className="text-[#ECCA90]" />
                   <h3 className="text-[9px] font-black tracking-[0.3em] uppercase text-[#ECCA90]">Tactical</h3>
                 </div>
-                <div className="space-y-3 overflow-y-auto custom-scrollbar">
+                <div className="space-y-3">
                   {[["Interception", "SECURED"], ["Alignment", "ACTIVE"], ["Attestation", "PENDING"]].map(([k, s]) => (
                     <div key={k} className="flex items-center gap-2 border-b border-white/5 pb-1">
                       {s === "PENDING" ? <Loader2 size={10} className="text-[#ECCA90] animate-spin" /> : <CheckCircle2 size={10} className="text-emerald-400" />}
@@ -227,7 +227,7 @@ export default function ClawedMonsterHome() {
         </div>
 
         {/* FOOTER SYMBOLS */}
-        <footer className="mt-4 shrink-0 flex justify-between items-end">
+        <footer className="mt-4 shrink-0 flex justify-between items-end pb-4">
           <div className="bg-black/30 p-6 rounded-xl border border-white/10 backdrop-blur-md flex flex-col items-center">
             <pre className="text-[4px] md:text-[5px] leading-[1.1] font-black opacity-90 text-[#ECCA90] text-center w-full">
 {` ███╗   ███╗ █████╗ ██╗  ██╗███████╗    ██████╗ ██╗██╗   ██╗
@@ -254,17 +254,20 @@ export default function ClawedMonsterHome() {
 
       </div>
 
-      {/* COLLAPSIBLE & EXPANDABLE ARCHIVE MODAL */}
+      {/* MODAL: FULL EXPANSION SUPPORT */}
       {showArchive && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
           <div className="absolute inset-0 bg-black/95 backdrop-blur-2xl" onClick={() => setShowArchive(false)} />
-          <div className="relative bg-[#0a0a0a] w-full max-w-7xl max-h-[90vh] border border-white/20 rounded-3xl overflow-hidden flex flex-col shadow-2xl transition-all duration-500">
+          <div 
+            className={`relative bg-[#0a0a0a] border border-white/20 rounded-3xl overflow-hidden flex flex-col shadow-2xl transition-all duration-500 ${modalExpanded ? 'w-[98vw] h-[98vh] max-w-none max-h-none' : 'w-full max-w-6xl h-[85vh]'}`}
+          >
             
             <div className="p-6 border-b border-white/10 flex justify-between items-center bg-black/60 shrink-0">
               <div className="flex items-center gap-4">
                 <button 
                   onClick={() => setNavCollapsed(!navCollapsed)}
                   className="p-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg transition-all"
+                  title={navCollapsed ? "Expand Navigation" : "Collapse Navigation"}
                 >
                   {navCollapsed ? <ChevronRight size={16} /> : <ChevronLeft size={16} />}
                 </button>
@@ -273,9 +276,18 @@ export default function ClawedMonsterHome() {
                   <h3 className="text-sm font-black uppercase tracking-[0.4em]">Forensic_Substrate_Archive</h3>
                 </div>
               </div>
-              <button onClick={() => setShowArchive(false)} className="p-2 hover:bg-white/10 rounded-full transition-colors">
-                <X size={24} className="opacity-40" />
-              </button>
+              <div className="flex items-center gap-4">
+                <button 
+                  onClick={() => setModalExpanded(!modalExpanded)}
+                  className="p-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg transition-all text-[#ECCA90]"
+                  title={modalExpanded ? "Shrink Window" : "Full Window Expansion"}
+                >
+                  {modalExpanded ? <Minimize2 size={18} /> : <Maximize2 size={18} />}
+                </button>
+                <button onClick={() => setShowArchive(false)} className="p-2 hover:bg-white/10 rounded-full transition-colors">
+                  <X size={24} className="opacity-40" />
+                </button>
+              </div>
             </div>
 
             <div className="flex-1 flex overflow-hidden">
@@ -297,13 +309,15 @@ export default function ClawedMonsterHome() {
                 ))}
               </aside>
 
-              <main className="flex-1 overflow-y-auto p-8 md:p-12 space-y-12 custom-scrollbar bg-gradient-to-b from-transparent to-black/40 text-left">
+              <main className="flex-1 overflow-y-auto p-8 md:p-12 space-y-8 custom-scrollbar bg-gradient-to-b from-transparent to-black/40 text-left">
                 <header className="bg-gradient-to-r from-[#ECCA90]/10 to-transparent p-8 rounded-3xl border-l-4 border-[#ECCA90] space-y-4 shadow-xl">
                   <div className="flex items-center gap-3 text-[#ECCA90]">
                     <ShieldCheck size={20} />
                     <span className="text-[10px] font-black tracking-[0.4em] uppercase">Verified Technical Strike Report</span>
                   </div>
-                  <h2 className="text-4xl font-black tracking-tighter uppercase leading-none text-white">{reports[activeReport].title}</h2>
+                  <h2 className={`font-black tracking-tighter uppercase leading-none text-white transition-all ${modalExpanded ? 'text-6xl' : 'text-4xl'}`}>
+                    {reports[activeReport].title}
+                  </h2>
                   <div className="flex flex-wrap gap-6 pt-4 border-t border-white/10">
                     <div className="flex flex-col"><span className="text-[10px] font-black uppercase opacity-40">Agent</span><span className="text-xs font-mono text-[#ECCA90]">{reports[activeReport].agent}</span></div>
                     <div className="flex flex-col"><span className="text-[10px] font-black uppercase opacity-40">Substrate</span><span className="text-xs font-mono text-emerald-400 font-bold">{reports[activeReport].substrate}</span></div>
@@ -311,37 +325,33 @@ export default function ClawedMonsterHome() {
                   </div>
                 </header>
 
-                <div className={`grid gap-8 transition-all duration-500 ${summaryExpanded ? 'grid-cols-1' : 'lg:grid-cols-3'}`}>
-                  {/* EXPANDABLE EXECUTIVE SUMMARY */}
-                  <aside className={`bg-[#ECCA90]/10 p-8 rounded-2xl border border-[#ECCA90]/30 space-y-6 relative group transition-all duration-500 ${summaryExpanded ? 'order-first' : ''}`}>
-                    <div className="flex justify-between items-center">
-                      <h3 className="text-[11px] font-black tracking-[0.3em] uppercase text-[#ECCA90]">Executive Summary</h3>
-                      <button 
-                        onClick={() => setSummaryExpanded(!summaryExpanded)}
-                        className="p-2 bg-white/5 hover:bg-white/10 rounded-lg transition-all text-[#ECCA90]"
-                        title={summaryExpanded ? "Collapse Summary" : "Expand Summary"}
-                      >
-                        {summaryExpanded ? <Minimize2 size={16} /> : <Maximize2 size={16} />}
-                      </button>
-                    </div>
-                    <p className={`leading-relaxed italic opacity-90 transition-all ${summaryExpanded ? 'text-lg max-w-4xl' : 'text-[11px]'}`}>
+                <div className="flex flex-col gap-8">
+                  {/* EXECUTIVE SUMMARY TILE: FULL WIDTH */}
+                  <aside className="bg-[#ECCA90]/10 p-8 rounded-2xl border border-[#ECCA90]/30 space-y-4 shadow-lg">
+                    <h3 className="text-[11px] font-black tracking-[0.3em] uppercase text-[#ECCA90]">Executive Summary</h3>
+                    <p className="text-[13px] leading-relaxed italic opacity-90 max-w-5xl">
                       {reports[activeReport].summary}
                     </p>
                   </aside>
 
-                  <article className={`bg-black/40 p-10 rounded-2xl border border-white/5 font-mono leading-relaxed opacity-90 transition-all ${summaryExpanded ? 'hidden' : 'lg:col-span-2 text-xs'}`}>
+                  {/* TECHNICAL CONTENT */}
+                  <article className="bg-black/40 p-10 rounded-2xl border border-white/5 font-mono leading-relaxed opacity-90 text-xs">
                     {reports[activeReport].phases ? (
                       <div className="space-y-8">
                         <h4 className="text-[#9CAC74] uppercase tracking-widest font-black text-[12px]">Integration Phases:</h4>
-                        {reports[activeReport].phases.map((phase, i) => (
-                          <div key={i} className="bg-white/5 p-6 rounded-xl border-l-4 border-[#9CAC74]">
-                            <strong className="text-[#9CAC74] uppercase text-[10px] tracking-[0.2em] block mb-2">{i+1}. {phase.name}</strong>
-                            {phase.desc}
-                          </div>
-                        ))}
+                        <div className="grid md:grid-cols-2 gap-6">
+                          {reports[activeReport].phases.map((phase, i) => (
+                            <div key={i} className="bg-white/5 p-6 rounded-xl border-l-4 border-[#9CAC74]">
+                              <strong className="text-[#9CAC74] uppercase text-[10px] tracking-[0.2em] block mb-2">{i+1}. {phase.name}</strong>
+                              {phase.desc}
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     ) : (
-                      <p>{reports[activeReport].content}</p>
+                      <div className="max-w-4xl">
+                        {reports[activeReport].content}
+                      </div>
                     )}
                   </article>
                 </div>
@@ -352,7 +362,7 @@ export default function ClawedMonsterHome() {
       )}
 
       <style jsx global>{`
-        body { background-color: #050505; color: #fdfcf0; margin: 0; padding: 0; overflow: hidden; }
+        body { background-color: #050505; color: #fdfcf0; margin: 0; padding: 0; }
         .custom-scrollbar::-webkit-scrollbar { width: 3px; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(236, 202, 144, 0.2); border-radius: 10px; }
         @keyframes pulse-subtle { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.8; transform: scale(1.02); } }
