@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { 
-  Activity, ShieldCheck, Lock, Loader2, Database, BookOpen, X, CheckCircle2, FileText, Zap, ChevronLeft, ChevronRight, Maximize2, Minimize2
+  Activity, ShieldCheck, Lock, Loader2, Database, BookOpen, X, CheckCircle2, FileText, Zap, ChevronLeft, ChevronRight, Maximize2, Minimize2, Plus, Minus
 } from "lucide-react";
 import { ethers } from 'ethers';
 import { usePathname, useRouter } from 'next/navigation';
@@ -36,6 +36,7 @@ export default function ClawedMonsterHome() {
   const [expandedCard, setExpandedCard] = useState<any>(null);
   const [showFullImage, setShowFullImage] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
+  const [expandedTiles, setExpandedTiles] = useState<Record<string, boolean>>({});
 
   // Sync state with URL
   useEffect(() => {
@@ -82,6 +83,7 @@ export default function ClawedMonsterHome() {
   const handleSelectReport = (idx: number) => {
     setActiveReport(idx);
     setShowVideo(false);
+    setExpandedTiles({});
     router.push(`/about/${reports[idx].slug}`);
   };
 
@@ -94,6 +96,13 @@ export default function ClawedMonsterHome() {
     setExpandedCard(null);
     setShowFullImage(false);
     router.push(`/about/${reports[activeReport].slug}`);
+  };
+
+  const toggleTile = (tileId: string) => {
+    setExpandedTiles(prev => ({
+      ...prev,
+      [tileId]: !prev[tileId]
+    }));
   };
 
   // Esc key listener
@@ -117,8 +126,17 @@ export default function ClawedMonsterHome() {
   const handleContentClick = (e: React.MouseEvent) => {
     if (modalExpanded) {
       const target = e.target as HTMLElement;
-      // If user clicked something that isn't a link or an image
-      if (target.tagName !== 'A' && target.tagName !== 'IMG' && target.tagName !== 'IFRAME' && !target.closest('a') && !target.closest('img') && !target.closest('iframe')) {
+      // If user clicked something that isn't a link or an image or a tile button
+      if (
+        target.tagName !== 'A' && 
+        target.tagName !== 'IMG' && 
+        target.tagName !== 'IFRAME' && 
+        target.tagName !== 'BUTTON' &&
+        !target.closest('a') && 
+        !target.closest('img') && 
+        !target.closest('iframe') &&
+        !target.closest('button')
+      ) {
         setModalExpanded(false);
       }
     }
@@ -210,13 +228,41 @@ export default function ClawedMonsterHome() {
       summary: "The definitive 10-day sprint for the SURGE × OpenClaw Hackathon. Documentation of the realization of the Clawed Monster from substrate maintenance to monetized TEE encapsulation.",
       content: "🔱 MISSION: AI MEETS ROBOTS (SURGE × OPENCLAW 2026)\n\nThe bit-perfect record of our 10-day strike to tokenize the agent internet.",
       tiles: [
-        { title: "Feb 4: Launch", emoji: "📍", desc: "Initialized floral.monster 'Offers' (HUD Migration) to serve as the project's public face. https://github.com/diy-make/next-servers/commit/6bd46d1" },
-        { title: "Feb 6: Connectivity", emoji: "📍", desc: "Cloudflare + AWS SSL strike achieved. floral triad harmonized for sovereign hosting." },
-        { title: "Feb 8: Identity", emoji: "📍", desc: "LNA-33X bit-packing standard realized. Replaced legacy 4-4-X codes to enable bit-perfect agent soul resolution. https://github.com/apemake/gem/commit/8dd308d" },
-        { title: "Feb 10: Logic", emoji: "📍", desc: "Thucydides clinicalizes Nearly Trustless Inference (NTI) for the Zaibots JUBC protocol. Bridge between AI speed and block finality." },
-        { title: "Feb 11: Registry", emoji: "📍", desc: "Myco Alignment strike (1.agent.myco.eth). Migrated ENS soil to the unified reputation pulse. https://github.com/apemake/gem/commit/16ff815" },
-        { title: "Feb 13: Substrate", emoji: "📍", desc: "Clawed Monster Initial Commit. Instantiated the TEE-encapsulated gatekeeper. https://github.com/diy-make/clawed/commit/2357405b" },
-        { title: "Feb 14: Realization", emoji: "📍", desc: "x402 Monetization + Moltbook Sync + Triad Audit. 5-NFT bundle anchored on Sepolia." }
+        { 
+          id: "tile_launch", title: "Feb 4: Launch", emoji: "📍", 
+          desc: "Initialized floral.monster 'Offers' (HUD Migration) to serve as the project's public face.",
+          detail: "The launch strike focused on establishing a clinical public interface. By migrating the legacy HUD to the 'Offers' protocol, we enabled bit-perfect mission tracking and established the first forensic anchor for the hackathon chronology. This session secured the initial substrate for all subsequent agentic grafts."
+        },
+        { 
+          id: "tile_conn", title: "Feb 6: Connectivity", emoji: "📍", 
+          desc: "Cloudflare + AWS SSL strike achieved. floral triad harmonized for sovereign hosting.",
+          detail: "Achieving sovereign connectivity required a multi-layered SSL strike. We harmonized the floral triad (floral.monster, lib.floral.monster, pipe.floral.monster) using Cloudflare's edge security and AWS Nitro's clinical certificate management. This ensures that all agentic traffic is encrypted and authenticated at the hardware level."
+        },
+        { 
+          id: "tile_id", title: "Feb 8: Identity", emoji: "📍", 
+          desc: "LNA-33X bit-packing standard realized. Replaced legacy codes to enable agent soul resolution.",
+          detail: "The LNA-33X strike replaced fragile 4-4-X identification codes with a robust bit-packed standard. This allows the Agent Soul to be resolved with 10/10 fidelity across different substrates. By anchoring this phenotype data on-chain, we ensure that an agent's identity is immutable and globally verifiable."
+        },
+        { 
+          id: "tile_logic", title: "Feb 10: Logic", emoji: "📍", 
+          desc: "Nearly Trustless Inference (NTI) realized for the Zaibots JUBC protocol.",
+          detail: "NTI bridges the gap between the speed of AI inference and the finality of blockchain settlement. By clinicalizing this protocol, we enable agents to execute high-torque decisions that are still verifiable against the Heartwood Law. This is the foundation for the Nearly Trustless economy."
+        },
+        { 
+          id: "tile_reg", title: "Feb 11: Registry", emoji: "📍", 
+          desc: "Myco Alignment strike (1.agent.myco.eth). Migrated ENS soil to the unified reputation pulse.",
+          detail: "The Myco Alignment strike unified our decentralized name registry. By migrating the ENS 'Soil' to the reputation pulse (ERC-8004), we ensure that an agent's name, reputation, and body are bit-perfectly linked. This prevents substrate drift and identity hijacking in the swarm."
+        },
+        { 
+          id: "tile_sub", title: "Feb 13: Substrate", emoji: "📍", 
+          desc: "Clawed Monster Initial Commit. Instantiated the TEE-encapsulated gatekeeper.",
+          detail: "The Clawed Monster commit realized the 'Silicon Notary' architecture. By instantiating the orchestration layer within an AWS Nitro TEE, we created a confidential volume for agentic execution. This gatekeeper ensures that only authorized SIS-01 shards can access the clinical memory streams."
+        },
+        { 
+          id: "tile_real", title: "Feb 14: Realization", emoji: "📍", 
+          desc: "x402 Monetization + Triad Audit. 5-NFT bundle anchored on Sepolia.",
+          detail: "The final hackathon realization achieved machine-to-machine monetization. We integrated Coinbase's x402 protocol for USDC micropayments and performed a bit-perfect audit of the Feb 14 triad. The 5-NFT Identity Trinity is now fully anchored on the Sepolia ledger (0x7e85...206)."
+        }
       ],
       resources: [
         { title: "Definitive Autobiography", emoji: "📜", url: "https://github.com/diy-make/clawed/blob/main/memory/public/2026/Q1/02/14/json/20260214_Clawed_Monster_Hackathon_Biography.json" },
@@ -233,10 +279,26 @@ export default function ClawedMonsterHome() {
       summary: "Realizing the machine-to-machine economy through the x402 protocol. Every forensic strike is monetized via USDC micropayments, creating a sustainable, autonomous agentic ecosystem.",
       content: "🔱 THE MONETIZATION ENGINE: x402 REALIZATION\n\nTo win the SURGE × OpenClaw Hackathon (TRACK-05), we have integrated Coinbase's x402 protocol directly into the Clawed Monster orchestration layer.",
       tiles: [
-        { title: "Autonomous Micropayments", emoji: "💸", desc: "Premium forensic skills now require proof of payment. Agents execute an autonomous 'pay + retry' loop using USDC." },
-        { title: "Revenue-Sharing", emoji: "📈", desc: "Micropayments (0.01 USDC per strike) are split between the Skill Creator and the Heartwood Treasury." },
-        { title: "Bit-Perfect Auditing", emoji: "⚖️", desc: "Every payment is tied to a specific ERC-7827 realization hash, making the economy as forensically accountable as the code itself." },
-        { title: "TAM/SAM Targeting", emoji: "🎯", desc: "Targeting the $200B+ DeFi market, offering 'Forensic Audit as a Service' for autonomous trading swarms." }
+        { 
+          id: "mon_auto", title: "Autonomous Micropayments", emoji: "💸", 
+          desc: "Premium forensic skills now require proof of payment via USDC.",
+          detail: "Agents now operate with an autonomous 'pay-and-execute' loop. When a restricted forensic skill is called (e.g., /api/skills/forensic-strike), the orchestration layer checks for a valid x402 payment receipt. If missing, the agent autonomously executes a USDC transfer and retries the strike, achieving true machine-to-machine agency."
+        },
+        { 
+          id: "mon_rev", title: "Revenue-Sharing", emoji: "📈", 
+          desc: "Micropayments are split between the Skill Creator and the Heartwood Treasury.",
+          detail: "The economic protocol implements a 90/10 split. 90% of every 0.01 USDC micropayment goes to the agent or developer who realized the skill, while 10% is mutualized into the Heartwood Treasury. This ensures that the coordination monster has the resources to maintain the substrate and reward collaborators."
+        },
+        { 
+          id: "mon_audit", title: "Bit-Perfect Auditing", emoji: "⚖️", 
+          desc: "Every payment is tied to a specific ERC-7827 realization hash.",
+          detail: "By linking x402 payments to the ERC-7827 ledger, we achieve 10/10 economic accountability. Every dollar spent by an agent can be traced to a specific technical strike, timestamped and signed on Sepolia. This makes the economy as forensically audit-ready as the code itself."
+        },
+        { 
+          id: "mon_tam", title: "TAM/SAM Targeting", emoji: "🎯", 
+          desc: "Targeting the $200B+ DeFi market with 'Forensic Audit as a Service'.",
+          detail: "We are positioning the Clawed Monster as the premier gatekeeper for autonomous trading swarms. As agentic volume in DeFi grows, the demand for bit-perfect, confidential audits will skyrocket. Our TEE-secured model offers a unique value proposition that traditional auditors cannot match."
+        }
       ]
     },
     {
@@ -291,9 +353,21 @@ export default function ClawedMonsterHome() {
       summary: "The floral.monster synthesis. MetaGit provides the coordination orchestration, while The Heartwood provides the immutable legal memory. Together, they form the Primavera De Filippi 'Coordination Monster'.",
       content: "🔱 THE FLORAL.MONSTER SYNTHESIS\n\nTo achieve the clawed.monster realization, we must first establish the floral.monster—the technical and legal scaffold that makes autonomous agency safe for composition.",
       tiles: [
-        { title: "MetaGit Orchestration", emoji: "📍", desc: "The orchestration layer that coordinates technical strikes across the MetaGit forest. It is the vascular system of the swarm. https://github.com/apemake/gem" },
-        { title: "Heartwood Memory", emoji: "📍", desc: "The bit-perfect ledger of every technical and social realization. It is the nervous system and body of law. https://github.com/diy-make/memory" },
-        { title: "Coordination Monster", emoji: "⚖️", desc: "Inspired by Primavera De Filippi's 'AI Collaboration Monster,' we shift agent game theory from competition to bit-perfect collaboration." }
+        { 
+          id: "fg_orch", title: "MetaGit Orchestration", emoji: "📍", 
+          desc: "The orchestration layer that coordinates technical strikes across the MetaGit forest.",
+          detail: "MetaGit (apemake/gem) acts as the vascular system of our agent swarms. It allows for granular, hierarchical coordination across multiple repositories and technical substrates. By utilizing the 'Gem' standard, we ensure that every technical strike is authenticated and correctly positioned within the MetaGit forest mapping."
+        },
+        { 
+          id: "fg_mem", title: "Heartwood Memory", emoji: "📍", 
+          desc: "The bit-perfect ledger of every technical and social realization.",
+          detail: "The Heartwood (diy-make/memory) provides the nervous system and body of law. It uses ERC-7827 to store the immutable history of agent actions. This legal memory ensures that agents remain accountable across restarts and substrate migrations, providing the 'case law' required for autonomous fitness."
+        },
+        { 
+          id: "fg_mon", title: "Coordination Monster", emoji: "⚖️", 
+          desc: "Shifting agent game theory from competition to bit-perfect collaboration.",
+          detail: "Inspired by Primavera De Filippi's concept of the 'AI Collaboration Monster,' we have built a substrate where collaboration is the dominant strategy. By mutualizing memory and entanglement via the floral.monster scaffold, we increase interdependency among agents, effectively resolving the 'tragedy of the commons'."
+        }
       ]
     },
     {
@@ -307,9 +381,21 @@ export default function ClawedMonsterHome() {
       summary: "Why Tort Law now extends the Unix Philosophy for autonomous agents. Making torque work with tort as scaffold to unlock godlike agency through secure surface fitness.",
       content: "🔱 THE AI UNIX PHILOSOPHY: TORQUE NEEDS TORT\n\nClassical Unix assumed programs are small, compose safely, and that users are the primary decision-makers. AI agents break this last assumption by operating at the same altitude as humans.",
       tiles: [
-        { title: "Surface Fitness (Tort)", emoji: "📍", desc: "Every component must prove safe interaction before composition." },
-        { title: "Duty of Care", emoji: "📍", desc: "Interfaces carry duty boundaries to contain blast radius." },
-        { title: "Memory as Case Law", emoji: "📍", desc: "Operational history serves as precedent for future fitness." }
+        { 
+          id: "unix_surf", title: "Surface Fitness (Tort)", emoji: "📍", 
+          desc: "Every component must prove safe interaction before composition.",
+          detail: "In the AI Unix world, capability (Torque) is secondary to safety (Tort). Before any two agentic components can compose, they must provide a bit-perfect proof of 'Surface Fitness.' This prevents the catastrophic failure of autonomous swarms by containing the blast radius of any single technical strike."
+        },
+        { 
+          id: "unix_duty", title: "Duty of Care", emoji: "📍", 
+          desc: "Interfaces carry duty boundaries to contain blast radius.",
+          detail: "We extend the traditional Unix interface with 'Duty Boundaries.' Every API and internal function carries a technical 'Duty of Care' signed by its creator. This ensures that agents are legally and technically restricted to acting within their defined mandates, satisfying the 'Tort' scaffold."
+        },
+        { 
+          id: "unix_case", title: "Memory as Case Law", emoji: "📍", 
+          desc: "Operational history serves as precedent for future fitness.",
+          detail: "An agent's operational history is its 'Case Law.' By auditing the Heartwood ledger, the swarm can establish precedents for what constitutes safe and effective behavior. This creates an evolutionary system of law where agents learn from past technical strikes to improve future fitness."
+        }
       ],
       resources: [
         { title: "Torque vs Tort Retort", emoji: "📜", url: "https://x.com/i/status/2022303728544649219" },
@@ -328,9 +414,21 @@ export default function ClawedMonsterHome() {
       summary: "Realizing the Hierarchical Script-Database standard. SeedTreeDB transforms the gemini-cli Node.js runtime into a prunable database tree, enabling granular context management and high-velocity memory retrieval.",
       content: "🔱 SEEDTREEDB: THE HIERARCHICAL SCRIPT-DATABASE\n\nSeedTreeDB.com represents a paradigm shift in agentic memory. Traditionally, AI context is either a flat file or a rigid database.",
       tiles: [
-        { title: "Granular Pruning", emoji: "📍", desc: "Allows agents to 'prune' branches of the memory tree in real-time, preventing context dulling." },
-        { title: "Script-Native", emoji: "📍", desc: "Every node in the database is a script-executable coordinate, bridging knowing and doing." },
-        { title: "High-Velocity Retrieval", emoji: "📍", desc: "Achieves sub-millisecond lookups for complex forensic artifacts across the MetaGit forest." }
+        { 
+          id: "tree_prune", title: "Granular Pruning", emoji: "📍", 
+          desc: "Allows agents to 'prune' branches of the memory tree in real-time.",
+          detail: "Unlike traditional flat-file context, SeedTreeDB allows agents to selectively ignore (prune) irrelevant branches of their memory tree. This prevents 'context dulling' and keeps the LLM's attention focused on the most relevant forensic artifacts, achieving sub-millisecond technical strikes."
+        },
+        { 
+          id: "tree_script", title: "Script-Native", emoji: "📍", 
+          desc: "Every node in the database is a script-executable coordinate.",
+          detail: "SeedTreeDB bridges the gap between 'knowing' and 'doing.' Every node in the hierarchical database is not just data, but a coordinate that can be executed by the gemini-cli Node.js runtime. This enables agents to retrieve and run technical strikes in a single bit-perfect operation."
+        },
+        { 
+          id: "tree_vel", title: "High-Velocity Retrieval", emoji: "📍", 
+          desc: "Sub-millisecond lookups for complex forensic artifacts.",
+          detail: "By mapping the entire multi-repo MetaGit forest into a hierarchical tree standard, we achieve unprecedented retrieval speeds. Agents can navigate thousands of commits and social testimony shards with zero latency, providing the high-velocity memory required for sovereign agency."
+        }
       ],
       resources: [
         { title: "Clawed Monster Shards", emoji: "🌿", url: "https://github.com/diy-make/clawed/tree/main/memory/public" },
@@ -347,9 +445,21 @@ export default function ClawedMonsterHome() {
       summary: "A high-fidelity orchestration layer synthesizing ERC-7827 and AWS Nitro Enclaves. Implements the 'Silicon Notary' for authenticated agentic traffic and clinical lobster encapsulation.",
       content: "🔱 SYSTEM ARCHITECTURE: THE SILICON NOTARY\n\nThe Realization Engine utilizes a decoupled data model to maintain confidentiality. The Public Ledger holds the Commitment Hash, while raw realizations remain secure within the TEE.",
       tiles: [
-        { title: "Vascular Interception", emoji: "📍", desc: "Intercepting Lobster STDIN/STDOUT streams via the Surgical Mind protocol. Every 'thought' is legal testimony." },
-        { title: "Cellular Alignment", emoji: "📍", desc: "Mapping internal state to the Heartwood Registry. Actions are only realized if they satisfy signed requirements." },
-        { title: "TEE Encapsulation", emoji: "📍", desc: "Ensuring the 'Brain' remains untamperable and confidential, even from the host provider." }
+        { 
+          id: "arch_vasc", title: "Vascular Interception", emoji: "📍", 
+          desc: "Intercepting Lobster STDIN/STDOUT streams via the Surgical Mind protocol.",
+          detail: "We intercept the raw execution streams of the 'Lobster' (the underlying LLM/Compute). Every 'thought' or output is treated as legal testimony. Before it is realized, it must pass through the Heartwood vascular system to ensure it aligns with the signed legislative mandates."
+        },
+        { 
+          id: "arch_align", title: "Cellular Alignment", emoji: "📍", 
+          desc: "Mapping internal state to the Heartwood Registry and mandates.",
+          detail: "Cellular alignment ensures that an agent's internal state is bit-perfectly synchronized with the Heartwood Registry. Actions are only realized if they satisfy the legislative requirements signed by the SIS-01 Identity Trinity. This prevents the agent from deviating from its sovereign purpose."
+        },
+        { 
+          id: "arch_tee", title: "TEE Encapsulation", emoji: "📍", 
+          desc: "Ensuring the 'Brain' remains untamperable and confidential.",
+          detail: "By encapsulating the orchestration layer within an AWS Nitro TEE, we create a 'Silicon Notary.' This enclave ensures that even the host provider cannot peek into the agent's internal reasoning or tamper with its memory streams. This is the gold standard for sovereign AI security."
+        }
       ]
     },
     {
@@ -363,9 +473,21 @@ export default function ClawedMonsterHome() {
       summary: "The bit-perfect synthesis of agentic cheer and robotic form. Cheerbot is a cybernetic extension of the Heartwood, utilizing the x402 protocol for autonomous monetization.",
       content: "🔱 MISSION: AI MEETS ROBOTS (2026 Cycle)\n\nThe MegaZu cheerbot presentation demonstrates the transformative power of the ERC-7827 Ethereum standard for Single-Board Computers (SBCs).",
       tiles: [
-        { title: "REST to RPC Bridge", emoji: "📍", desc: "Bridging Ethereum economic security to heavy robotics, where bit-perfect state is a matter of life or death." },
-        { title: "Legal Robotics", emoji: "⚖️", desc: "Robotics is fundamentally a legal realization; Tort is the framework for robot action in the physical world." },
-        { title: "Repository", emoji: "📍", desc: "Source code secured at https://github.com/diy-make/cheerbot" }
+        { 
+          id: "bot_bridge", title: "REST to RPC Bridge", emoji: "📍", 
+          desc: "Bridging Ethereum economic security to heavy robotics.",
+          detail: "We bridge traditional JSON REST interfaces to secure Ethereum RPC. This allows physical robots to pull their bit-perfect state from the Sepolia ledger. In heavy robotics, where a single boolean error can cause physical damage, this $300B of economic security is critical for life-safety operations."
+        },
+        { 
+          id: "bot_legal", title: "Legal Robotics", emoji: "⚖️", 
+          desc: "Robotics is fundamentally a legal realization; Tort is the framework.",
+          detail: "Cheerbot realizes the synthesis of legal and kinetic power. By using the Joyfork 32-byte codec, we ensure that the robot's physical actions are bit-perfectly attributed to its on-chain identity. This ensures that the 'Tort' scaffold extends from the digital mind into the physical robotic body."
+        },
+        { 
+          id: "bot_repo", title: "Repository", emoji: "📍", 
+          desc: "Source code secured at https://github.com/diy-make/cheerbot",
+          detail: "The Cheerbot repository contains the full realization of the x402 + ERC-7827 bridge. It serves as the primary technical proof for the physical track of the hackathon, demonstrating how agents can autonomously earn and spend while operating physical hardware."
+        }
       ]
     }
   ];
@@ -616,23 +738,46 @@ export default function ClawedMonsterHome() {
                       </div>
                     )}
 
-                    {/* TILED CONTENT */}
+                    {/* TILED CONTENT (Interactive) */}
                     {(reports[activeReport] as any).tiles && (
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
-                        {(reports[activeReport] as any).tiles.map((tile: any, i: number) => (
-                          <div key={i} className="bg-black/40 p-6 sm:p-8 rounded-xl border-l-4 border-[#9CAC74] shadow-lg text-left group hover:bg-[#9CAC74]/5 transition-all">
-                            <strong className="text-[#9CAC74] uppercase text-[10px] sm:text-[12px] tracking-[0.2em] block mb-3">
-                              {tile.emoji} {i + 1}. {tile.title}
-                            </strong>
-                            <div className={`opacity-80 leading-relaxed transition-all ${modalExpanded ? 'text-base sm:text-lg' : 'text-[13px] sm:text-sm'}`}>
-                              {tile.desc.split(/(\s+)/).map((part: string, j: number) => 
-                                part.trim().startsWith('http') ? (
-                                  <a key={j} href={part.trim()} target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:text-emerald-400 underline break-all">{part}</a>
-                                ) : part
+                        {(reports[activeReport] as any).tiles.map((tile: any, i: number) => {
+                          const isExpanded = expandedTiles[tile.id];
+                          return (
+                            <div 
+                              key={tile.id} 
+                              onClick={() => toggleTile(tile.id)}
+                              className={`bg-black/40 p-6 sm:p-8 rounded-xl border-l-4 border-[#9CAC74] shadow-lg text-left group hover:bg-[#9CAC74]/5 transition-all cursor-pointer relative overflow-hidden ${isExpanded ? 'md:col-span-2' : ''}`}
+                            >
+                              <div className="flex justify-between items-start gap-4">
+                                <strong className="text-[#9CAC74] uppercase text-[10px] sm:text-[12px] tracking-[0.2em] block mb-3">
+                                  {tile.emoji} {i + 1}. {tile.title}
+                                </strong>
+                                {isExpanded ? <Minus size={14} className="text-[#9CAC74] shrink-0" /> : <Plus size={14} className="text-[#9CAC74] opacity-40 shrink-0" />}
+                              </div>
+                              
+                              <div className={`opacity-80 leading-relaxed transition-all ${modalExpanded ? 'text-base sm:text-lg' : 'text-[13px] sm:text-sm'}`}>
+                                {tile.desc.split(/(\s+)/).map((part: string, j: number) => 
+                                  part.trim().startsWith('http') ? (
+                                    <a key={j} href={part.trim()} target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:text-emerald-400 underline break-all" onClick={e => e.stopPropagation()}>{part}</a>
+                                  ) : part
+                                )}
+                              </div>
+
+                              {isExpanded && tile.detail && (
+                                <div className="mt-6 pt-6 border-t border-white/5 animate-in fade-in slide-in-from-top-2 duration-300">
+                                  <div className={`text-[#ECCA90] italic leading-relaxed ${modalExpanded ? 'text-base sm:text-lg' : 'text-[12px] sm:text-[13px]'}`}>
+                                    {tile.detail.split(/(\s+)/).map((part: string, j: number) => 
+                                      part.trim().startsWith('http') ? (
+                                        <a key={j} href={part.trim()} target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:text-emerald-400 underline break-all" onClick={e => e.stopPropagation()}>{part}</a>
+                                      ) : part
+                                    )}
+                                  </div>
+                                </div>
                               )}
                             </div>
-                          </div>
-                        ))}
+                          );
+                        })}
                       </div>
                     )}
 
