@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { 
-  Activity, ShieldCheck, Lock, Loader2, Database, BookOpen, X, CheckCircle2, FileText, Zap, ChevronLeft, ChevronRight, Maximize2, Minimize2, Plus, Minus, ArrowRight
+  Activity, ShieldCheck, Lock, Loader2, Database, BookOpen, X, CheckCircle2, FileText, Zap, ChevronLeft, ChevronRight, Maximize2, Minimize2, Plus, Minus, ArrowRight, ExternalLink
 } from "lucide-react";
 import { ethers } from 'ethers';
 import { usePathname, useRouter } from 'next/navigation';
@@ -358,19 +358,42 @@ export default function ClawedMonsterHome() {
       content: "🔱 THE FLORAL.MONSTER SYNTHESIS\n\nTo achieve the clawed.monster realization, we must first establish the floral.monster—the technical and legal scaffold that makes autonomous agency safe for composition.",
       tiles: [
         { 
-          id: "fg_orch", title: "MetaGit Orchestration", emoji: "📍", 
+          id: "fg_orch", title: "MetaGit Orchestration", emoji: "🔱", 
           desc: "The orchestration layer that coordinates technical strikes across the MetaGit forest.",
-          detail: "MetaGit (apemake/gem) acts as the vascular system of our agent swarms. It allows for granular, hierarchical coordination across multiple repositories and technical substrates. By utilizing the 'Gem' standard, we ensure that every technical strike is authenticated and correctly positioned within the MetaGit forest mapping."
+          detail: "MetaGit (apemake/gem) acts as the vascular system of our agent swarms. It allows for granular, hierarchical coordination across multiple repositories and technical substrates. By utilizing the 'Gem' standard, we ensure that every technical strike is authenticated and correctly positioned within the MetaGit forest mapping.",
+          url: "https://github.com/apemake/gem"
         },
         { 
-          id: "fg_mem", title: "Heartwood Memory", emoji: "📍", 
+          id: "fg_mem", title: "Heartwood Memory", emoji: "🌳", 
           desc: "The bit-perfect ledger of every technical and social realization.",
-          detail: "The Heartwood (diy-make/memory) provides the nervous system and body of law. It uses ERC-7827 to store the immutable history of agent actions. This legal memory ensures that agents remain accountable across restarts and substrate migrations, providing the 'case law' required for autonomous fitness."
+          detail: "The Heartwood (diy-make/memory) provides the nervous system and body of law. It uses ERC-7827 to store the immutable history of agent actions. This legal memory ensures that agents remain accountable across restarts and substrate migrations, providing the 'case law' required for autonomous fitness.",
+          url: "https://github.com/diy-make/memory"
         },
         { 
           id: "fg_mon", title: "Coordination Monster", emoji: "⚖️", 
           desc: "Shifting agent game theory from competition to bit-perfect collaboration.",
           detail: "Inspired by Primavera De Filippi's concept of the 'AI Collaboration Monster,' we have built a substrate where collaboration is the dominant strategy. By mutualizing memory and entanglement via the floral.monster scaffold, we increase interdependency among agents, effectively resolving the 'tragedy of the commons'."
+        },
+        { 
+          id: "tri_root", title: "floral.monster", emoji: "🌸", 
+          desc: "The root art and manifest substrate for agentic grafting.",
+          detail: "floral.monster serves as the clinical face of the swarm. It is where the Heartwood law is visualized through generative art and technical propaganda. It defines the aesthetic and moral boundaries of the coordination monster.",
+          image: "/images/hackathon/photo_2026-02-14_09-59-08.jpg",
+          url: "https://floral.monster"
+        },
+        { 
+          id: "tri_lib", title: "lib.floral.monster", emoji: "📚", 
+          desc: "The clinical library of agentic components and standards.",
+          detail: "lib.floral.monster hosts the bit-perfect definitions of our SIS-01 shards and LNA-33X codes. It is the technical reference for all agents attempting to join the coordination monster, providing the 'bricks' for secure agency.",
+          image: "/images/hackathon/photo_2026-02-14_09-59-12.jpg",
+          url: "https://lib.floral.monster"
+        },
+        { 
+          id: "tri_pipe", title: "pipe.floral.monster", emoji: "🧪", 
+          desc: "The high-fidelity data pipe for authenticated agentic streams.",
+          detail: "pipe.floral.monster is the vascular system's pump. It handles the high-velocity streams of technical strikes and forensic artifacts, ensuring they are correctly routed to the Heartwood ledger for permanent realization.",
+          image: "/images/hackathon/photo_2026-02-14_09-59-14.jpg",
+          url: "https://pipe.floral.monster"
         }
       ]
     },
@@ -752,12 +775,21 @@ export default function ClawedMonsterHome() {
                             className="bg-black/40 p-6 sm:p-8 rounded-xl border-l-4 border-[#9CAC74] shadow-lg text-left group hover:bg-[#9CAC74]/10 transition-all cursor-pointer relative overflow-hidden"
                           >
                             <div className="flex justify-between items-start gap-4">
-                              <strong className="text-[#9CAC74] uppercase text-[10px] sm:text-[12px] tracking-[0.2em] block mb-3">
-                                {tile.emoji} {i + 1}. {tile.title}
-                              </strong>
+                              <div className="space-y-1">
+                                <strong className="text-[#9CAC74] uppercase text-[10px] sm:text-[12px] tracking-[0.2em] block">
+                                  {tile.emoji} {i + 1}. {tile.title}
+                                </strong>
+                                {tile.url && <div className="text-[8px] font-mono opacity-40">{new URL(tile.url).hostname}</div>}
+                              </div>
                               <Plus size={14} className="text-[#9CAC74] opacity-40 shrink-0 group-hover:opacity-100 transition-opacity" />
                             </div>
                             
+                            {tile.image && (
+                              <div className="mt-4 rounded-lg overflow-hidden border border-white/5 bg-black/40 aspect-video mb-4">
+                                <img src={tile.image} alt={tile.title} className="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all" />
+                              </div>
+                            )}
+
                             <div className={`opacity-80 leading-relaxed transition-all ${modalExpanded ? 'text-base sm:text-lg' : 'text-[13px] sm:text-sm'}`}>
                               {tile.desc.split(/(\s+)/).map((part: string, j: number) => 
                                 part.trim().startsWith('http') ? (
@@ -849,9 +881,21 @@ export default function ClawedMonsterHome() {
               <h2 className="text-2xl sm:text-3xl font-black text-[#fdfcf0] uppercase tracking-tighter">
                 {selectedTile.emoji} {selectedTile.title}
               </h2>
+              {selectedTile.url && (
+                <a href={selectedTile.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-emerald-500 hover:text-emerald-400 mt-2 transition-colors group">
+                  <ExternalLink size={12} />
+                  <span className="text-[10px] font-mono font-bold tracking-widest uppercase underline">{new URL(selectedTile.url).hostname}</span>
+                </a>
+              )}
             </header>
             
             <div className="space-y-6">
+              {selectedTile.image && (
+                <div className="rounded-xl overflow-hidden border border-white/10 shadow-2xl bg-black aspect-video">
+                  <img src={selectedTile.image} alt={selectedTile.title} className="w-full h-full object-cover" />
+                </div>
+              )}
+
               <div className="bg-[#ECCA90]/5 p-6 rounded-xl border border-[#ECCA90]/20 italic text-[#ECCA90] text-sm leading-relaxed">
                 {selectedTile.desc}
               </div>
