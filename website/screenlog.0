@@ -937,3 +937,67 @@ Persisting failed: Another write batch or compaction is already active (Only a s
 Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
 Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
 [1G[0K⠙[1G[0K
+> floral-monster@0.1.0 dev
+> next dev -p 3001 -H 0.0.0.0
+
+[1G[0K_bestape@yoga:/home/bestape/gemini/repos/diy-make/hackathons/clawed_monster/website\_bestape@yoga:/home/bestape/gemini/repos/diy-make/hackathons/clawed_monster/website\[?2004h[?2004h[0;34m[bestape@yoga:~/gemini/repos/diy-make/hackathons/clawed_monster/website]$[0m[0;34m[bestape@yoga:~/gemini/repos/diy-make/hackathons/clawed_monster/website]$[0m[1m[38;2;173;127;168m▲ Next.js 16.1.6[39m[22m (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://0.0.0.0:3001
+- Environments: .env.local
+
+[32m[1m✓[22m[39m Starting...
+[31m[1m⨯[22m[39m ./proxy.js:5:19
+[1m[31mModule not found[39m[22m: Can't resolve [32m'http-proxy'[39m
+[0m [90m 3 |[39m [36mconst[39m fs [33m=[39m require([32m'fs'[39m)[33m;[39m
+ [90m 4 |[39m [36mconst[39m tls [33m=[39m require([32m'tls'[39m)[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mconst[39m httpProxy [33m=[39m require([32m'http-proxy'[39m)[33m;[39m
+ [90m   |[39m                   [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m
+ [90m 7 |[39m [36mconst[39m proxy [33m=[39m httpProxy[33m.[39mcreateProxyServer({})[33m;[39m
+ [90m 8 |[39m[0m
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[32m[1m✓[22m[39m Ready in 1561ms
+[37m[1m○[22m[39m Compiling / ...
+ GET / [32m200[39m in 3.6s[2m (compile: 3.4s, render: 164ms)[22m
+ GET / [32m200[39m in 104ms[2m (compile: 11ms, render: 93ms)[22m
+ GET / [32m200[39m in 98ms[2m (compile: 7ms, render: 91ms)[22m
+[32m[1m✓[22m[39m Compiled in 69ms
+ GET / [32m200[39m in 254ms[2m (compile: 54ms, render: 200ms)[22m
+ GET / [32m200[39m in 256ms[2m (compile: 80ms, render: 176ms)[22m
+ GET / [32m200[39m in 203ms[2m (compile: 36ms, render: 168ms)[22m
+ GET / [32m200[39m in 204ms[2m (compile: 9ms, render: 194ms)[22m
+ GET / [32m200[39m in 236ms[2m (compile: 4ms, render: 232ms)[22m
+ GET / [32m200[39m in 238ms[2m (compile: 27ms, render: 211ms)[22m
+ GET / [32m200[39m in 226ms[2m (compile: 4ms, render: 222ms)[22m
+ GET / [32m200[39m in 227ms[2m (compile: 26ms, render: 201ms)[22m
+ GET / [32m200[39m in 214ms[2m (compile: 11ms, render: 203ms)[22m
+ GET / [32m200[39m in 216ms[2m (compile: 45ms, render: 171ms)[22m
+ GET / [32m200[39m in 221ms[2m (compile: 6ms, render: 215ms)[22m
+ GET / [32m200[39m in 222ms[2m (compile: 27ms, render: 195ms)[22m
+ GET / [32m200[39m in 219ms[2m (compile: 7ms, render: 212ms)[22m
+ GET / [32m200[39m in 218ms[2m (compile: 24ms, render: 194ms)[22m
+ GET / [32m200[39m in 202ms[2m (compile: 5ms, render: 197ms)[22m
+ GET / [32m200[39m in 202ms[2m (compile: 17ms, render: 185ms)[22m
+ GET / [32m200[39m in 201ms[2m (compile: 16ms, render: 184ms)[22m
+ GET / [32m200[39m in 195ms[2m (compile: 44ms, render: 151ms)[22m
+ GET / [32m200[39m in 162ms[2m (compile: 9ms, render: 152ms)[22m
+ GET / [32m200[39m in 163ms[2m (compile: 25ms, render: 138ms)[22m
+ GET / [32m200[39m in 167ms[2m (compile: 3ms, render: 164ms)[22m
+ GET / [32m200[39m in 183ms[2m (compile: 15ms, render: 168ms)[22m
+ GET / [32m200[39m in 169ms[2m (compile: 4ms, render: 165ms)[22m
+ GET / [32m200[39m in 185ms[2m (compile: 23ms, render: 162ms)[22m
+ GET / [32m200[39m in 164ms[2m (compile: 5ms, render: 159ms)[22m
+ GET / [32m200[39m in 172ms[2m (compile: 4ms, render: 167ms)[22m
+ GET / [32m200[39m in 151ms[2m (compile: 8ms, render: 143ms)[22m
+ GET / [32m200[39m in 103ms[2m (compile: 6ms, render: 97ms)[22m
+ GET / [32m200[39m in 102ms[2m (compile: 19ms, render: 83ms)[22m
+ GET / [32m200[39m in 71ms[2m (compile: 5ms, render: 66ms)[22m
+ GET / [32m200[39m in 71ms[2m (compile: 20ms, render: 52ms)[22m
+ GET / [32m200[39m in 39ms[2m (compile: 8ms, render: 31ms)[22m
+[?25h
+[1G[0K⠙[1G[0K
