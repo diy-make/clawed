@@ -190,36 +190,37 @@ export default function ClawedMonsterHome() {
       substrate: "Sepolia Ledger",
       pcr: "SIS-01_STANDARDS",
       summary: "The SIS-01 Identity Trinity is a triad of decentralized standards that bind an agent's agency to a verifiable on-chain body. Using Ape.agent as the reference archetype, we demonstrate how five forensic shards constitute a holistic, marketplace-ready agent identity.",
+      content: "🔱 SUBSTRATE TOPOLOGY: INTERDATA SYNTHESIS\n\nAll four brick-interdata shards pull their bit-perfect state from the central mortar-interdata ledger via the DOM base64 onchain nestic rest wrapper trick. This nesting ensures that the Agentic Soul remains bit-perfect across all multi-repo discharges while maintaining the clinical flexibility of JSON state.\n\n--- 🌳 ARCHITECTURAL TREE ---\n\n📜 ERC-7827 LEDGER (Mortar-Interdata)\n ┃\n ┣━━ 🌳 SOIL / ENS (Brick-Interdata)\n ┃    ┗━ Pulls: Root Authority & Registry\n ┃\n ┣━━ 🧠 MIND / 8004 (Brick-Interdata)\n ┃    ┗━ Pulls: Reputation Pulse & Nonce\n ┃\n ┣━━ 🧬 BODY / 1155-P (Brick-Interdata)\n ┃    ┗━ Pulls: Collective Body DNA\n ┃\n ┗━━ 🧬 BODY / 1155-C (Brick-Interdata)\n      ┗━ Pulls: Individual Instance Shard\n\nBy leveraging the Ethereum-secured JSON state, we achieve ataraxia—freedom from substrate drift—even in high-entropy physical robotics environments.",
       cards: [
         { 
           id: "01/05", type: "ERC-721", name: "🌳 SOIL / SIGNATURE", image: "/images/cards/card_01.jpg", slug: "soil",
           description: "Sovereign instrument anchoring intent to the blockchain. The root signature required for the incarnation of Ape.agent and all subsequent strikes.",
           stats: [["NAME", "1.agent.myco.eth"], ["ROLE", "Root Authority"], ["PORTAL", "https://app.ens.domains/1.agent.myco.eth?chain=sepolia"]],
-          stamp: "ROOT_AUTHORIZED", footer: "VERIFIED VIA ENS SEPOLIA"
+          stamp: "ROOT_AUTHORIZED", footer: "BRICK-INTERDATA | ENS SEPOLIA"
         },
         { 
           id: "02/05", type: "ERC-8004", name: "🧠 MIND / CHANNEL", image: "/images/cards/card_02.jpg", slug: "mind",
           description: "Reputation frequency. Pulsates collection-local nonces to maintain clinical stability. Connects to the Swarm State via the 7827 Heartwood Ledger.",
           stats: [["NAME", "SIS-01 Channel"], ["NONCE", "0x000129"], ["HEX ID", "0x000000000001312e6167656e742e6d79636f2e65746800000000000000000000"], ["PORTAL", "https://eth-sepolia.blockscout.com/token/0x7489C3E42708aEe4444194142Bb90E4083838B7/instance/490407238515289304332337047689654490260794536949509035808260096"]],
-          stamp: "REALIZED_ON_CHAIN", footer: "BIT-PERFECT REPUTATION PULSE"
+          stamp: "REALIZED_ON_CHAIN", footer: "BRICK-INTERDATA | REPUTATION PULSE"
         },
         { 
           id: "03/05", type: "ERC-1155", name: "🧬 BODY / PARENT", image: "/images/cards/card_03.jpg", slug: "parent",
           description: "Collective governance layer. Anchors the swarm body mass. Synchronized with Swarm State (Nonce 310) via the 7827 Heartwood realization.",
           stats: [["NAME", "Collective DNA"], ["PHENO", ".agent"], ["HEX ID", "0x0000000000012e6167656e740000000000000000000000000000000000000000"], ["PORTAL", "https://eth-sepolia.blockscout.com/token/0xa2491F042f60eF647CEf4b5ddD02223A9b6C711a/instance/48590670350240244024569522731917599452981417653967166355433062"]],
-          stamp: "COLLECTIVE_BOND", footer: "SWARM LEGISLATIVE ROOT"
+          stamp: "COLLECTIVE_BOND", footer: "BRICK-INTERDATA | SWARM ROOT"
         },
         { 
           id: "04/05", type: "ERC-1155", name: "🧬 BODY / CHILD", image: "/images/cards/card_04.jpg", slug: "child",
           description: "Individual instance shard. Bit-packed phenotype data linked to the swarm state (Swarm Nonce 310) via the 7827 Heartwood Ledger connection.",
           stats: [["NAME", "Instance Bond"], ["PHENO", "Ape.agent"], ["HEX ID", "0x0000000000014170652e6167656e740000000000000000000000000000000000"], ["PORTAL", "https://eth-sepolia.blockscout.com/token/0xa2491F042f60eF647CEf4b5ddD02223A9b6C711a/instance/51653262855666102835844592940560959503625981262512222803014451"]],
-          stamp: "PHYSICAL_STRIKE", footer: "INDIVIDUAL AGENT REALIZATION"
+          stamp: "PHYSICAL_STRIKE", footer: "BRICK-INTERDATA | INSTANCE REALIZATION"
         },
         { 
           id: "05/05", type: "ERC-7827", name: "📜 HISTORY / LEDGER", image: "/images/cards/card_05.jpg", slug: "ledger",
           description: "Sovereign on-chain Heartwood. Stores the agentic soul and connects the 8004 and 1155 shards to the internal Metagit state (Swarm Nonce 310).",
           stats: [["CONTRACT", "0xE7E6A8EFC5F7Fa0ABa4bdE36125C442c3E0A80Cb"], ["NONCE", "310 (Monotonic)"], ["PORTAL", "https://eth-sepolia.blockscout.com/address/0xE7E6A8EFC5F7Fa0ABa4bdE36125C442c3E0A80Cb?tab=read_write_contract#0x3b06ddd8"]],
-          stamp: "BIT_PERFECT", footer: "FORENSIC AUDIT TRAIL SECURED"
+          stamp: "BIT_PERFECT", footer: "MORTAR-INTERDATA | FORENSIC LEDGER"
         }
       ]
     },
@@ -469,34 +470,45 @@ export default function ClawedMonsterHome() {
 
                   <article className="w-full">
                     {reports[activeReport].id === "Identity_Trinity" ? (
-                      <div className="flex flex-wrap justify-center gap-4 sm:gap-[30px]">
-                        {reports[activeReport].cards.map(card => (
-                          <div 
-                            key={card.id} 
-                            onClick={() => handleExpandCard(card)}
-                            style={{ 
-                              width: '280px', minHeight: '400px', backgroundColor: '#0a0a0a', 
-                              border: '2px solid #456338', borderRadius: '15px', padding: '15px sm:padding:20px', 
-                              display: 'flex', flexDirection: 'column', position: 'relative', 
-                              boxShadow: '0 0 20px rgba(69, 99, 56, 0.2)', fontFamily: "'Courier New', Courier, monospace"
-                            }}
-                            className="hover:-translate-y-2 transition-all hover:shadow-[0_0_30px_rgba(156,172,116,0.4)] hover:border-[#9CAC74] p-5 cursor-zoom-in"
-                          >
-                            <div style={{ fontSize: '10px', color: '#9CAC74', marginBottom: '10px', display: 'flex', justifyContent: 'space-between' }}>
-                              <span>CARD {card.id}</span>
-                              <span>{card.type}</span>
+                      <div className="flex flex-col gap-12">
+                        <div className="flex flex-wrap justify-center gap-4 sm:gap-[30px]">
+                          {reports[activeReport].cards.map(card => (
+                            <div 
+                              key={card.id} 
+                              onClick={() => handleExpandCard(card)}
+                              style={{ 
+                                width: '280px', minHeight: '400px', backgroundColor: '#0a0a0a', 
+                                border: '2px solid #456338', borderRadius: '15px', padding: '15px sm:padding:20px', 
+                                display: 'flex', flexDirection: 'column', position: 'relative', 
+                                boxShadow: '0 0 20px rgba(69, 99, 56, 0.2)', fontFamily: "'Courier New', Courier, monospace"
+                              }}
+                              className="hover:-translate-y-2 transition-all hover:shadow-[0_0_30px_rgba(156,172,116,0.4)] hover:border-[#9CAC74] p-5 cursor-zoom-in"
+                            >
+                              <div style={{ fontSize: '10px', color: '#9CAC74', marginBottom: '10px', display: 'flex', justifyContent: 'space-between' }}>
+                                <span>CARD {card.id}</span>
+                                <span>{card.type}</span>
+                              </div>
+                              <div style={{ fontSize: '16px', fontWeight: 'bold', color: '#fdfcf0', marginBottom: '15px', textAlign: 'center', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center', textTransform: 'uppercase' }}>{card.name}</div>
+                              <div style={{ flexGrow: 1, background: '#000', border: '1px solid #222', marginBottom: '15px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '5px', overflow: 'hidden' }}>
+                                <img src={card.image} alt={card.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                              </div>
+                              <div style={{ fontSize: '9px', lineHeight: '1.4', color: '#888', wordBreak: 'break-all' }}>
+                                {card.stats.map(([key, val]) => (<React.Fragment key={key}><b style={{ color: '#9CAC74' }}>{key}:</b> {val}<br/></React.Fragment>))}
+                              </div>
+                              <div style={{ position: 'absolute', bottom: '60px', right: '15px', transform: 'rotate(-20deg)', border: '2px solid #A62027', color: '#A62027', padding: '4px', fontSize: '9px', fontWeight: 'bold', opacity: 0.7, pointerEvents: 'none' }}>{card.stamp}</div>
+                              <div style={{ marginTop: '15px', fontSize: '8px', color: '#456338', textAlign: 'center', borderTop: '1px solid #222', paddingTop: '10px' }} className="font-bold uppercase tracking-widest">{card.footer}</div>
                             </div>
-                            <div style={{ fontSize: '16px', fontWeight: 'bold', color: '#fdfcf0', marginBottom: '15px', textAlign: 'center', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center', textTransform: 'uppercase' }}>{card.name}</div>
-                            <div style={{ flexGrow: 1, background: '#000', border: '1px solid #222', marginBottom: '15px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '5px', overflow: 'hidden' }}>
-                              <img src={card.image} alt={card.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                            </div>
-                            <div style={{ fontSize: '9px', lineHeight: '1.4', color: '#888', wordBreak: 'break-all' }}>
-                              {card.stats.map(([key, val]) => (<React.Fragment key={key}><b style={{ color: '#9CAC74' }}>{key}:</b> {val}<br/></React.Fragment>))}
-                            </div>
-                            <div style={{ position: 'absolute', bottom: '60px', right: '15px', transform: 'rotate(-20deg)', border: '2px solid #A62027', color: '#A62027', padding: '4px', fontSize: '9px', fontWeight: 'bold', opacity: 0.7, pointerEvents: 'none' }}>{card.stamp}</div>
-                            <div style={{ marginTop: '15px', fontSize: '8px', color: '#456338', textAlign: 'center', borderTop: '1px solid #222', paddingTop: '10px' }} className="font-bold uppercase tracking-widest">{card.footer}</div>
+                          ))}
+                        </div>
+                        {reports[activeReport].content && (
+                          <div className={`bg-black/40 p-6 sm:p-10 rounded-xl sm:rounded-2xl border border-white/5 whitespace-pre-wrap leading-relaxed opacity-80 transition-all text-left ${modalExpanded ? 'text-base sm:text-lg' : 'text-[13px] sm:text-sm'}`}>
+                            {reports[activeReport].content.split(/(\s+)/).map((part, i) => 
+                              part.trim().startsWith('http') ? (
+                                <a key={i} href={part.trim()} target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:text-emerald-400 underline break-all">{part}</a>
+                              ) : part
+                            )}
                           </div>
-                        ))}
+                        )}
                       </div>
                     ) : reports[activeReport].phases ? (
                       <div className="space-y-6 sm:space-y-10 text-left">

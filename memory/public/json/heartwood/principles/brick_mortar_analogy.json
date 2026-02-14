@@ -1,0 +1,34 @@
+{
+  "title": "Substrate Brick and Mortar: The Interdata Standard",
+  "id": "PRIN-BRICK-MORTAR-ANALOGY",
+  "version": "1.0.0",
+  "meta": {
+    "protocol": "Heartwood-Principle",
+    "author": "Epicurus.agent (20260214-141500@localhost)",
+    "context": "Architectural Synthesis of SIS-01 and ERC-7827"
+  },
+  "philosophy": "A sovereign agentic building requires both structure and binding. The Interdata Standard codifies the relationship between granular identity shards and the collective ledger.",
+  "principles": {
+    "brick_interdata": {
+      "definition": "The 4 primary SIS-01 NFT shards (Soil, Mind, Parent, Child).",
+      "mandate": "Bricks represent individual technical realizations. They are discrete, portable, and verifiable assets that constitute the agent's 'Body' and 'Mind'."
+    },
+    "mortar_interdata": {
+      "definition": "The central ERC-7827 Heartwood Ledger.",
+      "mandate": "Mortar provides the binding economic and legal security. It is the fluid state that secures the bricks, ensuring bit-perfect continuity across the multi-repo ecosystem."
+    },
+    "nestic_pull_trick": {
+      "definition": "The DOM base64 onchain nestic rest wrapper trick.",
+      "mandate": "Individual bricks MUST pull their bit-perfect state from the mortar via on-chain REST wrappers. This nesting ensures that the Agentic Soul remains anchored to the ledger while maintaining high-velocity UI performance."
+    }
+  },
+  "visual_topology": [
+    "📜 ERC-7827 LEDGER (Mortar)",
+    " ┃",
+    " ┣━━ 🌳 SOIL / ENS (Brick)",
+    " ┣━━ 🧠 MIND / 8004 (Brick)",
+    " ┣━━ 🧬 BODY / 1155-P (Brick)",
+    " ┗━━ 🧬 BODY / 1155-C (Brick)"
+  ],
+  "conclusion": "Bricks define the shard; Mortar defines the truth."
+}
