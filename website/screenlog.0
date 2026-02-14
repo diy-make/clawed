@@ -1000,4 +1000,15 @@ https://nextjs.org/docs/messages/module-not-found
  GET / [32m200[39m in 71ms[2m (compile: 20ms, render: 52ms)[22m
  GET / [32m200[39m in 39ms[2m (compile: 8ms, render: 31ms)[22m
 [?25h
-[1G[0K⠙[1G[0K
+[1G[0K⠙[1G[0KCannot exec '/home/bestape/gemini/node_modules/.bin/next': No such file or directory
+_bestape@yoga:/home/bestape/gemini/repos/diy-make/hackathons/clawed_monster/website\_bestape@yoga:/home/bestape/gemini/repos/diy-make/hackathons/clawed_monster/website\[?2004h[?2004h[0;34m[bestape@yoga:~/gemini/repos/diy-make/hackathons/clawed_monster/website]$[0m[0;34m[bestape@yoga:~/gemini/repos/diy-make/hackathons/clawed_monster/website]$[0m_bestape@yoga:/home/bestape/gemini/repos/diy-make/hackathons/clawed_monster/website\[?2004h[0;34m[bestape@yoga:~/gemini/repos/diy-make/hackathons/clawed_monster/website]$[0m_bestape@yoga:/home/bestape/gemini/repos/diy-make/hackathons/clawed_monster/website\[?2004h[0;34m[bestape@yoga:~/gemini/repos/diy-make/hackathons/clawed_monster/website]$[0m[1m[38;2;173;127;168m▲ Next.js 16.1.6[39m[22m (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://0.0.0.0:3001
+- Environments: .env.local
+
+[32m[1m✓[22m[39m Starting...
+[32m[1m✓[22m[39m Ready in 1188ms
+ HEAD / [32m200[39m in 1251ms[2m (compile: 1086ms, render: 165ms)[22m
+ GET / [32m200[39m in 78ms[2m (compile: 8ms, render: 70ms)[22m
+[32m[1m✓[22m[39m Compiled in 141ms
+[32m[1m✓[22m[39m Compiled in 86ms

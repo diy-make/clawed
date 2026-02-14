@@ -180,9 +180,9 @@ export default function ClawedMonsterHome() {
       <div className="fixed inset-0 z-0">
         <div 
           className="absolute inset-0 bg-cover bg-[left_top]" 
-          style={{ backgroundImage: "url('/images/claw_01.png')", filter: "brightness(0.8) contrast(110%)" }} 
+          style={{ backgroundImage: "url('/images/claw_01.png')", filter: "brightness(1.0) contrast(110%)" }} 
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/35" />
       </div>
 
       <div className="relative z-20 flex-1 flex flex-col">
