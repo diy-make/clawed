@@ -314,7 +314,7 @@ export default function ClawedMonsterHome() {
         <nav className="flex flex-col sm:flex-row justify-between items-stretch sm:items-start gap-4 mb-4 shrink-0">
           <button 
             onClick={handleOpenAbout}
-            className="flex flex-col gap-1 bg-[#ECCA90]/10 p-4 sm:p-5 rounded-xl border border-[#ECCA90]/30 backdrop-blur-xl group transition-all hover:bg-[#ECCA90]/20 animate-pulse-subtle relative overflow-hidden shimmer-btn"
+            className="flex flex-col gap-1 bg-[#ECCA90]/10 p-4 sm:p-5 rounded-xl border border-[#ECCA90]/30 backdrop-blur-xl group transition-all hover:bg-[#ECCA90]/20 animate-pulse-subtle relative overflow-hidden shimmer-btn cursor-pointer"
           >
             <div className="px-3 sm:px-4 py-1 sm:py-1.5 border border-[#ECCA90] bg-[#ECCA90]/20 rounded-full flex items-center gap-2 self-start">
                 <BookOpen size={12} className="text-[#ECCA90]" />
@@ -338,7 +338,7 @@ export default function ClawedMonsterHome() {
               <button 
                 disabled={loading}
                 onClick={connectWallet}
-                className="group relative w-48 h-48 sm:w-64 sm:h-64 bg-black/40 border border-white/20 rounded-full flex flex-col items-center justify-center gap-3 sm:gap-4 transition-all duration-700 hover:border-red-600/50 hover:shadow-[0_0_80px_rgba(220,38,38,0.3)] overflow-hidden backdrop-blur-md shrink-0 shimmer-btn"
+                className="group relative w-48 h-48 sm:w-64 sm:h-64 bg-black/40 border border-white/20 rounded-full flex flex-col items-center justify-center gap-3 sm:gap-4 transition-all duration-700 hover:border-red-600/50 hover:shadow-[0_0_80px_rgba(220,38,38,0.3)] overflow-hidden backdrop-blur-md shrink-0 shimmer-btn cursor-pointer"
               >
                 <div className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-30 transition-opacity duration-700 grayscale" style={{ backgroundImage: "url('/images/claw_03.jpg')" }} />
                 {loading ? <Loader2 size={40} className="text-[#ECCA90] animate-spin" /> : <Lock size={48} className="text-white/40 group-hover:text-red-600 transition-colors" />}
