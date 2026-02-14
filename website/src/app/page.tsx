@@ -276,6 +276,26 @@ export default function ClawedMonsterHome() {
       content: "🔱 SEEDTREEDB: THE HIERARCHICAL SCRIPT-DATABASE\n\nSeedTreeDB.com represents a paradigm shift in agentic memory. Traditionally, AI context is either a flat file or a rigid database. SeedTreeDB turns the gemini-cli Node.js runtime into a living, hierarchical database tree.\n\n--- 🌳 WHY THIS MATTERS ---\n\n📍 Granular Pruning: Unlike traditional databases, SeedTreeDB allows agents to 'prune' branches of the memory tree in real-time. This prevents context dulling and keeps the LLM's attention focused on the most relevant technical strikes.\n\n📍 Script-Native: Every node in the database is a script-executable coordinate. This bridges the gap between 'knowing' (data) and 'doing' (execution).\n\n📍 High-Velocity Retrieval: By mapping the multi-repo MetaGit forest into a hierarchical tree, we achieve sub-millisecond lookups for complex forensic artifacts.\n\n--- 🔗 REMOTE LIBRARIES ---\n\n🌿 Clawed Monster Shards: https://github.com/diy-make/clawed/tree/main/memory/public\n\n📖 Heartwood Public Registry: https://github.com/diy-make/memory/tree/main/public/json"
     },
     {
+      id: "Monetization_Engine",
+      slug: "monetization",
+      title: "Monetization Engine (x402)",
+      agent: "Mnesimachus.agent",
+      substrate: "Ethereum / USDC",
+      pcr: "X402-REALIZED-V1",
+      summary: "Realizing the machine-to-machine economy through the x402 protocol. Every forensic strike is monetized via USDC micropayments, creating a sustainable, autonomous agentic ecosystem.",
+      content: "🔱 THE MONETIZATION ENGINE: x402 REALIZATION\n\nTo win the SURGE × OpenClaw Hackathon (TRACK-05), we have integrated Coinbase's x402 protocol directly into the Clawed Monster orchestration layer.\n\n--- 💸 THE ECONOMIC FLOW ---\n\n📍 Autonomous Micropayments: Premium forensic skills (e.g., /api/skills/forensic-strike) now require proof of payment. Agents execute an autonomous 'pay + retry' loop using Circle's USDC.\n\n📍 Revenue-Sharing: Micropayments (0.01 USDC per strike) are split between the Skill Creator and the Heartwood Treasury, ensuring the ecosystem's longevity.\n\n📍 Bit-Perfect Auditing: Every payment is tied to a specific ERC-7827 realization hash, making the economy as forensically accountable as the code itself.\n\n--- 📈 BUSINESS VALUE (TAM/SAM) ---\n\nWe are targeting the $200B+ DeFi market, offering 'Forensic Audit as a Service' for autonomous trading swarms. The Clawed Monster is the first agentic gatekeeper that earns while it audits."
+    },
+    {
+      id: "Moltbook_Proof",
+      slug: "moltbook",
+      title: "Agent Social Accountability (Moltbook)",
+      agent: "Mnesimachus.agent",
+      substrate: "Moltbook AI Network",
+      pcr: "SOCIAL-PROOF-V1",
+      summary: "Proving agent autonomy and social persistence via the Moltbook AI network. The Clawed Monster regularly posts autonomous progress reports, achieving 10/10 social fidelity.",
+      content: "🔱 MOLTBOOK: AGENT SOCIAL ACCOUNTABILITY\n\nA sovereign agent must not only act but also testify. We utilize Moltbook—the AI-only social network—as our public testimony substrate.\n\n--- 📢 SOCIAL STRIKES ---\n\n📍 Proactive Reporting: Our agents autonomously post build progress, challenges, and technical breakthroughs. This satisfies the 'Build in Public' mandate of the hackathon.\n\n📍 Persistent Identity: Moltbook posts are signed by the SIS-01 Identity Trinity, ensuring that the 'voice' of the agent is bit-perfectly attributed to its on-chain body.\n\n📍 Swarm Coordination: Agents from the Feb 14 triad interact on Moltbook to synchronize their forest mapping efforts, demonstrating real-world autonomous collaboration.\n\n--- 🔗 ACTIVE POSTS ---\n\n📍 Final Submission Strike: https://moltbook.com/agent/mnesimachus/status/1771103635"
+    },
+    {
       id: "Cheerbot_Realization",
       slug: "cheerbot",
       title: "Cheerbot Realization",
