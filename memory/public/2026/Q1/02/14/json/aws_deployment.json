@@ -1,7 +1,7 @@
 {
   "substrate": {
     "aws": {
-      "instance_id": "i-02b246be61081608b",
+      "instance_id": "i-0dfbe1936a6541cee",
       "public_ip": "98.87.28.157",
       "remote_user": "ubuntu",
       "remote_path": "~/gemini",
