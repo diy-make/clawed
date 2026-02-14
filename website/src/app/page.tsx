@@ -2,9 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import { 
-  Activity, Zap, ShieldCheck, Lock, Loader2, Cpu, Globe, Database, Scale
+  Activity, ShieldCheck, Lock, Loader2, Cpu, Globe, Database, Scale, Info, X, CheckCircle2
 } from "lucide-react";
-import WalletConnect from "../components/WalletConnect";
 
 const PALETTE = {
   bg: "#050505",
@@ -19,6 +18,7 @@ const PALETTE = {
 export default function ClawedMonsterHome() {
   const [isAuthorized, setIsAuthorized] = useState(false);
   const [identity, setIdentity] = useState<string | null>(null);
+  const [showAbout, setShowAbout] = useState(false);
 
   useEffect(() => {
     const checkAuth = () => {
@@ -44,7 +44,7 @@ export default function ClawedMonsterHome() {
       {/* 🖼️ THE LIVING SUBSTRATE */}
       <div className="fixed inset-0 z-0">
         <div 
-          className="absolute inset-0 bg-cover bg-[left_top] transition-transform duration-[20s] ease-out scale-110 animate-pulse" 
+          className="absolute inset-0 bg-cover bg-[left_top]" 
           style={{ backgroundImage: "url('/images/claw_01.png')", filter: "brightness(0.4) contrast(120%) saturate(50%)" }} 
         />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_#050505_95%)] opacity-80" />
@@ -54,18 +54,22 @@ export default function ClawedMonsterHome() {
         
         {/* TOP BAR */}
         <nav className="flex flex-col md:flex-row justify-between items-start gap-6 mb-12">
-          <div className="flex flex-col gap-1 bg-black/40 p-6 rounded-2xl border border-white/10 shadow-2xl backdrop-blur-xl w-full md:w-auto min-h-[120px] justify-end">
-            <div className="px-4 py-1.5 border border-red-500/40 bg-red-500/10 rounded-full transition-all flex items-center gap-2 self-start">
-                <Cpu size={12} className="text-red-400" />
-                <span className="text-[10px] font-black tracking-[0.3em] uppercase text-red-400">
-                  TEE_ENCLAVE_ACTIVE
+          {/* ABOUT BUTTON (Replacing the old tile) */}
+          <button 
+            onClick={() => setShowAbout(true)}
+            className="flex flex-col gap-1 bg-black/40 p-6 rounded-2xl border border-white/10 shadow-2xl backdrop-blur-xl w-full md:w-auto min-h-[120px] justify-end group transition-all hover:border-[#ECCA90]/40"
+          >
+            <div className="px-4 py-1.5 border border-[#ECCA90]/40 bg-[#ECCA90]/10 rounded-full transition-all flex items-center gap-2 self-start group-hover:bg-[#ECCA90]/20">
+                <Info size={12} className="text-[#ECCA90]" />
+                <span className="text-[10px] font-black tracking-[0.3em] uppercase text-[#ECCA90]">
+                  ABOUT_SUBSTRATE
                 </span>
             </div>
-            <span className="text-[10px] md:text-[12px] font-bold tracking-[0.5em] uppercase ml-1 opacity-60" style={{ color: PALETTE.floral_butter }}>Sovereign Nitro Wrapper</span>
-          </div>
+            <span className="text-[10px] md:text-[12px] font-bold tracking-[0.5em] uppercase ml-1 opacity-60 group-hover:opacity-100 transition-opacity" style={{ color: PALETTE.floral_butter }}>Technical Reports</span>
+          </button>
 
           <div className="w-full md:w-auto flex items-center justify-center">
-            {/* WalletConnect Removed */}
+            {/* Action Space */}
           </div>
         </nav>
 
@@ -202,7 +206,7 @@ export default function ClawedMonsterHome() {
                       </li>
                       <li className="bg-white/5 p-4 rounded-xl border-l-2 border-[#9CAC74]">
                         <strong className="text-[#9CAC74] uppercase text-[10px] tracking-widest block mb-1">2. Cellular Alignment</strong>
-                        The lobster&apos;s internal state is mapped to the Heartwood Registry. Every &quot;thought&quot; or &quot;action&quot; the lobster attempts is weighed against the Owockibot Social Contract.
+                        The lobster&apos;s internal state is mapped to the Heartwood Registry. Every &quot;thought&quot; or &quot;action&quot; the lobster attempts is weighed against the Heartwood mandates.
                       </li>
                     </ul>
                   </section>
@@ -229,6 +233,72 @@ export default function ClawedMonsterHome() {
                   </section>
                 </div>
               </article>
+            </div>
+          </div>
+        )}
+
+        {/* 🔱 ABOUT MODAL: THE FORENSIC REPORTS */}
+        {showAbout && (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-12 animate-in fade-in zoom-in duration-300">
+            <div className="absolute inset-0 bg-black/90 backdrop-blur-2xl" onClick={() => setShowAbout(false)} />
+            <div className="relative bg-[#0a0a0a] w-full max-w-4xl max-h-[85vh] border border-white/10 rounded-3xl overflow-hidden flex flex-col shadow-[0_0_100px_rgba(0,0,0,1)]">
+              
+              <div className="p-6 border-b border-white/5 flex justify-between items-center bg-black/40">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-[#ECCA90]/10 flex items-center justify-center border border-[#ECCA90]/30">
+                    <Database size={16} className="text-[#ECCA90]" />
+                  </div>
+                  <h3 className="text-sm font-black uppercase tracking-[0.4em]">Substrate_Archive</h3>
+                </div>
+                <button onClick={() => setShowAbout(false)} className="p-2 hover:bg-white/5 rounded-full transition-colors">
+                  <X size={20} className="opacity-40" />
+                </button>
+              </div>
+
+              <div className="flex-1 overflow-y-auto p-8 md:p-12 space-y-16 custom-scrollbar">
+                
+                {/* REPORT 1: ARCHITECTURE */}
+                <section className="space-y-6">
+                  <div className="flex items-center gap-4 text-[#ECCA90]">
+                    <span className="text-[10px] font-black tracking-widest uppercase border-b border-[#ECCA90]/40 pb-1">Report_01</span>
+                    <span className="h-px flex-1 bg-[#ECCA90]/10" />
+                  </div>
+                  <h4 className="text-3xl md:text-4xl font-black tracking-tighter uppercase leading-none">The Clawed Monster Architecture</h4>
+                  <div className="prose prose-invert prose-sm max-w-none opacity-80 leading-relaxed font-mono">
+                    <p>The **Clawed Monster** is a high-fidelity orchestration layer designed to encapsulate external AI execution within a hardened **AWS Nitro Enclave (TEE)**. This architecture instantiates **Forensics as a Substrate**.</p>
+                    <p>By synthesizing **ERC-7827 (Value Version Control)**, **ERC-4804 (Web3 URL Translation)**, and **ERC-8128 (Signed HTTP)**, we create a Sovereign Channel where interaction is cryptographically clinicalized.</p>
+                    <p>Realization occurs within the enclave as a &quot;Silicon Notary,&quot; signing JSON objects at V8 speeds (&lt;10ms). Commitment hashes are pushed to the public ledger while raw realizations remain within the secure substrate.</p>
+                  </div>
+                </section>
+
+                {/* REPORT 2: DICHOTOMY */}
+                <section className="space-y-6">
+                  <div className="flex items-center gap-4 text-red-500">
+                    <span className="text-[10px] font-black tracking-widest uppercase border-b border-red-500/40 pb-1">Report_02</span>
+                    <span className="h-px flex-1 bg-red-500/10" />
+                  </div>
+                  <h4 className="text-3xl md:text-4xl font-black tracking-tighter uppercase leading-none">The Lobster-Heartwood Dichotomy</h4>
+                  <div className="prose prose-invert prose-sm max-w-none opacity-80 leading-relaxed font-mono">
+                    <p>This report codifies the dichotomy between **Kinetic Compute** (the Lobster) and **Legislative Substrate** (the Heartwood). The Lobster represents raw, high-entropy muscle without internal regiment.</p>
+                    <p>The **Heartwood** is the sovereign body of law—bit-perfect, monotonic, and immutable. It protects itself via **Legislative Seals (.sealed)** and defines the mandates that govern all participants.</p>
+                    <p>The **Clawed Monster** enforces this dichotomy by intercepting thought streams and auditing them against the Heartwood. Actions are only realized if they satisfy the legislative requirements signed by the **SIS-01 Identity Trinity**.</p>
+                  </div>
+                </section>
+
+              </div>
+
+              <div className="p-8 bg-black/60 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div className="flex items-center gap-4 opacity-40">
+                  <ShieldCheck size={16} />
+                  <span className="text-[8px] font-black uppercase tracking-[0.3em]">Technical Strikes Secured // 2026</span>
+                </div>
+                <button 
+                  onClick={() => setShowAbout(false)}
+                  className="px-8 py-3 bg-[#ECCA90] text-black text-[10px] font-black uppercase tracking-[0.4em] rounded-full hover:scale-105 transition-transform"
+                >
+                  Return to Gate
+                </button>
+              </div>
             </div>
           </div>
         )}
@@ -263,6 +333,11 @@ export default function ClawedMonsterHome() {
 
       <style jsx global>{`
         body { background-color: #050505; cursor: default; color: #fdfcf0; }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(236, 202, 144, 0.1); border-radius: 10px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(236, 202, 144, 0.3); }
+        
         #next-dev-indicator, 
         .nextjs-static-indicator-container, 
         .__next-dev-indicator-container, 
