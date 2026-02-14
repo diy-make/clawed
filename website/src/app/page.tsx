@@ -433,13 +433,13 @@ export default function ClawedMonsterHome() {
                 ))}
               </aside>
 
-              <main className="flex-1 overflow-y-auto p-6 sm:p-12 space-y-8 custom-scrollbar bg-gradient-to-b from-transparent to-black/40 text-left">
+              <main className="flex-1 min-w-0 overflow-y-auto p-6 sm:p-12 space-y-8 custom-scrollbar bg-gradient-to-b from-transparent to-black/40 text-left">
                 <header className="bg-gradient-to-r from-[#ECCA90]/10 to-transparent p-6 sm:p-8 rounded-2xl sm:rounded-3xl border-l-4 border-[#ECCA90] space-y-4 shadow-xl">
                   <div className="flex items-center gap-3 text-[#ECCA90]">
                     <ShieldCheck size={20} />
                     <span className="text-[9px] sm:text-[10px] font-black tracking-[0.2em] sm:tracking-[0.4em] uppercase">Verified Technical Realization</span>
                   </div>
-                  <h2 className={`font-black tracking-tighter uppercase leading-tight text-white transition-all ${modalExpanded ? 'text-4xl sm:text-7xl' : 'text-2xl sm:text-4xl'}`}>
+                  <h2 className={`font-black tracking-tighter uppercase leading-tight text-white transition-all break-words ${modalExpanded ? 'text-4xl sm:text-7xl' : 'text-2xl sm:text-4xl'}`}>
                     {reports[activeReport].title}
                   </h2>
                   <div className="flex flex-wrap gap-4 sm:gap-6 pt-4 border-t border-white/10">
@@ -452,7 +452,7 @@ export default function ClawedMonsterHome() {
                 <div className="flex flex-col gap-6 sm:gap-8">
                   <aside className="bg-[#ECCA90]/10 p-6 sm:p-10 rounded-xl sm:rounded-2xl border border-[#ECCA90]/30 space-y-4 sm:space-y-6 shadow-lg">
                     <h3 className="text-[10px] sm:text-[12px] font-black tracking-[0.2em] sm:tracking-[0.4em] uppercase text-[#ECCA90]">Executive Summary</h3>
-                    <p className={`leading-relaxed italic opacity-90 transition-all ${modalExpanded ? 'text-lg sm:text-2xl font-serif' : 'text-base sm:text-lg font-serif'}`}>
+                    <p className={`leading-relaxed italic opacity-90 transition-all break-words ${modalExpanded ? 'text-lg sm:text-2xl font-serif' : 'text-base sm:text-lg font-serif'}`}>
                       {reports[activeReport].summary}
                     </p>
                   </aside>
@@ -480,7 +480,7 @@ export default function ClawedMonsterHome() {
                             <div style={{ flexGrow: 1, background: '#000', border: '1px solid #222', marginBottom: '15px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '5px', overflow: 'hidden' }}>
                               <img src={card.image} alt={card.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                             </div>
-                            <div style={{ fontSize: '9px', lineHeight: '1.4', color: '#888' }}>
+                            <div style={{ fontSize: '9px', lineHeight: '1.4', color: '#888', wordBreak: 'break-all' }}>
                               {card.stats.map(([key, val]) => (<React.Fragment key={key}><b style={{ color: '#9CAC74' }}>{key}:</b> {val}<br/></React.Fragment>))}
                             </div>
                             <div style={{ position: 'absolute', bottom: '60px', right: '15px', transform: 'rotate(-20deg)', border: '2px solid #A62027', color: '#A62027', padding: '4px', fontSize: '9px', fontWeight: 'bold', opacity: 0.7, pointerEvents: 'none' }}>{card.stamp}</div>
