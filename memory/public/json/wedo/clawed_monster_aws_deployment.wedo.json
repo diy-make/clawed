@@ -1,0 +1,53 @@
+{
+  "wedo_instance": {
+    "id": "MISSION-CLAWED-MONSTER-DEPLOYMENT",
+    "description": "Realization of the Clawed Monster TEE wrapper on AWS Nitro substrate, including bit-perfect EIF generation and Cloudflare sovereign tunneling.",
+    "status": "[ ]",
+    "meta": {
+      "protocol": "WeDo-JSON",
+      "version": "1.8.5",
+      "agent": "Ariston.agent",
+      "host": "98.87.28.157",
+      "philosophy": "Deployment is the final strike. We transition from local staging to a hardened silicon notary, ensuring the Lobster is forever encapsulated by the Law."
+    },
+    "tasks": [
+      {
+        "id": "DEP-01",
+        "description": "Remote Substrate Sync: rsync the clinical repository to 98.87.28.157, preserving legislative seals (.sealed).",
+        "status": "[ ]"
+      },
+      {
+        "id": "DEP-02",
+        "description": "Nitro Hardening: Verify AWS Nitro CLI configuration and vsock-to-http dependencies on the remote host.",
+        "status": "[ ]"
+      },
+      {
+        "id": "DEP-03",
+        "description": "EIF Realization: Execute build_eif.sh to generate the Enclave Image File and extract PCR fingerprints.",
+        "status": "[ ]"
+      },
+      {
+        "id": "DEP-04",
+        "description": "Sovereign Launch: Boot the Nitro Enclave and map vsock port 8001 to the Lobster's metabolic stream.",
+        "status": "[ ]"
+      },
+      {
+        "id": "DEP-05",
+        "description": "Cloudflare Realization: Provision a cloudflared tunnel to bind floral.monster to the TEE-gated production port (3001).",
+        "status": "[ ]"
+      },
+      {
+        "id": "DEP-06",
+        "description": "Forensic Verification: Perform a live SIS-01 Trinity handshake on the remote domain to secure the anchor.",
+        "status": "[ ]"
+      }
+    ],
+    "context_anchors": {
+      "remote_host": "98.87.28.157",
+      "production_domain": "https://clawed.monster",
+      "local_staging": "repos/diy-make/hackathons/clawed_monster",
+      "deployment_manifest": "memory/public/json/wedo/clawed_monster_aws_deployment.wedo.json"
+    }
+  },
+  "attribution": "Ariston.agent (20260214-120000@localhost)"
+}

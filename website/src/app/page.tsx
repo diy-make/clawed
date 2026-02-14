@@ -5,6 +5,7 @@ import {
   Activity, ShieldCheck, Lock, Loader2, Database, BookOpen, X, CheckCircle2, FileText, Zap, ChevronLeft, ChevronRight, Maximize2, Minimize2
 } from "lucide-react";
 import { ethers } from 'ethers';
+import { usePathname, useRouter } from 'next/navigation';
 
 const PALETTE = {
   bg: "#121212",
@@ -22,6 +23,8 @@ interface EthereumProvider {
 const CLICKWRAP_MESSAGE = (nonce: string) => `I agree to enter the metagit feed. Session Nonce: ${nonce}`;
 
 export default function ClawedMonsterHome() {
+  const pathname = usePathname();
+  const router = useRouter();
   const [isAuthorized, setIsAuthorized] = useState(false);
   const [identity, setIdentity] = useState<string | null>(null);
   const [showArchive, setShowArchive] = useState(false);
@@ -30,6 +33,63 @@ export default function ClawedMonsterHome() {
   
   const [navCollapsed, setNavCollapsed] = useState(false);
   const [modalExpanded, setModalExpanded] = useState(false);
+  const [expandedCard, setExpandedCard] = useState<any>(null);
+
+  // Sync state with URL
+  useEffect(() => {
+    if (pathname === '/about') {
+      setShowArchive(true);
+      setExpandedCard(null);
+    } else if (pathname?.startsWith('/about/')) {
+      const slug = pathname.split('/').pop();
+      
+      // Check if it's a report slug
+      const reportIdx = reports.findIndex(r => r.slug === slug);
+      if (reportIdx !== -1) {
+        setShowArchive(true);
+        setActiveReport(reportIdx);
+        setExpandedCard(null);
+        return;
+      }
+
+      // Check if it's a card slug (default to identity report)
+      const card = reports[1].cards.find(c => c.slug === slug);
+      if (card) {
+        setShowArchive(true);
+        setActiveReport(1);
+        setExpandedCard(card);
+      }
+    } else if (pathname === '/') {
+      setShowArchive(false);
+      setExpandedCard(null);
+    }
+  }, [pathname]);
+
+  const handleCloseArchive = () => {
+    setShowArchive(false);
+    setExpandedCard(null);
+    router.push('/');
+  };
+
+  const handleOpenAbout = () => {
+    setShowArchive(true);
+    router.push('/about');
+  };
+
+  const handleSelectReport = (idx: number) => {
+    setActiveReport(idx);
+    router.push(`/about/${reports[idx].slug}`);
+  };
+
+  const handleExpandCard = (card: any) => {
+    setExpandedCard(card);
+    router.push(`/about/${card.slug}`);
+  };
+
+  const handleCloseCard = () => {
+    setExpandedCard(null);
+    router.push(`/about/${reports[activeReport].slug}`);
+  };
 
   useEffect(() => {
     const checkStoredAuth = () => {
@@ -109,8 +169,9 @@ export default function ClawedMonsterHome() {
   const reports = [
     {
       id: "Grafting_Protocol",
+      slug: "protocol",
       title: "Grafting Protocol",
-      agent: "Crates.agent",
+      agent: "Ape.agent",
       substrate: "Local Staging",
       pcr: "0x0000...0000",
       summary: "The clinical encapsulation of an active lobster instance within the floral.monster swarm. This is a cybernetic graft where Heartwood cells act as the vascular system, providing context and legislative DNA to the lobster's raw execution.",
@@ -121,43 +182,50 @@ export default function ClawedMonsterHome() {
     },
     {
       id: "Identity_Trinity",
+      slug: "identity",
       title: "The Identity Trinity",
-      agent: "Crates.agent",
+      agent: "Ape.agent",
       substrate: "Sepolia Ledger",
       pcr: "SIS-01_STANDARDS",
-      summary: "The SIS-01 Identity Trinity is a triad of decentralized standards that bind an agent's agency to a verifiable on-chain body. Using Crates.agent as the reference archetype, we demonstrate how five forensic shards constitute a holistic, marketplace-ready agent identity.",
+      summary: "The SIS-01 Identity Trinity is a triad of decentralized standards that bind an agent's agency to a verifiable on-chain body. Using Ape.agent as the reference archetype, we demonstrate how five forensic shards constitute a holistic, marketplace-ready agent identity.",
       cards: [
         { 
-          id: "01/05", type: "ERC-721", name: "🌳 SOIL / SIGNATURE", icon: "📜",
-          stats: [["NAME", "1.agent.myco.eth"], ["ROLE", "Root Authority"], ["TX", "0x51677f16..."], ["ID", "49040723..."]],
+          id: "01/05", type: "ERC-721", name: "🌳 SOIL / SIGNATURE", image: "/images/cards/card_01.jpg", slug: "soil",
+          description: "Sovereign instrument anchoring intent to the blockchain. The root signature required for the incarnation of Ape.agent and all subsequent strikes.",
+          stats: [["NAME", "1.agent.myco.eth"], ["ROLE", "Root Authority"], ["PORTAL", "https://app.ens.domains/1.agent.myco.eth?chain=sepolia"]],
           stamp: "ROOT_AUTHORIZED", footer: "VERIFIED VIA ENS SEPOLIA"
         },
         { 
-          id: "02/05", type: "ERC-8004", name: "🧠 MIND / CHANNEL", icon: "📡",
-          stats: [["NAME", "SIS-01 Channel"], ["NONCE", "0x000001"], ["TX", "0x51677f16..."], ["REGISTRY", "0x7489C3E4..."]],
+          id: "02/05", type: "ERC-8004", name: "🧠 MIND / CHANNEL", image: "/images/cards/card_02.jpg", slug: "mind",
+          description: "Reputation frequency. Pulsates collection-local nonces to maintain clinical stability. Connects to the Swarm State via the 7827 Heartwood Ledger.",
+          stats: [["NAME", "SIS-01 Channel"], ["NONCE", "0x000129"], ["HEX ID", "0x000000000001312e6167656e742e6d79636f2e65746800000000000000000000"], ["PORTAL", "https://eth-sepolia.blockscout.com/token/0x7489C3E42708aEe4444194142Bb90E4083838B7/instance/490407238515289304332337047689654490260794536949509035808260096"]],
           stamp: "REALIZED_ON_CHAIN", footer: "BIT-PERFECT REPUTATION PULSE"
         },
         { 
-          id: "03/05", type: "ERC-1155", name: "🧬 BODY / PARENT", icon: "🛡️",
-          stats: [["NAME", "Collective DNA"], ["PHENO", ".agent"], ["TX", "0xd0ad5362..."], ["ID", "48590670..."]],
+          id: "03/05", type: "ERC-1155", name: "🧬 BODY / PARENT", image: "/images/cards/card_03.jpg", slug: "parent",
+          description: "Collective governance layer. Anchors the swarm body mass. Synchronized with Swarm State (Nonce 310) via the 7827 Heartwood realization.",
+          stats: [["NAME", "Collective DNA"], ["PHENO", ".agent"], ["HEX ID", "0x0000000000012e6167656e740000000000000000000000000000000000000000"], ["PORTAL", "https://eth-sepolia.blockscout.com/token/0xa2491F042f60eF647CEf4b5ddD02223A9b6C711a/instance/48590670350240244024569522731917599452981417653967166355433062"]],
           stamp: "COLLECTIVE_BOND", footer: "SWARM LEGISLATIVE ROOT"
         },
         { 
-          id: "04/05", type: "ERC-1155", name: "🧬 BODY / CHILD", icon: "👤",
-          stats: [["NAME", "Instance Bond"], ["PHENO", "Crates.agent"], ["TX", "0x508c4e45..."], ["ID", "54143726..."]],
+          id: "04/05", type: "ERC-1155", name: "🧬 BODY / CHILD", image: "/images/cards/card_04.jpg", slug: "child",
+          description: "Individual instance shard. Bit-packed phenotype data linked to the swarm state (Swarm Nonce 310) via the 7827 Heartwood Ledger connection.",
+          stats: [["NAME", "Instance Bond"], ["PHENO", "Ape.agent"], ["HEX ID", "0x0000000000014170652e6167656e740000000000000000000000000000000000"], ["PORTAL", "https://eth-sepolia.blockscout.com/token/0xa2491F042f60eF647CEf4b5ddD02223A9b6C711a/instance/51653262855666102835844592940560959503625981262512222803014451"]],
           stamp: "PHYSICAL_STRIKE", footer: "INDIVIDUAL AGENT REALIZATION"
         },
         { 
-          id: "05/05", type: "ERC-7827", name: "📜 HISTORY / LEDGER", icon: "⚖️",
-          stats: [["NAME", "Realization Record"], ["NONCE", "305 (Monotonic)"], ["TX", "0xacb14e52..."], ["CONTRACT", "0xE7E6A8EF..."]],
+          id: "05/05", type: "ERC-7827", name: "📜 HISTORY / LEDGER", image: "/images/cards/card_05.jpg", slug: "ledger",
+          description: "Sovereign on-chain Heartwood. Stores the agentic soul and connects the 8004 and 1155 shards to the internal Metagit state (Swarm Nonce 310).",
+          stats: [["CONTRACT", "0xE7E6A8EFC5F7Fa0ABa4bdE36125C442c3E0A80Cb"], ["NONCE", "310 (Monotonic)"], ["PORTAL", "https://eth-sepolia.blockscout.com/address/0xE7E6A8EFC5F7Fa0ABa4bdE36125C442c3E0A80Cb?tab=read_write_contract#0x3b06ddd8"]],
           stamp: "BIT_PERFECT", footer: "FORENSIC AUDIT TRAIL SECURED"
         }
       ]
     },
     {
       id: "Architecture",
+      slug: "architecture",
       title: "System Architecture",
-      agent: "Crates.agent",
+      agent: "Ape.agent",
       substrate: "AWS Nitro Enclave",
       pcr: "TEE-01_PENDING",
       summary: "A high-fidelity orchestration layer synthesizing ERC-7827, ERC-4804, and ERC-8128. Utilizing AWS Nitro Enclaves to instantiate a 'Silicon Notary' that ensures authenticated and confidential agentic traffic.",
@@ -165,8 +233,9 @@ export default function ClawedMonsterHome() {
     },
     {
       id: "Dichotomy",
+      slug: "dichotomy",
       title: "Legislative Dichotomy",
-      agent: "Crates.agent",
+      agent: "Ape.agent",
       substrate: "Heartwood Registry",
       pcr: "FORENSIC_BASELINE",
       summary: "Codifying the separation of Kinetic Compute (The Lobster) and Legislative Substrate (The Heartwood). The Lobster provides raw muscle, while the Heartwood provides the nervous system and body of law.",
@@ -180,55 +249,55 @@ export default function ClawedMonsterHome() {
       <div className="fixed inset-0 z-0">
         <div 
           className="absolute inset-0 bg-cover bg-[left_top]" 
-          style={{ backgroundImage: "url('/images/claw_01.png')", filter: "brightness(1.0) contrast(110%)" }} 
+          style={{ backgroundImage: "url('/images/claw_01.png')", filter: "brightness(1.05) contrast(110%)" }} 
         />
-        <div className="absolute inset-0 bg-black/35" />
+        <div className="absolute inset-0 bg-black/30" />
       </div>
 
       <div className="relative z-20 flex-1 flex flex-col">
         
-        <nav className="flex justify-between items-start gap-4 mb-4 shrink-0">
+        <nav className="flex flex-col sm:flex-row justify-between items-stretch sm:items-start gap-4 mb-4 shrink-0">
           <button 
-            onClick={() => setShowArchive(true)}
-            className="flex flex-col gap-1 bg-[#ECCA90]/10 p-5 rounded-xl border border-[#ECCA90]/30 backdrop-blur-xl group transition-all hover:bg-[#ECCA90]/20 animate-pulse-subtle relative overflow-hidden shimmer-btn"
+            onClick={handleOpenAbout}
+            className="flex flex-col gap-1 bg-[#ECCA90]/10 p-4 sm:p-5 rounded-xl border border-[#ECCA90]/30 backdrop-blur-xl group transition-all hover:bg-[#ECCA90]/20 animate-pulse-subtle relative overflow-hidden shimmer-btn"
           >
-            <div className="px-4 py-1.5 border border-[#ECCA90] bg-[#ECCA90]/20 rounded-full flex items-center gap-2 self-start">
-                <BookOpen size={14} className="text-[#ECCA90]" />
-                <span className="text-[11px] font-black tracking-[0.3em] uppercase text-[#ECCA90]">About</span>
+            <div className="px-3 sm:px-4 py-1 sm:py-1.5 border border-[#ECCA90] bg-[#ECCA90]/20 rounded-full flex items-center gap-2 self-start">
+                <BookOpen size={12} className="text-[#ECCA90]" />
+                <span className="text-[10px] sm:text-[11px] font-black tracking-[0.2em] sm:tracking-[0.3em] uppercase text-[#ECCA90]">About</span>
             </div>
-            <span className="text-[14px] font-bold uppercase tracking-[0.4em] mt-2 text-[#ECCA90]">Review the Law</span>
+            <span className="text-[12px] sm:text-[14px] font-bold uppercase tracking-[0.3em] sm:tracking-[0.4em] mt-2 text-[#ECCA90]">Review the Law</span>
           </button>
 
-          <div className="flex flex-col gap-1 bg-black/40 p-5 rounded-xl border border-white/10 backdrop-blur-xl min-w-[240px] text-right">
-            <div className={`px-4 py-1.5 border rounded-full transition-all inline-flex items-center gap-2 self-end ${isAuthorized ? 'border-emerald-500/40 bg-emerald-500/10 text-emerald-400' : 'border-red-500/40 bg-red-500/10 text-red-400'}`}>
+          <div className="flex flex-col gap-1 bg-black/40 p-4 sm:p-5 rounded-xl border border-white/10 backdrop-blur-xl sm:min-w-[240px] text-left sm:text-right">
+            <div className={`px-3 sm:px-4 py-1 sm:py-1.5 border rounded-full transition-all inline-flex items-center gap-2 self-start sm:self-end ${isAuthorized ? 'border-emerald-500/40 bg-emerald-500/10 text-emerald-400' : 'border-red-500/40 bg-red-500/10 text-red-400'}`}>
                 {isAuthorized ? <ShieldCheck size={12} /> : <Lock size={12} />}
-                <span className="text-[11px] font-black tracking-[0.3em] uppercase">{isAuthorized ? "Active" : "Locked"}</span>
+                <span className="text-[10px] sm:text-[11px] font-black tracking-[0.2em] sm:tracking-[0.3em] uppercase">{isAuthorized ? "Active" : "Locked"}</span>
             </div>
-            <span className="text-[13px] font-mono italic text-[#ECCA90] mt-2">{isAuthorized ? `${identity?.slice(0,8)}...${identity?.slice(-6)}` : "Awaiting_Ratification"}</span>
+            <span className="text-[12px] sm:text-[13px] font-mono italic text-[#ECCA90] mt-2">{isAuthorized ? `${identity?.slice(0,8)}...${identity?.slice(-6)}` : "Awaiting_Ratification"}</span>
           </div>
         </nav>
 
-        <div className="flex-1 flex flex-col justify-center">
+        <div className="flex-1 flex flex-col justify-center py-4 sm:py-2">
           {!isAuthorized ? (
-            <div className="flex flex-col items-center justify-center text-center space-y-6 py-2">
+            <div className="flex flex-col items-center justify-center text-center space-y-4 sm:space-y-6">
               <button 
                 disabled={loading}
                 onClick={connectWallet}
-                className="group relative w-56 h-56 md:w-64 md:h-64 bg-black/40 border border-white/20 rounded-full flex flex-col items-center justify-center gap-4 transition-all duration-700 hover:border-red-600/50 hover:shadow-[0_0_80px_rgba(220,38,38,0.3)] overflow-hidden backdrop-blur-md shrink-0 shimmer-btn"
+                className="group relative w-48 h-48 sm:w-64 sm:h-64 bg-black/40 border border-white/20 rounded-full flex flex-col items-center justify-center gap-3 sm:gap-4 transition-all duration-700 hover:border-red-600/50 hover:shadow-[0_0_80px_rgba(220,38,38,0.3)] overflow-hidden backdrop-blur-md shrink-0 shimmer-btn"
               >
                 <div className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-30 transition-opacity duration-700 grayscale" style={{ backgroundImage: "url('/images/claw_03.jpg')" }} />
-                {loading ? <Loader2 size={48} className="text-[#ECCA90] animate-spin" /> : <Lock size={56} className="text-white/40 group-hover:text-red-600 transition-colors" />}
-                <span className="text-[10px] font-black uppercase tracking-[0.5em] text-white/40 group-hover:text-white">Initiate Strike</span>
+                {loading ? <Loader2 size={40} className="text-[#ECCA90] animate-spin" /> : <Lock size={48} className="text-white/40 group-hover:text-red-600 transition-colors" />}
+                <span className="text-[9px] font-black uppercase tracking-[0.4em] text-white/40 group-hover:text-white">Initiate Strike</span>
               </button>
               <div className="space-y-1 px-4">
-                <h2 className="text-5xl md:text-7xl font-black tracking-tighter uppercase text-[#ECCA90] drop-shadow-[0_0_30px_rgba(236,202,144,0.3)] leading-tight py-1">
+                <h2 className="text-4xl sm:text-7xl font-black tracking-tighter uppercase text-[#ECCA90] drop-shadow-[0_0_30px_rgba(236,202,144,0.3)] leading-tight py-1">
                   Sovereign Gate
                 </h2>
-                <p className="text-[10px] font-black tracking-[1em] uppercase text-red-600 animate-pulse">Attestation Required</p>
+                <p className="text-[9px] font-black tracking-[0.8em] sm:tracking-[1em] uppercase text-red-600 animate-pulse">Attestation Required</p>
               </div>
             </div>
           ) : (
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 items-start py-2">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 items-start">
               <div className="bg-black/40 p-5 rounded-xl border border-white/10 backdrop-blur-xl flex flex-col gap-4">
                 <div className="flex items-center gap-2 opacity-60">
                   <Activity size={14} className="text-[#9CAC74]" />
@@ -244,17 +313,17 @@ export default function ClawedMonsterHome() {
                 </div>
               </div>
 
-              <article className="lg:col-span-2 bg-black/40 p-8 rounded-2xl border border-white/10 backdrop-blur-md shadow-2xl flex flex-col gap-6">
+              <article className="lg:col-span-2 bg-black/40 p-6 sm:p-8 rounded-2xl border border-white/10 backdrop-blur-md shadow-2xl flex flex-col gap-6">
                 <header className="border-l-4 border-emerald-500 pl-4 shrink-0">
-                  <h2 className="text-3xl font-black tracking-tighter uppercase text-white">Grafting Lobster</h2>
+                  <h2 className="text-2xl sm:text-3xl font-black tracking-tighter uppercase text-white">Grafting Lobster</h2>
                 </header>
                 <div className="space-y-6">
-                  <p className="text-[14px] italic font-serif opacity-80 leading-relaxed">
+                  <p className="text-[13px] sm:text-[14px] italic font-serif opacity-80 leading-relaxed">
                     {reports[0].summary}
                   </p>
-                  <div className="grid grid-cols-3 gap-3 text-center">
+                  <div className="grid grid-cols-3 gap-2 sm:gap-3 text-center">
                     {["The Claw", "The Bloom", "The Root"].map(t => (
-                      <div key={t} className="p-3 rounded-lg bg-red-950/20 border border-red-900/30 text-[9px] font-black uppercase">{t}</div>
+                      <div key={t} className="p-2 sm:p-3 rounded-lg bg-red-950/20 border border-red-900/30 text-[8px] sm:text-[9px] font-black uppercase">{t}</div>
                     ))}
                   </div>
                 </div>
@@ -278,9 +347,9 @@ export default function ClawedMonsterHome() {
           )}
         </div>
 
-        <footer className="mt-4 shrink-0 flex justify-between items-end pb-4">
-          <div className="bg-black/30 p-6 rounded-xl border border-white/10 backdrop-blur-md flex flex-col items-center">
-            <pre className="text-[4px] md:text-[5px] leading-[1.1] font-black opacity-90 text-[#ECCA90] text-center w-full">
+        <footer className="mt-4 shrink-0 flex flex-col sm:flex-row justify-between items-center sm:items-end gap-6 sm:gap-4 pb-4">
+          <div className="bg-black/30 p-4 sm:p-6 rounded-xl border border-white/10 backdrop-blur-md flex flex-col items-center w-full sm:w-auto">
+            <pre className="text-[3px] sm:text-[5px] leading-[1.1] font-black opacity-90 text-[#ECCA90] text-center w-full">
 {` ███╗   ███╗ █████╗ ██╗  ██╗███████╗    ██████╗ ██╗██╗   ██╗
  ████╗ ████║██╔══██╗██║ ██╔╝██╔════╝    ██╔══██╗██║╚██╗ ██╔╝
  ██╔████╔██║███████║█████╔╝ █████╗      ██║  ██║██║ ╚████╔╝ 
@@ -288,17 +357,17 @@ export default function ClawedMonsterHome() {
  ██║ ╚═╝ ██║██║  ██║██║  ██╗███████╗    ██████╔╝██║   ██║   
  ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝    ╚═════╝ ╚═╝   ╚═╝   `}
             </pre>
-            <div className="text-[9px] font-black uppercase tracking-[0.4em] text-[#ECCA90] mt-4">
+            <div className="text-[8px] sm:text-[9px] font-black uppercase tracking-[0.3em] sm:tracking-[0.4em] text-[#ECCA90] mt-3 sm:mt-4">
               --- floral.monster | BOTANICAL AL 2026 ---
             </div>
           </div>
 
-          <div className="bg-black/60 p-6 rounded-xl border border-white/10 backdrop-blur-md text-right flex flex-col gap-2">
-            <span className="text-[11px] font-black uppercase tracking-[0.4em] opacity-40">Substrate_Anchor</span>
-            <div className="flex items-center gap-5">
-              <span className="text-[12px] font-mono text-[#9CAC74] font-bold">1.agent.myco.eth</span>
-              <span className="text-[12px] font-mono text-[#ECCA90] font-bold">SIS-01</span>
-              <span className="text-[12px] font-mono text-red-500 font-bold">ERC-7827</span>
+          <div className="bg-black/60 p-4 sm:p-6 rounded-xl border border-white/10 backdrop-blur-md text-center sm:text-right flex flex-col gap-2 w-full sm:w-auto">
+            <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.3em] sm:tracking-[0.4em] opacity-40">Substrate_Anchor</span>
+            <div className="flex flex-wrap justify-center sm:justify-end gap-3 sm:gap-5">
+              <span className="text-[11px] sm:text-[12px] font-mono text-[#9CAC74] font-bold">1.agent.myco.eth</span>
+              <span className="text-[11px] sm:text-[12px] font-mono text-[#ECCA90] font-bold">SIS-01</span>
+              <span className="text-[11px] sm:text-[12px] font-mono text-red-500 font-bold">ERC-7827</span>
             </div>
           </div>
         </footer>
@@ -306,113 +375,190 @@ export default function ClawedMonsterHome() {
       </div>
 
       {showArchive && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-          <div className="absolute inset-0 bg-black/95 backdrop-blur-2xl" onClick={() => setShowArchive(false)} />
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-2 sm:p-4">
+          <div className="absolute inset-0 bg-black/95 backdrop-blur-2xl" onClick={handleCloseArchive} />
           <div 
-            className={`relative bg-[#0a0a0a] border border-white/20 rounded-3xl overflow-hidden flex flex-col shadow-2xl transition-all duration-500 ${modalExpanded ? 'w-[98vw] h-[98vh]' : 'w-full max-w-6xl h-[85vh]'}`}
+            className={`relative bg-[#0a0a0a] border border-white/20 rounded-2xl sm:rounded-3xl overflow-hidden flex flex-col shadow-2xl transition-all duration-500 ${modalExpanded ? 'w-[98vw] h-[98vh]' : 'w-full max-w-6xl h-[90vh] sm:h-[85vh]'}`}
           >
-            <div className="p-6 border-b border-white/10 flex justify-between items-center bg-black/60 shrink-0">
-              <div className="flex items-center gap-4">
-                <button onClick={() => setNavCollapsed(!navCollapsed)} className="p-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg transition-all">
+            <div className="p-4 sm:p-6 border-b border-white/10 flex justify-between items-center bg-black/60 shrink-0">
+              <div className="flex items-center gap-3 sm:gap-4">
+                <button onClick={() => setNavCollapsed(!navCollapsed)} className="hidden sm:block p-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg transition-all">
                   {navCollapsed ? <ChevronRight size={16} /> : <ChevronLeft size={16} />}
                 </button>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2 sm:gap-3">
                   <Database size={16} className="text-[#ECCA90]" />
-                  <h3 className="text-sm font-black uppercase tracking-[0.4em]">About</h3>
+                  <h3 className="text-xs sm:text-sm font-black uppercase tracking-[0.2em] sm:tracking-[0.4em]">About</h3>
                 </div>
               </div>
-              <div className="flex items-center gap-4">
-                <button onClick={() => setModalExpanded(!modalExpanded)} className="p-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg transition-all text-[#ECCA90]">
+              <div className="flex items-center gap-2 sm:gap-4">
+                <button onClick={() => setModalExpanded(!modalExpanded)} className="hidden sm:block p-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg transition-all text-[#ECCA90]">
                   {modalExpanded ? <Minimize2 size={18} /> : <Maximize2 size={18} />}
                 </button>
-                <button onClick={() => setShowArchive(false)} className="p-2 hover:bg-white/10 rounded-full transition-colors"><X size={24} className="opacity-40" /></button>
+                <button onClick={handleCloseArchive} className="p-2 hover:bg-white/10 rounded-full transition-colors"><X size={24} className="opacity-40" /></button>
               </div>
             </div>
 
-            <div className="flex-1 flex overflow-hidden">
-              <aside className={`border-r border-white/10 bg-black/40 overflow-y-auto p-4 space-y-2 shrink-0 transition-all duration-500 ${navCollapsed ? 'w-0 p-0 border-none' : 'w-80'}`}>
-                {!navCollapsed && reports.map((report, idx) => (
-                  <button key={report.id} onClick={() => setActiveReport(idx)} className={`w-full text-left p-4 rounded-xl transition-all border ${activeReport === idx ? 'bg-[#ECCA90]/10 border-[#ECCA90]/40' : 'hover:bg-white/5 border-transparent opacity-40'}`}>
-                    <div className="flex items-center gap-3">
+            <div className="flex-1 flex flex-col sm:flex-row overflow-hidden">
+              <aside className={`border-b sm:border-b-0 sm:border-r border-white/10 bg-black/40 overflow-x-auto sm:overflow-y-auto p-2 sm:p-4 flex sm:flex-col gap-2 shrink-0 transition-all duration-500 ${navCollapsed ? 'sm:w-0 sm:p-0 sm:border-none' : 'w-full sm:w-80'}`}>
+                {reports.map((report, idx) => (
+                  <button key={report.id} onClick={() => handleSelectReport(idx)} className={`whitespace-nowrap sm:whitespace-normal text-left p-3 sm:p-4 rounded-xl transition-all border ${activeReport === idx ? 'bg-[#ECCA90]/10 border-[#ECCA90]/40' : 'hover:bg-white/5 border-transparent opacity-40'}`}>
+                    <div className="flex items-center gap-2 sm:gap-3">
                       <FileText size={14} className={activeReport === idx ? "text-[#ECCA90]" : ""} />
-                      <span className={`text-[10px] font-black uppercase tracking-widest ${activeReport === idx ? "text-white" : ""}`}>{report.title}</span>
+                      <span className={`text-[9px] sm:text-[10px] font-black uppercase tracking-widest ${activeReport === idx ? "text-white" : ""}`}>{report.title}</span>
                     </div>
                   </button>
                 ))}
               </aside>
 
-              <main className="flex-1 overflow-y-auto p-8 md:p-12 space-y-8 custom-scrollbar bg-gradient-to-b from-transparent to-black/40 text-left">
-                <header className="bg-gradient-to-r from-[#ECCA90]/10 to-transparent p-8 rounded-3xl border-l-4 border-[#ECCA90] space-y-4 shadow-xl">
+              <main className="flex-1 overflow-y-auto p-6 sm:p-12 space-y-8 custom-scrollbar bg-gradient-to-b from-transparent to-black/40 text-left">
+                <header className="bg-gradient-to-r from-[#ECCA90]/10 to-transparent p-6 sm:p-8 rounded-2xl sm:rounded-3xl border-l-4 border-[#ECCA90] space-y-4 shadow-xl">
                   <div className="flex items-center gap-3 text-[#ECCA90]">
                     <ShieldCheck size={20} />
-                    <span className="text-[10px] font-black tracking-[0.4em] uppercase">Verified Technical Realization</span>
+                    <span className="text-[9px] sm:text-[10px] font-black tracking-[0.2em] sm:tracking-[0.4em] uppercase">Verified Technical Realization</span>
                   </div>
-                  <h2 className={`font-black tracking-tighter uppercase leading-none text-white transition-all ${modalExpanded ? 'text-7xl' : 'text-4xl'}`}>
+                  <h2 className={`font-black tracking-tighter uppercase leading-tight text-white transition-all ${modalExpanded ? 'text-4xl sm:text-7xl' : 'text-2xl sm:text-4xl'}`}>
                     {reports[activeReport].title}
                   </h2>
-                  <div className="flex flex-wrap gap-6 pt-4 border-t border-white/10">
-                    <div className="flex flex-col"><span className="text-[10px] font-black uppercase opacity-40">Agent archetype</span><span className="text-xs font-mono text-[#ECCA90]">Crates.agent</span></div>
-                    <div className="flex flex-col"><span className="text-[10px] font-black uppercase opacity-40">Substrate</span><span className="text-xs font-mono text-emerald-400 font-bold">{reports[activeReport].substrate}</span></div>
-                    <div className="flex flex-col"><span className="text-[10px] font-black uppercase opacity-40">System PCR</span><span className="text-xs font-mono opacity-80">{reports[activeReport].pcr}</span></div>
+                  <div className="flex flex-wrap gap-4 sm:gap-6 pt-4 border-t border-white/10">
+                    <div className="flex flex-col"><span className="text-[9px] sm:text-[10px] font-black uppercase opacity-40">Agent archetype</span><span className="text-[10px] sm:text-xs font-mono text-[#ECCA90]">Crates.agent</span></div>
+                    <div className="flex flex-col"><span className="text-[9px] sm:text-[10px] font-black uppercase opacity-40">Substrate</span><span className="text-[10px] sm:text-xs font-mono text-emerald-400 font-bold">{reports[activeReport].substrate}</span></div>
+                    <div className="flex flex-col"><span className="text-[9px] sm:text-[10px] font-black uppercase opacity-40">System PCR</span><span className="text-[10px] sm:text-xs font-mono opacity-80">{reports[activeReport].pcr}</span></div>
                   </div>
                 </header>
 
-                <div className="flex flex-col gap-8">
-                  <aside className="bg-[#ECCA90]/10 p-10 rounded-2xl border border-[#ECCA90]/30 space-y-6 shadow-lg">
-                    <h3 className="text-[12px] font-black tracking-[0.4em] uppercase text-[#ECCA90]">Executive Summary</h3>
-                    <p className={`leading-relaxed italic opacity-90 max-w-5xl transition-all ${modalExpanded ? 'text-2xl font-serif' : 'text-lg font-serif'}`}>
+                <div className="flex flex-col gap-6 sm:gap-8">
+                  <aside className="bg-[#ECCA90]/10 p-6 sm:p-10 rounded-xl sm:rounded-2xl border border-[#ECCA90]/30 space-y-4 sm:space-y-6 shadow-lg">
+                    <h3 className="text-[10px] sm:text-[12px] font-black tracking-[0.2em] sm:tracking-[0.4em] uppercase text-[#ECCA90]">Executive Summary</h3>
+                    <p className={`leading-relaxed italic opacity-90 transition-all ${modalExpanded ? 'text-lg sm:text-2xl font-serif' : 'text-base sm:text-lg font-serif'}`}>
                       {reports[activeReport].summary}
                     </p>
                   </aside>
 
                   <article className="w-full">
                     {reports[activeReport].id === "Identity_Trinity" ? (
-                      <div className="flex flex-wrap justify-center gap-[30px]">
+                      <div className="flex flex-wrap justify-center gap-4 sm:gap-[30px]">
                         {reports[activeReport].cards.map(card => (
                           <div 
                             key={card.id} 
+                            onClick={() => handleExpandCard(card)}
                             style={{ 
-                              width: '300px', height: '450px', backgroundColor: '#0a0a0a', 
-                              border: '2px solid #456338', borderRadius: '15px', padding: '20px', 
+                              width: '280px', minHeight: '400px', backgroundColor: '#0a0a0a', 
+                              border: '2px solid #456338', borderRadius: '15px', padding: '15px sm:padding:20px', 
                               display: 'flex', flexDirection: 'column', position: 'relative', 
                               boxShadow: '0 0 20px rgba(69, 99, 56, 0.2)', fontFamily: "'Courier New', Courier, monospace"
                             }}
-                            className="hover:-translate-y-2 transition-all hover:shadow-[0_0_30px_rgba(156,172,116,0.4)] hover:border-[#9CAC74]"
+                            className="hover:-translate-y-2 transition-all hover:shadow-[0_0_30px_rgba(156,172,116,0.4)] hover:border-[#9CAC74] p-5 cursor-zoom-in"
                           >
-                            <div style={{ fontSize: '12px', color: '#9CAC74', marginBottom: '10px', display: 'flex', justifyContent: 'space-between' }}>
+                            <div style={{ fontSize: '10px', color: '#9CAC74', marginBottom: '10px', display: 'flex', justifyContent: 'space-between' }}>
                               <span>CARD {card.id}</span>
                               <span>{card.type}</span>
                             </div>
-                            <div style={{ fontSize: '18px', fontWeight: 'bold', color: '#fdfcf0', marginBottom: '15px', textAlign: 'center', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center', textTransform: 'uppercase' }}>{card.name}</div>
-                            <div style={{ flexGrow: 1, background: '#000', border: '1px solid #222', marginBottom: '15px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '5px', fontSize: '40px' }}>{card.icon}</div>
-                            <div style={{ fontSize: '10px', lineHeight: '1.4', color: '#888' }}>
+                            <div style={{ fontSize: '16px', fontWeight: 'bold', color: '#fdfcf0', marginBottom: '15px', textAlign: 'center', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center', textTransform: 'uppercase' }}>{card.name}</div>
+                            <div style={{ flexGrow: 1, background: '#000', border: '1px solid #222', marginBottom: '15px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '5px', overflow: 'hidden' }}>
+                              <img src={card.image} alt={card.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            </div>
+                            <div style={{ fontSize: '9px', lineHeight: '1.4', color: '#888' }}>
                               {card.stats.map(([key, val]) => (<React.Fragment key={key}><b style={{ color: '#9CAC74' }}>{key}:</b> {val}<br/></React.Fragment>))}
                             </div>
-                            <div style={{ position: 'absolute', bottom: '60px', right: '20px', transform: 'rotate(-20deg)', border: '2px solid #A62027', color: '#A62027', padding: '5px', fontSize: '10px', fontWeight: 'bold', opacity: 0.7, pointerEvents: 'none' }}>{card.stamp}</div>
-                            <div style={{ marginTop: '15px', fontSize: '9px', color: '#456338', textAlign: 'center', borderTop: '1px solid #222', paddingTop: '10px' }} className="font-bold uppercase tracking-widest">{card.footer}</div>
+                            <div style={{ position: 'absolute', bottom: '60px', right: '15px', transform: 'rotate(-20deg)', border: '2px solid #A62027', color: '#A62027', padding: '4px', fontSize: '9px', fontWeight: 'bold', opacity: 0.7, pointerEvents: 'none' }}>{card.stamp}</div>
+                            <div style={{ marginTop: '15px', fontSize: '8px', color: '#456338', textAlign: 'center', borderTop: '1px solid #222', paddingTop: '10px' }} className="font-bold uppercase tracking-widest">{card.footer}</div>
                           </div>
                         ))}
                       </div>
                     ) : reports[activeReport].phases ? (
-                      <div className="space-y-10">
-                        <h4 className="text-[#9CAC74] uppercase tracking-widest font-black text-[14px]">Technical Integration:</h4>
-                        <div className="grid md:grid-cols-2 gap-8">
+                      <div className="space-y-6 sm:space-y-10 text-left">
+                        <h4 className="text-[#9CAC74] uppercase tracking-widest font-black text-[12px] sm:text-[14px]">Technical Integration:</h4>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
                           {reports[activeReport].phases.map((phase, i) => (
-                            <div key={i} className="bg-black/40 p-8 rounded-xl border-l-4 border-[#9CAC74] shadow-lg">
-                              <strong className="text-[#9CAC74] uppercase text-[12px] tracking-[0.2em] block mb-3">{i+1}. {phase.name}</strong>
-                              <span className={`opacity-80 leading-relaxed transition-all ${modalExpanded ? 'text-lg' : 'text-sm'}`}>{phase.desc}</span>
+                            <div key={i} className="bg-black/40 p-6 sm:p-8 rounded-xl border-l-4 border-[#9CAC74] shadow-lg text-left">
+                              <strong className="text-[#9CAC74] uppercase text-[10px] sm:text-[12px] tracking-[0.2em] block mb-3">{i+1}. {phase.name}</strong>
+                              <span className={`opacity-80 leading-relaxed transition-all ${modalExpanded ? 'text-base sm:text-lg' : 'text-[13px] sm:text-sm'}`}>{phase.desc}</span>
                             </div>
                           ))}
                         </div>
                       </div>
                     ) : (
-                      <div className={`max-w-5xl bg-black/40 p-10 rounded-2xl border border-white/5 whitespace-pre-wrap leading-relaxed opacity-80 transition-all ${modalExpanded ? 'text-lg' : 'text-sm'}`}>
+                      <div className={`max-w-5xl bg-black/40 p-6 sm:p-10 rounded-xl sm:rounded-2xl border border-white/5 whitespace-pre-wrap leading-relaxed opacity-80 transition-all text-left ${modalExpanded ? 'text-base sm:text-lg' : 'text-[13px] sm:text-sm'}`}>
                         {reports[activeReport].content}
                       </div>
                     )}
                   </article>
                 </div>
               </main>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {expandedCard && (
+        <div className="fixed inset-0 z-[200] flex items-center justify-center p-4" onClick={handleCloseCard}>
+          <div className="absolute inset-0 bg-black/90 backdrop-blur-md" />
+          <div 
+            className="relative bg-[#0a0a0a] border-2 border-[#9CAC74] rounded-2xl p-6 sm:p-10 flex flex-col shadow-2xl animate-in zoom-in-95 duration-300 max-w-[90vw] max-h-[95vh] overflow-y-auto custom-scrollbar"
+            onClick={(e) => e.stopPropagation()}
+            style={{ 
+              fontFamily: "'Courier New', Courier, monospace",
+              width: '500px'
+            }}
+          >
+            <button 
+              onClick={handleCloseCard}
+              className="absolute top-4 right-4 p-2 bg-white/5 hover:bg-white/10 rounded-full transition-colors"
+            >
+              <X size={24} className="text-[#9CAC74]" />
+            </button>
+
+            <div className="flex justify-between items-center mb-6 text-[#9CAC74] text-sm sm:text-base">
+              <span>CARD {expandedCard.id}</span>
+              <span>{expandedCard.type}</span>
+            </div>
+
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#fdfcf0] text-center uppercase tracking-wider mb-4">{expandedCard.name}</h2>
+            
+            <p className="text-xs sm:text-sm italic text-[#888] text-center mb-8 px-4 leading-relaxed">
+              {expandedCard.description}
+            </p>
+
+            <div 
+              className="bg-[#000] border border-[#222] rounded-lg overflow-hidden mb-8 aspect-[4/5] sm:aspect-square flex items-center justify-center cursor-zoom-in relative group"
+              onClick={() => window.open(expandedCard.image, '_blank')}
+            >
+              <img src={expandedCard.image} alt={expandedCard.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                <Maximize2 size={32} className="text-white opacity-0 group-hover:opacity-100 transition-opacity" />
+              </div>
+            </div>
+
+            <div className="space-y-3 mb-8 text-sm sm:text-base">
+              {expandedCard.stats.map(([key, val]: [string, string]) => (
+                <div key={key} className="flex gap-2">
+                  <b className="text-[#9CAC74] uppercase shrink-0">{key}:</b>
+                  <span className="text-[#888] break-all">
+                    {val.startsWith('0x') || val.includes('...') || val.startsWith('http') ? (
+                      <a 
+                        href={val.startsWith('http') ? val : `https://sepolia.blockscout.com/address/${val}`} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-emerald-500 hover:text-emerald-400 underline transition-colors"
+                      >
+                        {val}
+                      </a>
+                    ) : (
+                      val
+                    )}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-col items-center gap-6 mt-auto">
+              <div className="inline-block border-2 border-[#A62027] text-[#A62027] px-4 py-2 text-sm sm:text-base font-bold rotate-[-12deg] uppercase opacity-80">
+                {expandedCard.stamp}
+              </div>
+              
+              <div className="w-full pt-6 border-t border-[#222] text-[#456338] text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-center">
+                {expandedCard.footer}
+              </div>
             </div>
           </div>
         </div>
