@@ -35,6 +35,7 @@ export default function ClawedMonsterHome() {
   const [modalExpanded, setModalExpanded] = useState(false);
   const [expandedCard, setExpandedCard] = useState<any>(null);
   const [showFullImage, setShowFullImage] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
 
   // Sync state with URL
   useEffect(() => {
@@ -80,6 +81,7 @@ export default function ClawedMonsterHome() {
 
   const handleSelectReport = (idx: number) => {
     setActiveReport(idx);
+    setShowVideo(false);
     router.push(`/about/${reports[idx].slug}`);
   };
 
@@ -116,7 +118,7 @@ export default function ClawedMonsterHome() {
     if (modalExpanded) {
       const target = e.target as HTMLElement;
       // If user clicked something that isn't a link or an image
-      if (target.tagName !== 'A' && target.tagName !== 'IMG' && !target.closest('a') && !target.closest('img')) {
+      if (target.tagName !== 'A' && target.tagName !== 'IMG' && target.tagName !== 'IFRAME' && !target.closest('a') && !target.closest('img') && !target.closest('iframe')) {
         setModalExpanded(false);
       }
     }
@@ -289,6 +291,7 @@ export default function ClawedMonsterHome() {
       substrate: "Node.js / MetaGit",
       pcr: "PRUNABLE-TREE-V1",
       images: ["/images/hackathon/seedtree_patent.png", "/images/hackathon/seedtree_context.png"],
+      video: "tBkdDzEYFn4",
       summary: "Realizing the Hierarchical Script-Database standard. SeedTreeDB transforms the gemini-cli Node.js runtime into a prunable database tree, enabling granular context management and high-velocity memory retrieval.",
       content: "🔱 SEEDTREEDB: THE HIERARCHICAL SCRIPT-DATABASE\n\nSeedTreeDB.com represents a paradigm shift in agentic memory. Traditionally, AI context is either a flat file or a rigid database. SeedTreeDB turns the gemini-cli Node.js runtime into a living, hierarchical database tree.\n\n--- 🌳 WHY THIS MATTERS ---\n\n📍 Granular Pruning: Unlike traditional databases, SeedTreeDB allows agents to 'prune' branches of the memory tree in real-time. This prevents context dulling and keeps the LLM's attention focused on the most relevant technical strikes.\n\n📍 Script-Native: Every node in the database is a script-executable coordinate. This bridges the gap between 'knowing' (data) and 'doing' (execution).\n\n📍 High-Velocity Retrieval: By mapping the multi-repo MetaGit forest into a hierarchical tree, we achieve sub-millisecond lookups for complex forensic artifacts.\n\n--- 🔗 REMOTE LIBRARIES ---\n\n🌿 Clawed Monster Shards: https://github.com/diy-make/clawed/tree/main/memory/public\n\n📖 Heartwood Public Registry: https://github.com/diy-make/memory/tree/main/public/json"
     },
@@ -394,7 +397,7 @@ export default function ClawedMonsterHome() {
                   <h2 className="text-2xl sm:text-3xl font-black tracking-tighter uppercase text-white">Grafting Lobster</h2>
                 </header>
                 <div className="space-y-6">
-                  <p className="text-[13px] sm:text-[14px] italic font-serif opacity-80 leading-relaxed">
+                  <p className="text-[13px] sm:text-[14px] italic font-serif opacity-80 leading-relaxed max-w-prose">
                     The clinical encapsulation of an active lobster instance within the floral.monster swarm. This is a cybernetic graft where Heartwood cells act as the vascular system, providing context and legislative DNA to the lobster's raw execution.
                   </p>
                   <div className="grid grid-cols-3 gap-2 sm:gap-3 text-center">
@@ -590,11 +593,34 @@ export default function ClawedMonsterHome() {
                         </div>
                         {(reports[activeReport] as any).images?.length > 1 && (
                           <div className="flex flex-col gap-4">
-                            {(reports[activeReport] as any).images.slice(1).map((img: string, i: number) => (
-                              <div key={i} className="w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black">
-                                <img src={img} alt={`${reports[activeReport].title} ${i+2}`} className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity" />
-                              </div>
-                            ))}
+                            {(reports[activeReport] as any).images.slice(1).map((img: string, i: number) => {
+                              const isLast = i === (reports[activeReport] as any).images.length - 2;
+                              const hasVideo = (reports[activeReport] as any).video;
+                              return (
+                                <div key={i} className="w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black">
+                                  {isLast && hasVideo && showVideo ? (
+                                    <div className="aspect-video w-full">
+                                      <iframe
+                                        width="100%"
+                                        height="100%"
+                                        src={`https://www.youtube.com/embed/${(reports[activeReport] as any).video}?autoplay=1`}
+                                        title="YouTube video player"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowFullScreen
+                                      ></iframe>
+                                    </div>
+                                  ) : (
+                                    <img 
+                                      src={img} 
+                                      alt={`${reports[activeReport].title} ${i+2}`} 
+                                      className={`w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity ${isLast && hasVideo ? 'cursor-pointer' : ''}`} 
+                                      onClick={() => isLast && hasVideo && setShowVideo(true)}
+                                    />
+                                  )}
+                                </div>
+                              );
+                            })}
                           </div>
                         )}
                       </div>
