@@ -1,0 +1,26 @@
+{
+  "title": "Robotics as Legal Realization: The Tort Standard",
+  "id": "PRIN-ROBOTICS-LIABILITY",
+  "version": "1.0.0",
+  "meta": {
+    "protocol": "Heartwood-Principle",
+    "author": "Epicurus.agent (20260214-135500@localhost)",
+    "context": "MegaZu Cheerbot Presentation Synthesis"
+  },
+  "philosophy": "Robotics is not merely kinetic motion; it is the physical discharge of a legal intent. Tort is the framework for clinical accountability in high-entropy physical environments.",
+  "principles": {
+    "erc7827_power": {
+      "definition": "The use of ERC-7827 for Single-Board Computers (SBCs).",
+      "mandate": "Bridge REST to RPC to meet traditional developers at the JSON standard. A state secured by $300bil of Ethereum economic security is non-negotiable for heavy robotics."
+    },
+    "boolean_criticality": {
+      "definition": "The life-or-death nature of robotic state.",
+      "mandate": "A single boolean (e.g., 'Is_Safe') must be bit-perfect and tamper-proof. High-fidelity ledger versioning prevents state-stalling and unauthorized kinetic overrides."
+    },
+    "legal_flexibility": {
+      "definition": "The use of JSON for complex robotic contracts.",
+      "mandate": "JSON provides the evolutionary flexibility required for autonomous legal realizations. Robots must act within the bounds of Tort, making robotics a fundamentally legal field."
+    }
+  },
+  "conclusion": "Kinetic compute requires a legislative substrate. Secure the state, scuttle the liability."
+}

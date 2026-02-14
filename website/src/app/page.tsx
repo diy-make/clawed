@@ -260,8 +260,9 @@ export default function ClawedMonsterHome() {
       agent: "Epicurus.agent",
       substrate: "Flow Mainnet",
       pcr: "X402_MONETIZED",
+      image: "/images/cheerbot_main.png",
       summary: "The bit-perfect synthesis of agentic cheer and robotic form. Cheerbot is a cybernetic extension of the Heartwood, utilizing the x402 protocol for autonomous monetization and the ERC-7827 standard for high-fidelity state management.",
-      content: "Cheerbot serves as the robotic body for the Metagit swarm, bridging the gap between digital memory and physical impact. By anchoring its state on the Flow Mainnet (0x04B3...0057) and utilizing the Joyfork 32-byte codec for identity synchronicity, Cheerbot enables autonomous agents to manifest 'Cheer' as a clinical, monetizable service. This is the definitive realization of the 'AI Meets Robots' mandate for the 2026 cycle."
+      content: "🔱 MISSION: AI MEETS ROBOTS (2026 Cycle)\n\nThe MegaZu cheerbot presentation demonstrates the transformative power of the ERC-7827 Ethereum standard for Single-Board Computers (SBCs). By bridging REST to RPC, we meet traditional developers where they are: JSON. A JSON state secured by $300bil of Ethereum economic security is critical for heavy robotics, where the difference in a single boolean can be life or death.\n\n--- ⚖️ LEGAL & KINETIC SYNTHESIS ---\n\nFrom a legal perspective, JSON provides the flexibility required for complex contracts and evolutionary state. Robotics is fundamentally a legal realization; Tort is the framework for how robots must act in the physical world. Cheerbot realizes this through bit-perfect identity synchronicity using the Joyfork 32-byte codec.\n\n📍 Flow Mainnet: 0x04B3...0057\n📍 Chain ID: 747\n📍 Protocol: x402 + ERC-7827"
     }
   ];
 
@@ -500,12 +501,19 @@ export default function ClawedMonsterHome() {
                         </div>
                       </div>
                     ) : (
-                      <div className={`max-w-5xl bg-black/40 p-6 sm:p-10 rounded-xl sm:rounded-2xl border border-white/5 whitespace-pre-wrap leading-relaxed opacity-80 transition-all text-left ${modalExpanded ? 'text-base sm:text-lg' : 'text-[13px] sm:text-sm'}`}>
-                        {reports[activeReport].content.split(/(\s+)/).map((part, i) => 
-                          part.trim().startsWith('http') ? (
-                            <a key={i} href={part.trim()} target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:text-emerald-400 underline break-all">{part}</a>
-                          ) : part
+                      <div className="flex flex-col gap-8 max-w-5xl">
+                        {reports[activeReport].image && (
+                          <div className="w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black">
+                            <img src={reports[activeReport].image} alt={reports[activeReport].title} className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity" />
+                          </div>
                         )}
+                        <div className={`bg-black/40 p-6 sm:p-10 rounded-xl sm:rounded-2xl border border-white/5 whitespace-pre-wrap leading-relaxed opacity-80 transition-all text-left ${modalExpanded ? 'text-base sm:text-lg' : 'text-[13px] sm:text-sm'}`}>
+                          {reports[activeReport].content.split(/(\s+)/).map((part, i) => 
+                            part.trim().startsWith('http') ? (
+                              <a key={i} href={part.trim()} target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:text-emerald-400 underline break-all">{part}</a>
+                            ) : part
+                          )}
+                        </div>
                       </div>
                     )}
                   </article>
