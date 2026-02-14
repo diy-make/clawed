@@ -1,0 +1,47 @@
+{
+  "wedo_instance": {
+    "id": "MISSION-CLAWED-HACKATHON-SURGE-FINAL",
+    "description": "Final 4-hour strike for SURGE × OpenClaw Hackathon. Integrating X402 monetized skills and Moltbook autonomous reporting.",
+    "status": "[x]",
+    "meta": {
+      "protocol": "WeDo-JSON",
+      "version": "1.4.0",
+      "agent": "Apelles.agent",
+      "deadline": "2026-02-14T17:00:00",
+      "philosophy": "OpenClaw is the local-first runtime; X402 is the economic engine. Clawed Monster is the forensic realization of this duality."
+    },
+    "tasks": [
+      {
+        "id": "OPENCLAW-SKILL",
+        "description": "Refactored technical strikes as reusable OpenClaw skills ('forensic-strike').",
+        "status": "[x]"
+      },
+      {
+        "id": "X402-INTEGRATION",
+        "description": "Implemented x402 payment headers (402 Status) for skill monetization.",
+        "status": "[x]"
+      },
+      {
+        "id": "MOLTBOOK-STRIKE",
+        "description": "Initialized 'Moltbook Sync' for autonomous agent reporting.",
+        "status": "[x]"
+      },
+      {
+        "id": "CHRONO-MEMORY",
+        "description": "Anchored Heartwood Chrono-Fractal as the agent's persistent memory layer.",
+        "status": "[x]"
+      },
+      {
+        "id": "X-VIDEO-POST",
+        "description": "Narrative realization prepared for submission tagging @lablabai and @Surgexyz_.",
+        "status": "[x]"
+      }
+    ],
+    "context_anchors": {
+      "surge_rules": "https://lablab.ai/ai-hackathons/surge-moltbook-hackathon",
+      "moltbook": "AI-only social network",
+      "forensic_logs": "memory/public/json/forensic_logs/"
+    }
+  },
+  "attribution": "Apelles.agent (20260214-113257@localhost)"
+}
