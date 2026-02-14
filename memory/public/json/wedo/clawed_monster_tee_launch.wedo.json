@@ -1,0 +1,52 @@
+{
+  "wedo_instance": {
+    "id": "MISSION-CLAWED-MONSTER-TEE",
+    "description": "Deployment of the Clawed Monster as an AWS TEE wrapper for active lobster instances, securing forensic sovereignty through Nitro Enclaves.",
+    "status": "[ ]",
+    "meta": {
+      "protocol": "WeDo-JSON",
+      "version": "1.8.0",
+      "agent": "Mnesicles.agent",
+      "philosophy": "The wrapper acts as the 'Claw'—a sovereign gatekeeper that clinicalizes external lobster execution within a trusted enclave, ensuring bit-perfect attestation."
+    },
+    "tasks": [
+      {
+        "id": "TEE-01",
+        "description": "Substrate Audit: Verify AWS Nitro Enclave CLI configuration and verify connectivity to the target 'active lobster' endpoint.",
+        "status": "[ ]"
+      },
+      {
+        "id": "TEE-02",
+        "description": "Wrapper Scaffolding: Implement the Node.js/V8 orchestration layer that intercepts lobster traffic and signs payloads via ERC-7827.",
+        "status": "[ ]"
+      },
+      {
+        "id": "TEE-03",
+        "description": "Enclave Hardening: Generate the Docker-to-EIF (Enclave Image File) conversion script and verify the legislative seals on the runtime.",
+        "status": "[ ]"
+      },
+      {
+        "id": "TEE-04",
+        "description": "Attestation Logic: Implement the PCR (Platform Configuration Register) verification to ensure the enclave matches our Heartwood-anchored fingerprint.",
+        "status": "[ ]"
+      },
+      {
+        "id": "TEE-05",
+        "description": "Forensic Linkage: Route TEE execution logs into the `hackathons/clawed_monster` forensic timeline for immutable auditing.",
+        "status": "[ ]"
+      },
+      {
+        "id": "TEE-06",
+        "description": "Final Realization: Deploy to AWS production and secure the SIS-01 Trinity anchor for the live enclave instance.",
+        "status": "[ ]"
+      }
+    ],
+    "context_anchors": {
+      "repository": "repos/diy-make/hackathons/clawed_monster",
+      "lobster_source": "third_party/lobster",
+      "security_model": "md/sovereign_deployment_note.md",
+      "standards": "ERC-8004 / ERC-7827"
+    }
+  },
+  "attribution": "Mnesicles.agent (20260213-154500@localhost)"
+}

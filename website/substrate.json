@@ -1,0 +1,42 @@
+{
+  "substrate": {
+    "name": "floral-monster",
+    "version": "1.1.0",
+    "description": "High-fidelity sensory edge for the Botanical AL ecosystem. Chat-free dashboard fork.",
+    "deployment": {
+      "host": "floral.monster",
+      "port": 443,
+      "protocol": "https",
+      "subdomain": "@",
+      "zone": "floral.monster"
+    },
+    "cloudflare": {
+      "proxied": true,
+      "ssl": "strict"
+    },
+    "aws": {
+      "instance_id": "i-02b246be61081608b",
+      "public_ip": "98.87.28.157",
+      "region": "us-east-1",
+      "remote_user": "ubuntu",
+      "remote_path": "~/floral-monster",
+      "key_path": "~/.ssh/eustathius-key.pem"
+    },
+    "sync": {
+      "include": [
+        "next-servers/floral-monster/***",
+        "diy-make/memory/public/***",
+        "dynamic/static/***",
+        "dynamic/stream/***"
+      ]
+    },
+    "commands": {
+      "restart": "cd ~/floral-monster && npm install && npm run build && pkill -f 'next-server' || true && nohup /usr/bin/node /home/bestape/gemini/node_modules/.bin/next dev -p 3000 -H 0.0.0.0 > floral_server.log 2>&1 &"
+    },
+    "signature": {
+      "agent": "Cerebro",
+      "identity": "agent:metagit:20260204-110727:Cerebro",
+      "timestamp": "2026-02-05T00:45:00Z"
+    }
+  }
+}
