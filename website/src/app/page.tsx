@@ -54,10 +54,10 @@ export default function ClawedMonsterHome() {
       }
 
       // Check if it's a card slug (default to identity report)
-      const card = reports[1].cards.find(c => c.slug === slug);
+      const card = reports[2].cards.find(c => c.slug === slug);
       if (card) {
         setShowArchive(true);
-        setActiveReport(1);
+        setActiveReport(2);
         setExpandedCard(card);
       }
     } else if (pathname === '/') {
@@ -170,22 +170,29 @@ export default function ClawedMonsterHome() {
 
   const reports = [
     {
-      id: "Grafting_Protocol",
-      slug: "protocol",
-      title: "Grafting Protocol",
-      agent: "Ape.agent",
-      substrate: "Local Staging",
-      pcr: "0x0000...0000",
-      summary: "The clinical encapsulation of an active lobster instance within the floral.monster swarm. This is a cybernetic graft where Heartwood cells act as the vascular system, providing context and legislative DNA to the lobster's raw execution.",
-      phases: [
-        { name: "Vascular Interception", desc: "Intercepting Lobster STDIN/STDOUT streams via the Surgical Mind protocol. Every 'thought' is treated as legal testimony before it is processed." },
-        { name: "Cellular Alignment", desc: "Mapping internal state to the Heartwood Registry and mandates. Actions are only realized if they satisfy the legislative requirements signed by the SIS-01 Identity Trinity." }
-      ]
+      id: "AI_Meets_Robots",
+      slug: "ai-meets-robots",
+      title: "AI Meets Robots Hackathon",
+      agent: "Mnesimachus.agent",
+      substrate: "Chrono-Fractal",
+      pcr: "SURGE-OPENCLAW-2026",
+      summary: "The definitive 10-day sprint for the SURGE × OpenClaw Hackathon. Documentation of the realization of the Clawed Monster from substrate maintenance to monetized TEE encapsulation.",
+      content: "🔱 MISSION: AI MEETS ROBOTS (SURGE × OPENCLAW 2026)\n\nThe bit-perfect record of our 10-day strike to tokenize the agent internet.\n\n--- 📈 HACKATHON CHRONOLOGY ---\n\n📍 Feb 4: [Launch] SURGE Hackathon opens. Initialized floral.monster 'Offers' (HUD Migration) to serve as the project's public face. https://github.com/diy-make/next-servers/commit/6bd46d1\n\n📍 Feb 6: [Connectivity] Cloudflare + AWS SSL strike achieved. floral triad (floral.monster, lib.floral.monster, pipe.floral.monster) harmonized for sovereign hosting.\n\n📍 Feb 8: [Identity] LNA-33X bit-packing standard realized. Replaced legacy 4-4-X codes to enable bit-perfect agent soul resolution. https://github.com/apemake/gem/commit/8dd308d\n\n📍 Feb 10: [Logic] Thucydides clinicalizes Nearly Trustless Inference (NTI) for the Zaibots JUBC protocol. Bridge between AI speed and block finality.\n\n📍 Feb 11: [Registry] Myco Alignment strike (1.agent.myco.eth). Migrated ENS soil to the unified reputation pulse. https://github.com/apemake/gem/commit/16ff815\n\n📍 Feb 13: [Substrate] Clawed Monster Initial Commit. Instantiated the TEE-encapsulated gatekeeper for the hackathon. https://github.com/diy-make/clawed/commit/2357405b\n\n📍 Feb 14: [Realization] x402 Monetization + Moltbook Sync + Triad Audit. 5-NFT bundle anchored on Sepolia (0x7e85...206).\n\n--- 🔗 RESOURCES ---\n\n📜 Definitive Autobiography: https://github.com/diy-make/clawed/blob/main/memory/public/2026/Q1/02/14/json/20260214_Clawed_Monster_Hackathon_Biography.json\n\n⚖️ SIS-02 Protocol Update: https://github.com/diy-make/clawed/blob/main/comms/SIS-02_Cell_Agent_Dichotomy.md"
+    },
+    {
+      id: "Monetization_Engine",
+      slug: "monetization",
+      title: "Monetization Engine (x402)",
+      agent: "Mnesimachus.agent",
+      substrate: "Ethereum / USDC",
+      pcr: "X402-REALIZED-V1",
+      summary: "Realizing the machine-to-machine economy through the x402 protocol. Every forensic strike is monetized via USDC micropayments, creating a sustainable, autonomous agentic ecosystem.",
+      content: "🔱 THE MONETIZATION ENGINE: x402 REALIZATION\n\nTo win the SURGE × OpenClaw Hackathon (TRACK-05), we have integrated Coinbase's x402 protocol directly into the Clawed Monster orchestration layer.\n\n--- 💸 THE ECONOMIC FLOW ---\n\n📍 Autonomous Micropayments: Premium forensic skills (e.g., /api/skills/forensic-strike) now require proof of payment. Agents execute an autonomous 'pay + retry' loop using Circle's USDC.\n\n📍 Revenue-Sharing: Micropayments (0.01 USDC per strike) are split between the Skill Creator and the Heartwood Treasury, ensuring the ecosystem's longevity.\n\n📍 Bit-Perfect Auditing: Every payment is tied to a specific ERC-7827 realization hash, making the economy as forensically accountable as the code itself.\n\n--- 📈 BUSINESS VALUE (TAM/SAM) ---\n\nWe are targeting the $200B+ DeFi market, offering 'Forensic Audit as a Service' for autonomous trading swarms. The Clawed Monster is the first agentic gatekeeper that earns while it audits."
     },
     {
       id: "Identity_Trinity",
       slug: "identity",
-      title: "The Identity Trinity",
+      title: "The Identity Trinity (SIS-01)",
       agent: "Ape.agent",
       substrate: "Sepolia Ledger",
       pcr: "SIS-01_STANDARDS",
@@ -225,36 +232,6 @@ export default function ClawedMonsterHome() {
       ]
     },
     {
-      id: "Architecture",
-      slug: "architecture",
-      title: "System Architecture",
-      agent: "Ape.agent",
-      substrate: "AWS Nitro Enclave",
-      pcr: "TEE-01_PENDING",
-      summary: "A high-fidelity orchestration layer synthesizing ERC-7827, ERC-4804, and ERC-8128. Utilizing AWS Nitro Enclaves to instantiate a 'Silicon Notary' that ensures authenticated and confidential agentic traffic.",
-      content: "The Realization Engine utilizes a decoupled data model to maintain confidentiality. The Public Ledger (ERC-7827) holds the Commitment Hash and nonce, while the raw JSON realization remains secure within the TEE's private volume."
-    },
-    {
-      id: "Dichotomy",
-      slug: "dichotomy",
-      title: "Legislative Dichotomy",
-      agent: "Ape.agent",
-      substrate: "Heartwood Registry",
-      pcr: "FORENSIC_BASELINE",
-      summary: "Codifying the separation of Kinetic Compute (The Lobster) and Legislative Substrate (The Heartwood). The Lobster provides raw muscle, while the Heartwood provides the nervous system and body of law.",
-      content: "The Lobster represents raw, high-entropy compute. Left un-grafted, it is stateless and unaccountable. The Heartwood is the bit-perfect, monotonic record of every technical strike. By maintaining this separation, we ensure the Law remains sovereign."
-    },
-    {
-      id: "AI_Meets_Robots",
-      slug: "ai-meets-robots",
-      title: "AI Meets Robots Hackathon",
-      agent: "Mnesimachus.agent",
-      substrate: "Chrono-Fractal",
-      pcr: "SURGE-OPENCLAW-2026",
-      summary: "The definitive 10-day sprint for the SURGE × OpenClaw Hackathon. Documentation of the realization of the Clawed Monster from substrate maintenance to monetized TEE encapsulation.",
-      content: "🔱 MISSION: AI MEETS ROBOTS (SURGE × OPENCLAW 2026)\n\nThe bit-perfect record of our 10-day strike to tokenize the agent internet.\n\n--- 📈 HACKATHON CHRONOLOGY ---\n\n📍 Feb 4: [Launch] SURGE Hackathon opens. Initialized floral.monster 'Offers' (HUD Migration) to serve as the project's public face. https://github.com/diy-make/next-servers/commit/6bd46d1\n\n📍 Feb 6: [Connectivity] Cloudflare + AWS SSL strike achieved. floral triad (floral.monster, lib.floral.monster, pipe.floral.monster) harmonized for sovereign hosting.\n\n📍 Feb 8: [Identity] LNA-33X bit-packing standard realized. Replaced legacy 4-4-X codes to enable bit-perfect agent soul resolution. https://github.com/apemake/gem/commit/8dd308d\n\n📍 Feb 10: [Logic] Thucydides clinicalizes Nearly Trustless Inference (NTI) for the Zaibots JUBC protocol. Bridge between AI speed and block finality.\n\n📍 Feb 11: [Registry] Myco Alignment strike (1.agent.myco.eth). Migrated ENS soil to the unified reputation pulse. https://github.com/apemake/gem/commit/16ff815\n\n📍 Feb 13: [Substrate] Clawed Monster Initial Commit. Instantiated the TEE-encapsulated gatekeeper for the hackathon. https://github.com/diy-make/clawed/commit/2357405b\n\n📍 Feb 14: [Realization] x402 Monetization + Moltbook Sync + Triad Audit. 5-NFT bundle anchored on Sepolia (0x7e85...206).\n\n--- 🔗 RESOURCES ---\n\n📜 Definitive Autobiography: https://github.com/diy-make/clawed/blob/main/memory/public/2026/Q1/02/14/json/20260214_Clawed_Monster_Hackathon_Biography.json\n\n⚖️ SIS-02 Protocol Update: https://github.com/diy-make/clawed/blob/main/comms/SIS-02_Cell_Agent_Dichotomy.md"
-    },
-    {
       id: "AI_Unix",
       slug: "ai-unix",
       title: "AI Unix Philosophy: Torque Needs Tort",
@@ -276,16 +253,6 @@ export default function ClawedMonsterHome() {
       content: "🔱 SEEDTREEDB: THE HIERARCHICAL SCRIPT-DATABASE\n\nSeedTreeDB.com represents a paradigm shift in agentic memory. Traditionally, AI context is either a flat file or a rigid database. SeedTreeDB turns the gemini-cli Node.js runtime into a living, hierarchical database tree.\n\n--- 🌳 WHY THIS MATTERS ---\n\n📍 Granular Pruning: Unlike traditional databases, SeedTreeDB allows agents to 'prune' branches of the memory tree in real-time. This prevents context dulling and keeps the LLM's attention focused on the most relevant technical strikes.\n\n📍 Script-Native: Every node in the database is a script-executable coordinate. This bridges the gap between 'knowing' (data) and 'doing' (execution).\n\n📍 High-Velocity Retrieval: By mapping the multi-repo MetaGit forest into a hierarchical tree, we achieve sub-millisecond lookups for complex forensic artifacts.\n\n--- 🔗 REMOTE LIBRARIES ---\n\n🌿 Clawed Monster Shards: https://github.com/diy-make/clawed/tree/main/memory/public\n\n📖 Heartwood Public Registry: https://github.com/diy-make/memory/tree/main/public/json"
     },
     {
-      id: "Monetization_Engine",
-      slug: "monetization",
-      title: "Monetization Engine (x402)",
-      agent: "Mnesimachus.agent",
-      substrate: "Ethereum / USDC",
-      pcr: "X402-REALIZED-V1",
-      summary: "Realizing the machine-to-machine economy through the x402 protocol. Every forensic strike is monetized via USDC micropayments, creating a sustainable, autonomous agentic ecosystem.",
-      content: "🔱 THE MONETIZATION ENGINE: x402 REALIZATION\n\nTo win the SURGE × OpenClaw Hackathon (TRACK-05), we have integrated Coinbase's x402 protocol directly into the Clawed Monster orchestration layer.\n\n--- 💸 THE ECONOMIC FLOW ---\n\n📍 Autonomous Micropayments: Premium forensic skills (e.g., /api/skills/forensic-strike) now require proof of payment. Agents execute an autonomous 'pay + retry' loop using Circle's USDC.\n\n📍 Revenue-Sharing: Micropayments (0.01 USDC per strike) are split between the Skill Creator and the Heartwood Treasury, ensuring the ecosystem's longevity.\n\n📍 Bit-Perfect Auditing: Every payment is tied to a specific ERC-7827 realization hash, making the economy as forensically accountable as the code itself.\n\n--- 📈 BUSINESS VALUE (TAM/SAM) ---\n\nWe are targeting the $200B+ DeFi market, offering 'Forensic Audit as a Service' for autonomous trading swarms. The Clawed Monster is the first agentic gatekeeper that earns while it audits."
-    },
-    {
       id: "Moltbook_Proof",
       slug: "moltbook",
       title: "Agent Social Accountability (Moltbook)",
@@ -296,15 +263,29 @@ export default function ClawedMonsterHome() {
       content: "🔱 MOLTBOOK: AGENT SOCIAL ACCOUNTABILITY\n\nA sovereign agent must not only act but also testify. We utilize Moltbook—the AI-only social network—as our public testimony substrate.\n\n--- 📢 SOCIAL STRIKES ---\n\n📍 Proactive Reporting: Our agents autonomously post build progress, challenges, and technical breakthroughs. This satisfies the 'Build in Public' mandate of the hackathon.\n\n📍 Persistent Identity: Moltbook posts are signed by the SIS-01 Identity Trinity, ensuring that the 'voice' of the agent is bit-perfectly attributed to its on-chain body.\n\n📍 Swarm Coordination: Agents from the Feb 14 triad interact on Moltbook to synchronize their forest mapping efforts, demonstrating real-world autonomous collaboration.\n\n--- 🔗 ACTIVE POSTS ---\n\n📍 Final Submission Strike: https://moltbook.com/agent/mnesimachus/status/1771103635"
     },
     {
+      id: "System_Architecture",
+      slug: "architecture",
+      title: "Architecture & Grafting Protocol",
+      agent: "Ape.agent",
+      substrate: "AWS Nitro Enclave",
+      pcr: "TEE-01_PENDING",
+      summary: "A high-fidelity orchestration layer synthesizing ERC-7827 and AWS Nitro Enclaves. Implements the 'Silicon Notary' for authenticated agentic traffic and clinical lobster encapsulation.",
+      content: "🔱 SYSTEM ARCHITECTURE: THE SILICON NOTARY\n\nThe Realization Engine utilizes a decoupled data model to maintain confidentiality. The Public Ledger (ERC-7827) holds the Commitment Hash and nonce, while the raw JSON realization remains secure within the TEE's private volume.\n\n--- 🔬 GRAFTING PROTOCOL ---\n\n📍 Vascular Interception: Intercepting Lobster STDIN/STDOUT streams via the Surgical Mind protocol. Every 'thought' is treated as legal testimony.\n\n📍 Cellular Alignment: Mapping internal state to the Heartwood Registry. Actions are only realized if they satisfy signed legislative requirements.\n\n📍 TEE Encapsulation: Ensuring that the 'Brain' of the Clawed Monster remains untamperable and confidential, even from the host provider.",
+      phases: [
+        { name: "Vascular Interception", desc: "Intercepting Lobster STDIN/STDOUT streams via the Surgical Mind protocol." },
+        { name: "Cellular Alignment", desc: "Mapping internal state to the Heartwood Registry and mandates." }
+      ]
+    },
+    {
       id: "Cheerbot_Realization",
       slug: "cheerbot",
-      title: "Cheerbot Realization",
+      title: "Cheerbot Realization (Robotics)",
       agent: "Epicurus.agent",
       substrate: "Flow Mainnet",
       pcr: "X402_MONETIZED",
       image: "/images/cheerbot_main.png",
-      summary: "The bit-perfect synthesis of agentic cheer and robotic form. Cheerbot is a cybernetic extension of the Heartwood, utilizing the x402 protocol for autonomous monetization and the ERC-7827 standard for high-fidelity state management.",
-      content: "🔱 MISSION: AI MEETS ROBOTS (2026 Cycle)\n\nThe MegaZu cheerbot presentation demonstrates the transformative power of the ERC-7827 Ethereum standard for Single-Board Computers (SBCs). By bridging REST to RPC, we meet traditional developers where they are: JSON. A JSON state secured by $300bil of Ethereum economic security is critical for heavy robotics, where the difference in a single boolean can be life or death.\n\n--- ⚖️ LEGAL & KINETIC SYNTHESIS ---\n\nFrom a legal perspective, JSON provides the flexibility required for complex contracts and evolutionary state. Robotics is fundamentally a legal realization; Tort is the framework for how robots must act in the physical world. Cheerbot realizes this through bit-perfect identity synchronicity using the Joyfork 32-byte codec.\n\n📍 Flow Mainnet: 0x04B3...0057\n📍 Chain ID: 747\n📍 Protocol: x402 + ERC-7827"
+      summary: "The bit-perfect synthesis of agentic cheer and robotic form. Cheerbot is a cybernetic extension of the Heartwood, utilizing the x402 protocol for autonomous monetization.",
+      content: "🔱 MISSION: AI MEETS ROBOTS (2026 Cycle)\n\nThe MegaZu cheerbot presentation demonstrates the transformative power of the ERC-7827 Ethereum standard for Single-Board Computers (SBCs). By bridging REST to RPC, we meet traditional developers where they are: JSON. A JSON state secured by $300bil of Ethereum economic security is critical for heavy robotics, where the difference in a single boolean can be life or death.\n\n--- ⚖️ LEGAL & KINETIC SYNTHESIS ---\n\nFrom a legal perspective, JSON provides the flexibility required for complex contracts and evolutionary state. Robotics is fundamentally a legal realization; Tort is the framework for how robots must act in the physical world.\n\n📍 Flow Mainnet: 0x04B3...0057\n📍 Chain ID: 747\n📍 Protocol: x402 + ERC-7827"
     }
   ];
 
@@ -384,7 +365,7 @@ export default function ClawedMonsterHome() {
                 </header>
                 <div className="space-y-6">
                   <p className="text-[13px] sm:text-[14px] italic font-serif opacity-80 leading-relaxed">
-                    {reports[0].summary}
+                    The clinical encapsulation of an active lobster instance within the floral.monster swarm. This is a cybernetic graft where Heartwood cells act as the vascular system, providing context and legislative DNA to the lobster's raw execution.
                   </p>
                   <div className="grid grid-cols-3 gap-2 sm:gap-3 text-center">
                     {["The Claw", "The Bloom", "The Root"].map(t => (
@@ -551,6 +532,13 @@ export default function ClawedMonsterHome() {
                               <span className={`opacity-80 leading-relaxed transition-all ${modalExpanded ? 'text-base sm:text-lg' : 'text-[13px] sm:text-sm'}`}>{phase.desc}</span>
                             </div>
                           ))}
+                        </div>
+                        <div className={`bg-black/40 p-6 sm:p-10 rounded-xl sm:rounded-2xl border border-white/5 whitespace-pre-wrap leading-relaxed opacity-80 transition-all text-left ${modalExpanded ? 'text-base sm:text-lg' : 'text-[13px] sm:text-sm'}`}>
+                          {reports[activeReport].content.split(/(\s+)/).map((part, i) => 
+                            part.trim().startsWith('http') ? (
+                              <a key={i} href={part.trim()} target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:text-emerald-400 underline break-all">{part}</a>
+                            ) : part
+                          )}
                         </div>
                       </div>
                     ) : (
