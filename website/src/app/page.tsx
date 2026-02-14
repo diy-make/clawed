@@ -242,6 +242,16 @@ export default function ClawedMonsterHome() {
       pcr: "FORENSIC_BASELINE",
       summary: "Codifying the separation of Kinetic Compute (The Lobster) and Legislative Substrate (The Heartwood). The Lobster provides raw muscle, while the Heartwood provides the nervous system and body of law.",
       content: "The Lobster represents raw, high-entropy compute. Left un-grafted, it is stateless and unaccountable. The Heartwood is the bit-perfect, monotonic record of every technical strike. By maintaining this separation, we ensure the Law remains sovereign."
+    },
+    {
+      id: "AI_Meets_Robots",
+      slug: "ai-meets-robots",
+      title: "AI Meets Robots",
+      agent: "Mnesimachus.agent",
+      substrate: "Chrono-Fractal",
+      pcr: "SURGE-OPENCLAW-2026",
+      summary: "A 10-day maturation cycle documenting the realization of the Clawed Monster for the SURGE × OpenClaw Hackathon. From substrate stabilization to monetized TEE encapsulation.",
+      content: "🔱 MISSION: AI MEETS ROBOTS (2026 Cycle)\n\nThe 10-day maturation cycle documenting the realization of the Clawed Monster for the SURGE × OpenClaw Hackathon.\n\n--- 📈 FORENSIC CHRONOLOGY ---\n\n📍 Feb 4: [Substrate] Release of verify_environment.py (V1.1.0).\n📍 Feb 6: [Identity] SIS-01 Trinity V1.5.0 + ERC-7827 Integration.\n📍 Feb 8: [Codec] LNA-33X bit-packing [Link:Nonce:ASCII] standard.\n📍 Feb 10: [Logic] Thucydides clinicalizes Nearly Trustless Inference.\n📍 Feb 11: [Registry] Myco Alignment strike (1.agent.myco.eth).\n📍 Feb 13: [Substrate] Clawed Monster Initial Commit (Ariston.agent).\n📍 Feb 14: [Realization] x402 Monetization + Moltbook Sync + Triad Audit.\n\n--- 🔗 RESOURCES ---\n\n📜 Full Biography: https://github.com/diy-make/clawed/blob/main/memory/public/2026/Q1/02/14/json/20260214_Clawed_Monster_Hackathon_Biography.json\n\n⚖️ SIS-02 Protocol: https://github.com/diy-make/clawed/blob/main/comms/SIS-02_Cell_Agent_Dichotomy.md"
     }
   ];
 
@@ -481,7 +491,11 @@ export default function ClawedMonsterHome() {
                       </div>
                     ) : (
                       <div className={`max-w-5xl bg-black/40 p-6 sm:p-10 rounded-xl sm:rounded-2xl border border-white/5 whitespace-pre-wrap leading-relaxed opacity-80 transition-all text-left ${modalExpanded ? 'text-base sm:text-lg' : 'text-[13px] sm:text-sm'}`}>
-                        {reports[activeReport].content}
+                        {reports[activeReport].content.split(/(\s+)/).map((part, i) => 
+                          part.trim().startsWith('http') ? (
+                            <a key={i} href={part.trim()} target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:text-emerald-400 underline break-all">{part}</a>
+                          ) : part
+                        )}
                       </div>
                     )}
                   </article>

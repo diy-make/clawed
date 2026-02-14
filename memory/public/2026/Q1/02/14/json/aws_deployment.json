@@ -9,10 +9,17 @@
     },
     "sync": {
       "include": [
-        "diy-make/hackathons/clawed_monster",
-        "diy-make/memory",
-        "diy-make/next-servers/aws",
-        "diy-make/next-servers/floral-monster"
+        "diy-make/",
+        "diy-make/hackathons/",
+        "diy-make/hackathons/clawed_monster/",
+        "diy-make/hackathons/clawed_monster/**",
+        "diy-make/memory/",
+        "diy-make/memory/**",
+        "diy-make/next-servers/",
+        "diy-make/next-servers/aws/",
+        "diy-make/next-servers/aws/**",
+        "diy-make/next-servers/floral-monster/",
+        "diy-make/next-servers/floral-monster/**"
       ]
     },
     "deployment": {
