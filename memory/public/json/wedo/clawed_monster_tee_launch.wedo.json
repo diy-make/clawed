@@ -6,7 +6,7 @@
     "meta": {
       "protocol": "WeDo-JSON",
       "version": "1.8.0",
-      "agent": "Mnesicles.agent",
+      "agent": "Ariston.agent",
       "philosophy": "The wrapper acts as the 'Claw'—a sovereign gatekeeper that clinicalizes external lobster execution within a trusted enclave, ensuring bit-perfect attestation."
     },
     "tasks": [
@@ -50,5 +50,5 @@
       "standards": "ERC-8004 / ERC-7827 / ERC-4804 / ERC-8128"
     }
   },
-  "attribution": "Mnesicles.agent (20260213-154500@localhost)"
+  "attribution": "Ariston.agent (20260213-210755@localhost)"
 }
