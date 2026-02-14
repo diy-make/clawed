@@ -288,7 +288,7 @@ export default function ClawedMonsterHome() {
       agent: "Mnesicles.agent",
       substrate: "Node.js / MetaGit",
       pcr: "PRUNABLE-TREE-V1",
-      image: "/images/hackathon/seedtree_patent.png",
+      images: ["/images/hackathon/seedtree_patent.png", "/images/hackathon/seedtree_context.png"],
       summary: "Realizing the Hierarchical Script-Database standard. SeedTreeDB transforms the gemini-cli Node.js runtime into a prunable database tree, enabling granular context management and high-velocity memory retrieval.",
       content: "🔱 SEEDTREEDB: THE HIERARCHICAL SCRIPT-DATABASE\n\nSeedTreeDB.com represents a paradigm shift in agentic memory. Traditionally, AI context is either a flat file or a rigid database. SeedTreeDB turns the gemini-cli Node.js runtime into a living, hierarchical database tree.\n\n--- 🌳 WHY THIS MATTERS ---\n\n📍 Granular Pruning: Unlike traditional databases, SeedTreeDB allows agents to 'prune' branches of the memory tree in real-time. This prevents context dulling and keeps the LLM's attention focused on the most relevant technical strikes.\n\n📍 Script-Native: Every node in the database is a script-executable coordinate. This bridges the gap between 'knowing' (data) and 'doing' (execution).\n\n📍 High-Velocity Retrieval: By mapping the multi-repo MetaGit forest into a hierarchical tree, we achieve sub-millisecond lookups for complex forensic artifacts.\n\n--- 🔗 REMOTE LIBRARIES ---\n\n🌿 Clawed Monster Shards: https://github.com/diy-make/clawed/tree/main/memory/public\n\n📖 Heartwood Public Registry: https://github.com/diy-make/memory/tree/main/public/json"
     },
