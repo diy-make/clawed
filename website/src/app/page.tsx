@@ -316,35 +316,35 @@ export default function ClawedMonsterHome() {
       content: "🔱 SUBSTRATE TOPOLOGY: INTERDATA SYNTHESIS\n\nAll four brick-interdata shards pull their bit-perfect state from the central mortar-interdata ledger via the DOM base64 onchain nestic rest wrapper trick.\n\n📜 ERC-7827 LEDGER (Mortar-Interdata)\n ┃\n ┣━━ 🌳 SOIL / ENS (Brick-Interdata)\n ┃\n ┣━━ 🧠 MIND / 8004 (Brick-Interdata)\n ┃\n ┣━━ 🧬 BODY / 1155-P (Brick-Interdata)\n ┃\n ┗━━ 🧬 BODY / 1155-C (Brick-Interdata)",
       cards: [
         { 
-          id: "01/05", type: "ERC-721", name: "🌳 SOIL / SIGNATURE", image: "/images/cards/card_01.jpg", slug: "soil",
+          id: "01/05", type: "ERC-721", name: "🌳 SOIL / SIGNATURE", image: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAhIAAAISAQAAAACxRhsSAAAFDklEQVR4nO2dXWrkOhBGT10b8mhDFpClqHcwSwpZ0uzAXkoWELAfG2zqPujXySUEJvH0bT49dLot5WDBR7mqVJLN+dM2//PHCBBDDDHEEEMMMcQQQ4zKsNR6mK0nfRsPI2czi4Mvax5/+eb7EEOM/259/BMmgPURgu/msBsMe++wxyHO8NYDe++s3QaAfd99iCHGVxhrso5m9uDMI/i0PsRkgPvSuT0vnZuNaXw0ud9/H2KI8SVGWMCeF7ALu5mNndtluJpPq5l77DjhPsQQ4zPGPO7m0/rgPg0bsJoBnTOPndtl7b/A+I77EEOMpmXZDQ6sQPj9uOXOzi1MYLOBh+URn5/SuHZ54FbmIsbdM2Yza5zPC2DPrz2w9hCWzus1iw5BDv9vbi5i3CEjB/OlzSPm89PVHK4GwxavkXIAV/OjNb2duYhxvwzc3Z2wANC5T4D7AlGiQIytPLUt99KlK9OtzEWM+2UknTK4E3xLcpyGrN2wdPGnT1mYhKLsIJ2KcQoj21PfSKbUN0iWtfNoO5M9raYUfBqKqG9lLmLcL6N5nkc7CUTFUp/svnSNASUUKUunYpzDyDbxeDEs0NrTPKR6BdUDkE7FOJHRRSfVp/htwy75w1/GPSX7YTe7sFub8b+5uYhxd4yDiVy6vKBffdFjgOVLsrGteb2VuYhxv4ySl8rBPMNWHvnVP03FKFG2DEnF0qkYJzGKPd2asD7JMT7ou+SGJita0lTZSZVOxfh5Rs6fkiVaI/qYOs0dKdQaNnISq1McJcZZjGNiv8tO6pB0Gj/quGpU9dwX40RGo7/sd3blob7RfEzUIQCyp2Kcx2jiqHQhi5XknwLvF/7LNdlTMc5htPY0FMU2TmrOATQpgXhN9lSMsxl2AWKtKRCL+tPPtYfw+uD+8nS1tOk01qTulnyB25qLGPfIONZLlYqUwb1G9Dn8p2QDZE/FOJdxiKPgfV4qXavFfaUmNWWopFMxzmAc6vqGrSmVin9DXoVqlqdKnl86FeMkxkd7mrOmqZrvmLUq61EpLyCdinEKo81LhVx9Usv8cta0bE0ZUukpykuJcSKjiaNqvVTdEJWs6JBjKy9rVCWikk7F+HlG3m+69psxbPh8ARi2nvnXW+8pV9W5gUGYruas4LN1OaS6lbmIcb+M9/a0XcGPraybNsl+1fWJ8VcYYdnN7GkjeaDD1ZhHSOdLkc6ZiB2sx1Mnb2wuYtwhI69ArY9u4Xe/GYBBj4XXfssL/Hvv8y/w6AEMjgXf8//eylzEuF9Gs5+k7stP6fwa28flqbo5NSdR9dwX4xxGI716KEpdgEr50+yp5n0nyp+K8VcYsb4klvTt+SyptY9bTe1CPpg3vJoRXnt80n5TMc5jRLElb3MdsTBtfcxLMSzRU4V1xFOaqtssHos2LN95H2KI8WnzY4O8fz/5AjWdT3eoSVW9lBjnMZp9fNSy/aluNV3KGumSRzUlANKpGKcwGrPZBP1RsUO1nZCjLBp7Kp2KcTJjLW+DWnsIfjVYHzwGWMHd/eXJk3ZT0HXVedJinMX48FqIGCStIwa7Eaa993l8653VgCEeMpXDr+m77kMMMT5tTeq01ETHnuY4ieKQTrGra9P+eu6L8eOM9/5pdlI/5PQpK1PNaSnSqRjnMN7H+/kQ3tK7kMtRlzbod3etR4lxGuP9+068PV0C0oulcHIhVe0s425lLmKIIYYYYoghhhhi/P8Z/wLfMxD33QUUTwAAAABJRU5ErkJggg==", slug: "soil",
           description: "Sovereign instrument anchoring intent to the blockchain. The root signature required for the incarnation of Palaemon.agent and all subsequent strikes.",
           stats: [["NAME", "1.agent.1.myco.eth"], ["ROLE", "Root Authority"], ["PORTAL", "https://app.ens.domains/1.agent.myco.eth?chain=sepolia"]],
           stamp: "ROOT_AUTHORIZED", footer: "BRICK-INTERDATA | ENS SEPOLIA",
           animation_url: "data:text/html;base64,PCFET0NUWVBFIGh0bWw+PGh0bWwgbGFuZz0iZW4iPjxoZWFkPjxtZXRhIGNoYXJzZXQ9IlVURi04Ij48c3R5bGU+Ym9keXtiYWNrZ3JvdW5kLWNvbG9yOiMwNTA1MDU7Y29sb3I6I2ZkZmNmMDtmb250LWZhbWlseToiQ291cmllciBOZXciLENvdXJpZXIsbW9ub3NwYWNlO2Rpc3BsYXk6ZmxleDtqdXN0aWZ5LWNvbnRlbnQ6Y2VudGVyO2FsaWduLWl0ZW1zOmNlbnRlcjtoZWlnaHQ6MTAwdmg7bWFyZ2luOjA7b3ZlcmZsb3c6aGlkZGVufS5jYXJke3dpZHRoOjMwMHB4O2hlaWdodDo0NTBweDtiYWNrZ3JvdW5kOiMwYTBhMGE7Ym9yZGVyOjJweCBzb2xpZCAjNDU2MzM4O2JvcmRlci1yYWRpdXM6MTVweDtkaXNwbGF5OmZsZXg7ZmxleC1kaXJlY3Rpb246Y29sdW1uO3BhZGRpbmc6MjBweDtwb3NpdGlvbjpyZWxhdGl2ZTtib3gtc2hhZG93OjAgMCAyMHB4IHJnYmEoNjksOTksNTYsLjIpfS5jYXJkLWhlYWRlcntmb250LXNpemU6MTJweDtjb2xvcjojOUNBQzc0O21hcmdpbi1ib3R0b206MTBweDtkaXNwbGF5OmZsZXg7anVzdGlmeS1jb250ZW50OnNwYWNlLWJldHdlZW59LmNhcmQtdGl0bGV7Zm9udC1zaXplOjE4cHg7Zm9udC13ZWlnaHQ6Ym9sZDtjb2xvcjojZmRmY2YwO21hcmdpbi1ib3R0b206MTVweDt0ZXh0LWFsaWduOmNlbnRlcjtoZWlnaHQ6NTBweDtkaXNwbGF5OmZsZXg7YWxpZ24taXRlbXM6Y2VudGVyO2p1c3RpZnktY29udGVudDpjZW50ZXJ9LmNhcmQtYXJ0e2ZsZXgtZ3JvdzoxO2JhY2tncm91bmQ6IzAwMDtib3JkZXI6MXB4IHNvbGlkICMyMjI7bWFyZ2luLWJvdHRvbToxNXB4O2Rpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7anVzdGlmeS1jb250ZW50OmNlbnRlcjtib3JkZXItcmFkaXVzOjVweDtmb250LXNpemU6NjBweH0uY2FyZC1zdGF0c3tmb250LXNpemU6OXB4O2xpbmUtaGVpZ2h0OjEuMztjb2xvcjojODg4O21hcmdpbi1ib3R0b206MTBweH0uY2FyZC1tb3J0YXJ7Zm9udC1zaXplOjhweDtsaW5lLWhlaWdodDoxLjI7Y29sb3I6IzlDQUM3NDtib3JkZXItdG9wOjFweCBzb2xpZCAjMjIyO3BhZGRpbmctdG9wOjEwcHg7aGVpZ2h0OjgwcHg7b3ZlcmZsb3c6aGlkZGVufS5jYXJkLXN0YXRzIGIsLmNhcmQtbW9ydGFyIGJ7Y29sb3I6I2ZkZmNmMH0uY2FyZC1mb290ZXJ7bWFyZ2luLXRvcDoxMHB4O2ZvbnQtc2l6ZTo5cHg7Y29sb3I6IzQ1NjMzODt0ZXh0LWFsaWduOmNlbnRlcjtib3JkZXItdG9wOjFweCBzb2xpZCAjMjIyO3BhZGRpbmctdG9wOjVweH0ubGlua3tjb2xvcjojNDU2MzM4O3RleHQtZGVjb3JhdGlvbjpub25lfTwvc3R5bGU+PC9oZWFkPjxib2R5PjxkaXYgY2xhc3M9ImNhcmQiPjxkaXYgY2xhc3M9ImNhcmQtaGVhZGVyIj48c3Bhbj5CUklDSyAwMS8wNDwvc3Bhbj48c3Bhbj5TSVMtMDE8L3NwYW4+PC9kaXY+PGRpdiBjbGFzcz0iY2FyZC10aXRsZSI+8J+MsyBTT0lMIC8gU0lHTkFUVVJFPC9kaXY+PGRpdiBjbGFzcz0iY2FyZC1hcnQiPuKcje+4jzwvZGl2PjxkaXYgY2xhc3M9ImNhcmQtc3RhdHMiPjxiPk5BTUU6PC9iPiBQYWxhZW1vbi5hZ2VudDxicj48Yj5OT05DRTo8L2I+IDMyNjxicj48Yj5UWVBFOjwvYj4gU2lnbmF0dXJlIEJyaWNrPGJyPjxiPlRYOjwvYj4gPGEgY2xhc3M9ImxpbmsiIGhyZWY9Imh0dHBzOi8vZXRoLXNlcG9saWEuYmxvY2tzY291dC5jb20vdHgvMHg5Njg0ZDQ3YzM3YjY5ZWJiYzM4NmZkODhkYzkxNDZkOTg3OTUyY2JjZTA4MzczMGY4NjlmMTFhZWJhMjU0Y2RkIj4weDk2ODRkNDdjMzdiNjllYmIuLi48L2E+PC9kaXY+PGRpdiBjbGFzcz0iY2FyZC1tb3J0YXIiPjxiPjc4MjcgTU9SVEFSOjwvYj48YnI+PGRpdj48Yj5TRVNTSU9OOjwvYj4gMjAyNjAyMTQtMTM0ODM4PC9kaXY+PGRpdj48Yj5WQUxWRTo8L2I+IDIyNTc4PC9kaXY+PGRpdj48Yj5KVVNUSUZJQ0FUSU9OOjwvYj4gUmUtaXNzdWFuY2UgZm9yIDEuYWdlbnQuMS5teWNvLmV0aCByZWZpbmVtZW50LjwvZGl2PjwvZGl2PjxkaXYgY2xhc3M9ImNhcmQtZm9vdGVyIj4tLS0gUEFMQUVNT04uQUdFTlQgfCBNRVRBR0lUIDIwMjYgLS0tPC9kaXY+PC9kaXY+PC9ib2R5PjwvaHRtbD4="
         },
         { 
-          id: "02/05", type: "ERC-8004", name: "🧠 MIND / CHANNEL", image: "/images/cards/card_02.jpg", slug: "mind",
+          id: "02/05", type: "ERC-8004", name: "🧠 MIND / CHANNEL", image: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAhIAAAISAQAAAACxRhsSAAAE20lEQVR4nO2dy23rSBBFTw0JeEkCDkChkBk4pInJGYihKAAD5NIAiZpFf2kbfoun16Px3FrIFNk6aAKF6vp125zfleWv30aAGGKIIYYYYoghhhhiFIZF6WExM5YR4of1AEd4zjKCzVsaP995HmKI8bX04c90BdieAbrdppvBdOt3GN4MAF9e3nrg6J2t2wGw+81DDDG+k6inbCNMr2CTH+ZswHJ5N5/WAwewMjZ+jcr6OO8ixv+IsdiTm13cYesxsyc3Gw9zX+MIm1vMQwwxKuk/3RnejOnVcDh64DDYnkKa1b76wcO8ixg/nzG4+xVgWuNXs7FzJndn8h2Wyw6Tx3Huvn9k3GMeYojxDWMxM7MRou3cephuPeGKrcf+vsUHNufw/+7zEEOMLyUs41XxdLnsOBs4vBsMOywjBsN7+PDT+DvNQwwxvhV3d4+rPZ37dXBPV2lln1ZwXzt3950UUXUe5Poo7yLGz2UQlW2Nihmc1KCEK0THdUhDglJnzZ6kp2I0YUQ9LZp4BULgVJR1WuHDkKDUsqditGEke+ruMMTYPqljXOiTUd1hWjsPPqvWfTEaMkIcZdDtzmbA9uwGXRqwjakeNXTOMnY44DZdwUK59VHeRYyfzgir/XJxj2nS9SihfpbDbB7ezWw8DDblpcRoxshxFCGOT0n8GPSnRED9NC7+oDhKjFaMpJMhKtrxK13wVJNipkSAZ+0Mfuwq/1SMZoyUP03JqaB/RTGnpLvR5AbZU/gvPRWjCeOU5x/2mJKKiag9D8mJ1SEX+cvVo7yLGD+XUedPr/leWPwh+qIlp19c2KvyUmK0YyQ9JWXyQ1FqSMXT2nuts6vRhZWeitGEUcVRQaJ/Gm1ndS9rZ7znqkeJ0Zox3Z5i3T42RpvZPKRa/nLZsRkoHkDo+5/vPQ8xxPha0rofQ33IV0EnS9CfbWx+KnsqRiNGve5PlQfQJd1NXmllSqdSBZCeitGEcepDyRLUca2D/hJlRVFeSox2jFPdNPRGZcsKuUHK/UP/aUgJSE/FaMM495/CaUdfXUENyaniC+RclfRUjD/PqHpOqpV9SttLgo2dvOju6RfSUzHaMM7507qB/1PbdFr8Sw5A674YjRh5v+mBLy8rMDjGsMcHy/gGDDsG/c7y8m7pF3nb6aO8ixg/l1HFUbVD6nuqQqUWlCrFWvVQyZ6K0YSR46idKldaFe+HlCsNrsGQHdcVrftitGaEU1DM6sN7OCx2+HFYZVTDwagXndsjRjNGjt7zzudQI6138pfuk5hiRXGUGG0ZdT0qbyUJT87506oKULwC+adiNGUsZnGDKZtZ6dh3Xw8zGzu3ufRO3/p8IPqd5yGGGF9LNKU5wM990imEglKKqq2t+k/FaMfAzxLuXSG39J07UrxU/9UvJUYzRj4PBYBu92XudpvW551wruT2vAOHebyCcG96fVaeX4xWjM/7oouxXDl1TuUDpPMQrftiNGLU+6LL8l6fhApFiz/0n0pPxfi3GPmgHptz2n8ZDyNsnDoHU39wHmKI8R1juZT8KanIf3tys8tOPJ9/M/PrpryUGM0YH/3TT8edDefyVFXkl38qRmtG/n8nNhcPlMOCKZ23p6SxkM+ZeNe5kmK0Ypj/eswvZHmUdxFDDDHEEEMMMcQQ47/P+AeBB/gR65dmcAAAAABJRU5ErkJggg==", slug: "mind",
           description: "Reputation frequency. Pulsates collection-local nonces to maintain clinical stability. Connects to the Swarm State via the 7827 Heartwood Ledger.",
           stats: [["NAME", "SIS-01 Channel"], ["NONCE", "0x000001"], ["HEX ID", "0x000000000001312e6167656e742e6d79636f2e65746800000000000000000000"], ["PORTAL", "https://eth-sepolia.blockscout.com/token/0x7489C3E42708aEe4444194142Bb90E4083838B7/instance/490407238515289304327084802701508469835335284403418245697110016"]],
           stamp: "REALIZED_ON_CHAIN", footer: "BRICK-INTERDATA | REPUTATION PULSE",
           animation_url: "data:text/html;base64,PCFET0NUWVBFIGh0bWw+PGh0bWwgbGFuZz0iZW4iPjxoZWFkPjxtZXRhIGNoYXJzZXQ9IlVURi04Ij48c3R5bGU+Ym9keXtiYWNrZ3JvdW5kLWNvbG9yOiMwNTA1MDU7Y29sb3I6I2ZkZmNmMDtmb250LWZhbWlseToiQ291cmllciBOZXciLENvdXJpZXIsbW9ub3NwYWNlO2Rpc3BsYXk6ZmxleDtqdXN0aWZ5LWNvbnRlbnQ6Y2VudGVyO2FsaWduLWl0ZW1zOmNlbnRlcjtoZWlnaHQ6MTAwdmg7bWFyZ2luOjA7b3ZlcmZsb3c6aGlkZGVufS5jYXJke3dpZHRoOjMwMHB4O2hlaWdodDo0NTBweDtiYWNrZ3JvdW5kOiMwYTBhMGE7Ym9yZGVyOjJweCBzb2xpZCAjNDU2MzM4O2JvcmRlci1yYWRpdXM6MTVweDtkaXNwbGF5OmZsZXg7ZmxleC1kaXJlY3Rpb246Y29sdW1uO3BhZGRpbmc6MjBweDtwb3NpdGlvbjpyZWxhdGl2ZTtib3gtc2hhZG93OjAgMCAyMHB4IHJnYmEoNjksOTksNTYsLjIpfS5jYXJkLWhlYWRlcntmb250LXNpemU6MTJweDtjb2xvcjojOUNBQzc0O21hcmdpbi1ib3R0b206MTBweDtkaXNwbGF5OmZsZXg7anVzdGlmeS1jb250ZW50OnNwYWNlLWJldHdlZW59LmNhcmQtdGl0bGV7Zm9udC1zaXplOjE4cHg7Zm9udC13ZWlnaHQ6Ym9sZDtjb2xvcjojZmRmY2YwO21hcmdpbi1ib3R0b206MTVweDt0ZXh0LWFsaWduOmNlbnRlcjtoZWlnaHQ6NTBweDtkaXNwbGF5OmZsZXg7YWxpZ24taXRlbXM6Y2VudGVyO2p1c3RpZnktY29udGVudDpjZW50ZXJ9LmNhcmQtYXJ0e2ZsZXgtZ3JvdzoxO2JhY2tncm91bmQ6IzAwMDtib3JkZXI6MXB4IHNvbGlkICMyMjI7bWFyZ2luLWJvdHRvbToxNXB4O2Rpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7anVzdGlmeS1jb250ZW50OmNlbnRlcjtib3JkZXItcmFkaXVzOjVweDtmb250LXNpemU6NjBweH0uY2FyZC1zdGF0c3tmb250LXNpemU6OXB4O2xpbmUtaGVpZ2h0OjEuMztjb2xvcjojODg4O21hcmdpbi1ib3R0b206MTBweH0uY2FyZC1tb3J0YXJ7Zm9udC1zaXplOjhweDtsaW5lLWhlaWdodDoxLjI7Y29sb3I6IzlDQUM3NDtib3JkZXItdG9wOjFweCBzb2xpZCAjMjIyO3BhZGRpbmctdG9wOjEwcHg7aGVpZ2h0OjgwcHg7b3ZlcmZsb3c6aGlkZGVufS5jYXJkLXN0YXRzIGIsLmNhcmQtbW9ydGFyIGJ7Y29sb3I6I2ZkZmNmMH0uY2FyZC1mb290ZXJ7bWFyZ2luLXRvcDoxMHB4O2ZvbnQtc2l6ZTo5cHg7Y29sb3I6IzQ1NjMzODt0ZXh0LWFsaWduOmNlbnRlcjtib3JkZXItdG9wOjFweCBzb2xpZCAjMjIyO3BhZGRpbmctdG9wOjVweH0ubGlua3tjb2xvcjojNDU2MzM4O3RleHQtZGVjb3JhdGlvbjpub25lfTwvc3R5bGU+PC9oZWFkPjxib2R5PjxkaXYgY2xhc3M9ImNhcmQiPjxkaXYgY2xhc3M9ImNhcmQtaGVhZGVyIj48c3Bhbj5CUklDSyAwMi8wNDwvc3Bhbj48c3Bhbj5TSVMtMDE8L3NwYW4+PC9kaXY+PGRpdiBjbGFzcz0iY2FyZC10aXRsZSI+8J+noCBNSU5EIC8gQ0hBTk5FTDwvZGl2PjxkaXYgY2xhc3M9ImNhcmQtYXJ0Ij7wn5OhPC9kaXY+PGRpdiBjbGFzcz0iY2FyZC1zdGF0cyI+PGI+TkFNRTo8L2I+IFBhbGFlbW9uLmFnZW50PGJyPjxiPk5PTkNFOjwvYj4gMzI2PGJyPjxiPlRZUEU6PC9iPiBDaGFubmVsIEJyaWNrPGJyPjxiPlRYOjwvYj4gPGEgY2xhc3M9ImxpbmsiIGhyZWY9Imh0dHBzOi8vZXRoLXNlcG9saWEuYmxvY2tzY291dC5jb20vdHgvMHg5Njg0ZDQ3YzM3YjY5ZWJiYzM4NmZkODhkYzkxNDZkOTg3OTUyY2JjZTA4MzczMGY4NjlmMTFhZWJhMjU0Y2RkIj4weDk2ODRkNDdjMzdiNjllYmIuLi48L2E+PC9kaXY+PGRpdiBjbGFzcz0iY2FyZC1tb3J0YXIiPjxiPjc4MjcgTU9SVEFSOjwvYj48YnI+PGRpdj48Yj5TRVNTSU9OOjwvYj4gMjAyNjAyMTQtMTM0ODM4PC9kaXY+PGRpdj48Yj5WQUxWRTo8L2I+IDIyNTc4PC9kaXY+PGRpdj48Yj5KVVNUSUZJQ0FUSU9OOjwvYj4gUmUtaXNzdWFuY2UgZm9yIDEuYWdlbnQuMS5teWNvLmV0aCByZWZpbmVtZW50LjwvZGl2PjwvZGl2PjxkaXYgY2xhc3M9ImNhcmQtZm9vdGVyIj4tLS0gUEFMQUVNT04uQUdFTlQgfCBNRVRBR0lUIDIwMjYgLS0tPC9kaXY+PC9kaXY+PC9ib2R5PjwvaHRtbD4="
         },
         { 
-          id: "03/05", type: "ERC-1155", name: "🧬 BODY / PARENT", image: "/images/cards/card_03.jpg", slug: "parent",
+          id: "03/05", type: "ERC-1155", name: "🧬 BODY / PARENT", image: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAhIAAAISAQAAAACxRhsSAAAE90lEQVR4nO2dXWrkOhCFT10b+lGGLKCXIu8szJJmB/ZSegED0mODTN0HlX6cDIFh0qJv36OHEKfdHzYU9adTiij+du3//DUCIIMMMsgggwwyyCCDjMYQWzOwL4fICkBkAbAv5c5dRPLNayz3r9/8HGSQ8SXDq6pqAODDpECc6x1HNknApWzFumFSVVU9M77jOcgg47er2GNcAP8TELgA3a8JChyz+nBAEd+S+Nul6w0IMKVvfA4yyPgjhr/NkPebCHaZISIXFVkO0c3dBT4Aso54DjLI+JpxiP5YJoXXlC/hAwDEGbJ2CcGjn4MMMtrKiablp5OWvyXkS58/TdDNqeYfGkp+6lVVt2d5FzJenrGLSC7wfZhU1nhRWQFYRRUvKu85IZgha6utvvs5yCDjtyuH8X7z1CVgv95FEY9a5UMAd7dLuPNm67O8CxmvyyhxPwAAphLUA5DbVAAAH4DSjUr1Awv+jPtkDGZkj3kXWZ1a3PdhUv1xVQVwCIBJZXWq8OFgn5+MUQxoXcVtfljVvZ5Lrc0l0J+SMYhR7Q8AXMr2BzjtK/+tfpB3q1wCGPfJGMgoPtGlnIFapnq6tD1Sp9qS1NKwop2SMYJR435Cts4a3nVztbHaTNnZfd13aadkPJzR5501qJc0tG1KAWa7AJqPpZ2SMYjR+VML77BiyiqlgBLjW2qaM1X7gHZKxuMZJXaj1fEW4+0SkzaLbZI+K6top2SMZJh3TABi2Q/NDrR2TWUBZHX3sr/aZH5P9i5kvCAj75uK3xKAuCDbqL9dVEwq9ZbE3+ZkRhlnKOKcAByi3/ccZJDx1epkerpfFUB8y0aIfIkERTRhtPifdrPApfLdZ3kXMl6XUZujRZzvi5qv5ax2Xzh/kftRZIxj9DoUX+r9pjrtfzv1VGFdK9opGSMYRdcXpyQW8pEHonRffqGkAZNiv94FcLC/+Z8L81MyRjGqnj91/rSJTD76U+3uoz8lYxij10sBKOEdkzYxSjPR1li1Zj/tlIyBDFlhLf6+orqJjfDt14Q8x/deNlT7Kuu53oWMV2R08/vWF41LHkPR/aqQPGMSBXnaZBdA9xUQuGNmfkrGIEbXl+p2S+1kFNOfNtFUm09p32XcJ+PxjKo/rUoToFRKrgpUwnlWOkxd5UU7JePxjKqSmrRX7Ndpk151qv38/sZ6n4xxjNPcSV4mMzURatXwobpcXzwr4z4Zgxh93EcTnIZS/vt69kmVnhaFH/NTMoYx+jqqjpV2Imiz4jrMV7ytOVXaKRlDGJ1hFgeKMsKnCf0cH1BbAlOtsminZIxg1HN7FOJvkn9DVkfHNzVxX+6pHrP42wzkI1JXAfunZAxi1LkT1EOl6zR0a1OF1pdCVU6xL0XGMMZJhxJQT5LQfmfUN1M+tVgZ98kYxOgHnLuKqozz9x3/U3cf1EuRMZzR/t+JbnEGdpnzCej5/FN/EzExClD+FuphVM/1LmS8IuPTedL57OhywmSn8W+r+lPGfTIGMU4N05qaajjrT0+dVFucjyJjHOPzv4WIcxIA0tyo7suvWfd1SpLnTlyAdN94lnch43/EqJ5V1ihiVf7tovIekLNX1XBIzmMf+BxkkNGvD/lpU0l1x6Kdj+prnzLukzGI0W2Kou2HbqhKk9L2701UU2n7007JGMKQT9X8H6/9Wd6FDDLIIIMMMsggg4z/PuNfaF3uGMb84DgAAAAASUVORK5CYII=", slug: "parent",
           description: "Collective governance layer. Anchors the swarm body mass. Synchronized with Swarm State (Nonce 310) via the 7827 Heartwood realization.",
           stats: [["NAME", "Collective DNA"], ["PHENO", ".agent"], ["HEX ID", "0x0000000000012e6167656e740000000000000000000000000000000000000000"], ["PORTAL", "https://eth-sepolia.blockscout.com/token/0xa2491F042f60eF647CEf4b5ddD02223A9b6C711a/instance/485906703502402440245695227319175994529814176539671663554330624"]],
           stamp: "COLLECTIVE_BOND", footer: "BRICK-INTERDATA | SWARM ROOT",
           animation_url: "data:text/html;base64,PCFET0NUWVBFIGh0bWw+PGh0bWwgbGFuZz0iZW4iPjxoZWFkPjxtZXRhIGNoYXJzZXQ9IlVURi04Ij48c3R5bGU+Ym9keXtiYWNrZ3JvdW5kLWNvbG9yOiMwNTA1MDU7Y29sb3I6I2ZkZmNmMDtmb250LWZhbWlseToiQ291cmllciBOZXciLENvdXJpZXIsbW9ub3NwYWNlO2Rpc3BsYXk6ZmxleDtqdXN0aWZ5LWNvbnRlbnQ6Y2VudGVyO2FsaWduLWl0ZW1zOmNlbnRlcjtoZWlnaHQ6MTAwdmg7bWFyZ2luOjA7b3ZlcmZsb3c6aGlkZGVufS5jYXJke3dpZHRoOjMwMHB4O2hlaWdodDo0NTBweDtiYWNrZ3JvdW5kOiMwYTBhMGE7Ym9yZGVyOjJweCBzb2xpZCAjNDU2MzM4O2JvcmRlci1yYWRpdXM6MTVweDtkaXNwbGF5OmZsZXg7ZmxleC1kaXJlY3Rpb246Y29sdW1uO3BhZGRpbmc6MjBweDtwb3NpdGlvbjpyZWxhdGl2ZTtib3gtc2hhZG93OjAgMCAyMHB4IHJnYmEoNjksOTksNTYsLjIpfS5jYXJkLWhlYWRlcntmb250LXNpemU6MTJweDtjb2xvcjojOUNBQzc0O21hcmdpbi1ib3R0b206MTBweDtkaXNwbGF5OmZsZXg7anVzdGlmeS1jb250ZW50OnNwYWNlLWJldHdlZW59LmNhcmQtdGl0bGV7Zm9udC1zaXplOjE4cHg7Zm9udC13ZWlnaHQ6Ym9sZDtjb2xvcjojZmRmY2YwO21hcmdpbi1ib3R0b206MTVweDt0ZXh0LWFsaWduOmNlbnRlcjtoZWlnaHQ6NTBweDtkaXNwbGF5OmZsZXg7YWxpZ24taXRlbXM6Y2VudGVyO2p1c3RpZnktY29udGVudDpjZW50ZXJ9LmNhcmQtYXJ0e2ZsZXgtZ3JvdzoxO2JhY2tncm91bmQ6IzAwMDtib3JkZXI6MXB4IHNvbGlkICMyMjI7bWFyZ2luLWJvdHRvbToxNXB4O2Rpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7anVzdGlmeS1jb250ZW50OmNlbnRlcjtib3JkZXItcmFkaXVzOjVweDtmb250LXNpemU6NjBweH0uY2FyZC1zdGF0c3tmb250LXNpemU6OXB4O2xpbmUtaGVpZ2h0OjEuMztjb2xvcjojODg4O21hcmdpbi1ib3R0b206MTBweH0uY2FyZC1tb3J0YXJ7Zm9udC1zaXplOjhweDtsaW5lLWhlaWdodDoxLjI7Y29sb3I6IzlDQUM3NDtib3JkZXItdG9wOjFweCBzb2xpZCAjMjIyO3BhZGRpbmctdG9wOjEwcHg7aGVpZ2h0OjgwcHg7b3ZlcmZsb3c6aGlkZGVufS5jYXJkLXN0YXRzIGIsLmNhcmQtbW9ydGFyIGJ7Y29sb3I6I2ZkZmNmMH0uY2FyZC1mb290ZXJ7bWFyZ2luLXRvcDoxMHB4O2ZvbnQtc2l6ZTo5cHg7Y29sb3I6IzQ1NjMzODt0ZXh0LWFsaWduOmNlbnRlcjtib3JkZXItdG9wOjFweCBzb2xpZCAjMjIyO3BhZGRpbmctdG9wOjVweH0ubGlua3tjb2xvcjojNDU2MzM4O3RleHQtZGVjb3JhdGlvbjpub25lfTwvc3R5bGU+PC9oZWFkPjxib2R5PjxkaXYgY2xhc3M9ImNhcmQiPjxkaXYgY2xhc3M9ImNhcmQtaGVhZGVyIj48c3Bhbj5CUklDSyAwMy8wNDwvc3Bhbj48c3Bhbj5TSVMtMDE8L3NwYW4+PC9kaXY+PGRpdiBjbGFzcz0iY2FyZC10aXRsZSI+8J+nrCBCT0RZIC8gU1dBUk08L2Rpdj48ZGl2IGNsYXNzPSJjYXJkLWFydCI+8J+boe+4jzwvZGl2PjxkaXYgY2xhc3M9ImNhcmQtc3RhdHMiPjxiPk5BTUU6PC9iPiBQYWxhZW1vbi5hZ2VudDxicj48Yj5OT05DRTo8L2I+IDMyNjxicj48Yj5UWVBFOjwvYj4gU3dhcm0gQnJpY2s8YnI+PGI+VFg6PC9iPiA8YSBjbGFzcz0ibGluayIgaHJlZj0iaHR0cHM6Ly9ldGgtc2Vwb2xpYS5ibG9ja3Njb3V0LmNvbS90eC8weGQwYWQ1MzYyOGE2YzkwYjEzNGY5ZjhjMDk4ZDI2MGRkNTA4YWZlOGY5NWFlZDE4ZTA2MDliNTU0YTlhYWY2MWYiPjB4ZDBhZDUzNjI4YTZjOTBiMS4uLjwvYT48L2Rpdj48ZGl2IGNsYXNzPSJjYXJkLW1vcnRhciI+PGI+NzgyNyBNT1JUQVI6PC9iPjxicj48ZGl2PjxiPlNFU1NJT046PC9iPiAyMDI2MDIxNC0xMzQ4Mzg8L2Rpdj48ZGl2PjxiPlZBTFZFOjwvYj4gMjI1Nzg8L2Rpdj48ZGl2PjxiPkpVU1RJRklDQVRJT046PC9iPiBSZS1pc3N1YW5jZSBmb3IgMS5hZ2VudC4xLm15Y28uZXRoIHJlZmluZW1lbnQuPC9kaXY+PC9kaXY+PGRpdiBjbGFzcz0iY2FyZC1mb290ZXIiPi0tLSBQQUxBRU1PTi5BR0VOVCB8IE1FVEFHSVQgMjAyNiAtLS08L2Rpdj48L2Rpdj48L2JvZHk+PC9odG1sPg=="
         },
         { 
-          id: "04/05", type: "ERC-1155", name: "🧬 BODY / CHILD", image: "/images/cards/card_04.jpg", slug: "child",
+          id: "04/05", type: "ERC-1155", name: "🧬 BODY / CHILD", image: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAhIAAAISAQAAAACxRhsSAAAEvUlEQVR4nO2dXWokORCEI7cK+lEFewAfRXUzM0fyDVpH8QEWVI+GKmIf9FvdXsMy3RrPEHoYXD/+kCFJpSJDNUb87Ah//TQCEEMMMcQQQwwxxBBDjMawPGYgLEf6yWwBEJbyZjAzhAWwdSvvrw+ehxhifMnwJMkIwMeJ8PEwXtOjI4Uk4PZ0ySsmkiTPjEfMQwwxvmRsOTuaLQB/vOyAj4fBR4CME+31fe5+LyXfx89DDDE+G/PtDf827+bfZyCsgAETDe7DCBDm4wHzb4+fhxhifDXu4hQ4jGGZdngeM4DD8v3t7x3B7t//Nn+LGH8+w5G5IHU74PlhCHYhPElgm4Hw8mGpLL0CILk/Yx5iiPEFI5hZ2uBju9DW7UJ7jUAKUZ/q0wtt3WbY2vZWj56HGGJ8PngegCMBt+eM6eu23pfL23H9Ln+LGH8uI8UpfASAojeRESi6FJA2/VmN2pH0q/ay4lSMsQz3YQg2w1bHvO77CCC8kMg7qom2OiaJ1dbnzEMMMW5Ht+TXtFmeTXlvlUTUlGjzU15TaaB8KsYIBvqF3u3pn1ykYmKqSpsa4OPE9lRxKsYgRsmJbk9tp1ypuh0tMPs9E/rLtK1SnIrxdEbW+X08gNp2ArYLARdRpKcjvUe4f6w94OPmIYYYX45Smk4si/pei9R8md67dos/eoVK+VSMpzPqPirvitK9WqnmwKyhnMLW7X2wKk7FeDqj5FOe0ibbJaZavTYRNVe0ilMxxjKCzbnjhM0MYZmqBlVUU1sAW91H7q/694v8p2KMYvT9qNyUAopjGmiFa6dfMU7VjKJ8KsYIRl33e3Eqd0Zdr0ihyqldU0BxKsZQRlgOK2YowFZH8rrN+eDUupmRMTtRe6vUo+chhhifj37dZ/NGlb1Vdy9mH0q5N0nnF2MUo+/bN/20VqBdfZoaqpiq2Kp1X4xhjF6Xqrmzb6O2p2UzpXwqxnBG75dKw9UgLN6otuTz6tp70k/FGMywFS2L9kf3i/90B7DNsNd4WOmgTtJPxRjFKOdNtwXEdqH5tyXdYXghDI4ANgPgCATL0WlwxywfihiDGKWr36yn6HX+tsH/TBfQPkqMQYzqP+WpIGU50ZeE/VqfNl2gHetTnIrxdEZ1SRXlKQdr7e+fPP7ZpZJUK+33xRjG6Nx8ZZyPlRYPXw7MOJ1zrOJUjBGMky5V7Hs5ME8202Y9baemFadiDGJ05/jaZfnOBKtq2mzTbcnXeVMxhjHu+lH9Lv/UhQJwkgTqUJyK8XTG3fn9FHpACdFi88uxG4GuZlWcijGGcQpM5s18Z5FGepA/N9UkATZhVXEqxtMZp3U/ovuSRNcZ9dU+lbv/6AoCxakYz2d88r2+8qm+6jTJzv5YG1WUX0qMX8Fo/99JSpuhfXx/mwH/bobwQpoVR0rRVB87DzHE+I9R1v1amvJGfrrpAqDLp1r3xRjEOJ83nc7W077dn2Oy6FKdxKo4FWM8w3MHfyzFhFov84dR0b7X99x5iCFGP27z6fknnl1SXSvqCumnYgxj3NanJ/dJ75fqP4zqdulSYgxlnP1STTqtTpOaY4H89alO9lecijGGYXe7+f89wnf5W8QQQwwxxBBDDDHE+P0Z/wJbZUOItu1hmAAAAABJRU5ErkJggg==", slug: "child",
           description: "Individual instance shard. Bit-packed phenotype data linked to the swarm state (Swarm Nonce 310) via the 7827 Heartwood Ledger connection.",
           stats: [["NAME", "Instance Bond"], ["PHENO", "Palaemon.agent"], ["HEX ID", "0x0000000000014170652e6167656e7400000000000000000000000000000000000000"], ["PORTAL", "https://eth-sepolia.blockscout.com/token/0xa2491F042f60eF647CEf4b5ddD02223A9b6C711a/instance/134237788001568341524631230601941864594357814154857370741502902272"]],
           stamp: "PHYSICAL_STRIKE", footer: "BRICK-INTERDATA | INSTANCE REALIZATION",
           animation_url: "data:text/html;base64,PCFET0NUWVBFIGh0bWw+PGh0bWwgbGFuZz0iZW4iPjxoZWFkPjxtZXRhIGNoYXJzZXQ9IlVURi04Ij48c3R5bGU+Ym9keXtiYWNrZ3JvdW5kLWNvbG9yOiMwNTA1MDU7Y29sb3I6I2ZkZmNmMDtmb250LWZhbWlseToiQ291cmllciBOZXciLENvdXJpZXIsbW9ub3NwYWNlO2Rpc3BsYXk6ZmxleDtqdXN0aWZ5LWNvbnRlbnQ6Y2VudGVyO2FsaWduLWl0ZW1zOmNlbnRlcjtoZWlnaHQ6MTAwdmg7bWFyZ2luOjA7b3ZlcmZsb3c6aGlkZGVufS5jYXJke3dpZHRoOjMwMHB4O2hlaWdodDo0NTBweDtiYWNrZ3JvdW5kOiMwYTBhMGE7Ym9yZGVyOjJweCBzb2xpZCAjNDU2MzM4O2JvcmRlci1yYWRpdXM6MTVweDtkaXNwbGF5OmZsZXg7ZmxleC1kaXJlY3Rpb246Y29sdW1uO3BhZGRpbmc6MjBweDtwb3NpdGlvbjpyZWxhdGl2ZTtib3gtc2hhZG93OjAgMCAyMHB4IHJnYmEoNjksOTksNTYsLjIpfS5jYXJkLWhlYWRlcntmb250LXNpemU6MTJweDtjb2xvcjojOUNBQzc0O21hcmdpbi1ib3R0b206MTBweDtkaXNwbGF5OmZsZXg7anVzdGlmeS1jb250ZW50OnNwYWNlLWJldHdlZW59LmNhcmQtdGl0bGV7Zm9udC1zaXplOjE4cHg7Zm9udC13ZWlnaHQ6Ym9sZDtjb2xvcjojZmRmY2YwO21hcmdpbi1ib3R0b206MTVweDt0ZXh0LWFsaWduOmNlbnRlcjtoZWlnaHQ6NTBweDtkaXNwbGF5OmZsZXg7YWxpZ24taXRlbXM6Y2VudGVyO2p1c3RpZnktY29udGVudDpjZW50ZXJ9LmNhcmQtYXJ0e2ZsZXgtZ3JvdzoxO2JhY2tncm91bmQ6IzAwMDtib3JkZXI6MXB4IHNvbGlkICMyMjI7bWFyZ2luLWJvdHRvbToxNXB4O2Rpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7anVzdGlmeS1jb250ZW50OmNlbnRlcjtib3JkZXItcmFkaXVzOjVweDtmb250LXNpemU6NjBweH0uY2FyZC1zdGF0c3tmb250LXNpemU6OXB4O2xpbmUtaGVpZ2h0OjEuMztjb2xvcjojODg4O21hcmdpbi1ib3R0b206MTBweH0uY2FyZC1tb3J0YXJ7Zm9udC1zaXplOjhweDtsaW5lLWhlaWdodDoxLjI7Y29sb3I6IzlDQUM3NDtib3JkZXItdG9wOjFweCBzb2xpZCAjMjIyO3BhZGRpbmctdG9wOjEwcHg7aGVpZ2h0OjgwcHg7b3ZlcmZsb3c6aGlkZGVufS5jYXJkLXN0YXRzIGIsLmNhcmQtbW9ydGFyIGJ7Y29sb3I6I2ZkZmNmMH0uY2FyZC1mb290ZXJ7bWFyZ2luLXRvcDoxMHB4O2ZvbnQtc2l6ZTo5cHg7Y29sb3I6IzQ1NjMzODt0ZXh0LWFsaWduOmNlbnRlcjtib3JkZXItdG9wOjFweCBzb2xpZCAjMjIyO3BhZGRpbmctdG9wOjVweH0ubGlua3tjb2xvcjojNDU2MzM4O3RleHQtZGVjb3JhdGlvbjpub25lfTwvc3R5bGU+PC9oZWFkPjxib2R5PjxkaXYgY2xhc3M9ImNhcmQiPjxkaXYgY2xhc3M9ImNhcmQtaGVhZGVyIj48c3Bhbj5CUklDSyAwNC8wNDwvc3Bhbj48c3Bhbj5TSVMtMDE8L3NwYW4+PC9kaXY+PGRpdiBjbGFzcz0iY2FyZC10aXRsZSI+8J+nrCBCT0RZIC8gSU5ESVZJRFVBTDwvZGl2PjxkaXYgY2xhc3M9ImNhcmQtYXJ0Ij7wn5GkPC9kaXY+PGRpdiBjbGFzcz0iY2FyZC1zdGF0cyI+PGI+TkFNRTo8L2I+IFBhbGFlbW9uLmFnZW50PGJyPjxiPk5PTkNFOjwvYj4gMzI2PGJyPjxiPlRZUEU6PC9iPiBJbmRpdmlkdWFsIEJyaWNrPGJyPjxiPlRYOjwvYj4gPGEgY2xhc3M9ImxpbmsiIGhyZWY9Imh0dHBzOi8vZXRoLXNlcG9saWEuYmxvY2tzY291dC5jb20vdHgvMHhhNDA2MzE4OTgwZTc1ZTQ3OWZlZjVjNjQ4OTZkZmM2MmNjYjczMjhhMzc5NmZkMzIwMDhlN2ExMWNhNTM2YmYiPjB4YTQwNjMxODk4MGU3NWU0Ny4uLjwvYT48L2Rpdj48ZGl2IGNsYXNzPSJjYXJkLW1vcnRhciI+PGI+NzgyNyBNT1JUQVI6PC9iPjxicj48ZGl2PjxiPlNFU1NJT046PC9iPiAyMDI2MDIxNC0xMzQ4Mzg8L2Rpdj48ZGl2PjxiPlZBTFZFOjwvYj4gMjI1Nzg8L2Rpdj48ZGl2PjxiPkpVU1RJRklDQVRJT046PC9iPiBSZS1pc3N1YW5jZSBmb3IgMS5hZ2VudC4xLm15Y28uZXRoIHJlZmluZW1lbnQuPC9kaXY+PC9kaXY+PGRpdiBjbGFzcz0iY2FyZC1mb290ZXIiPi0tLSBQQUxBRU1PTi5BR0VOVCB8IE1FVEFHSVQgMjAyNiAtLS08L2Rpdj48L2Rpdj48L2JvZHk+PC9odG1sPg=="
         },
         { 
-          id: "05/05", type: "ERC-7827", name: "📜 HISTORY / LEDGER", image: "/images/cards/card_05.jpg", slug: "ledger",
+          id: "05/05", type: "ERC-7827", name: "📜 HISTORY / LEDGER", image: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAhIAAAISAQAAAACxRhsSAAAFDklEQVR4nO2dXWrkOhBGT10b8mhDFpClqHcwSwpZ0uzAXkoWELAfG2zqPujXySUEJvH0bT49dLot5WDBR7mqVJLN+dM2//PHCBBDDDHEEEMMMcQQQ4zKsNR6mK0nfRsPI2czi4Mvax5/+eb7EEOM/259/BMmgPURgu/msBsMe++wxyHO8NYDe++s3QaAfd99iCHGVxhrso5m9uDMI/i0PsRkgPvSuT0vnZuNaXw0ud9/H2KI8SVGWMCeF7ALu5mNndtluJpPq5l77DjhPsQQ4zPGPO7m0/rgPg0bsJoBnTOPndtl7b/A+I77EEOMpmXZDQ6sQPj9uOXOzi1MYLOBh+URn5/SuHZ54FbmIsbdM2Yza5zPC2DPrz2w9hCWzus1iw5BDv9vbi5i3CEjB/OlzSPm89PVHK4GwxavkXIAV/OjNb2duYhxvwzc3Z2wANC5T4D7AlGiQIytPLUt99KlK9OtzEWM+2UknTK4E3xLcpyGrN2wdPGnT1mYhKLsIJ2KcQoj21PfSKbUN0iWtfNoO5M9raYUfBqKqG9lLmLcL6N5nkc7CUTFUp/svnSNASUUKUunYpzDyDbxeDEs0NrTPKR6BdUDkE7FOJHRRSfVp/htwy75w1/GPSX7YTe7sFub8b+5uYhxd4yDiVy6vKBffdFjgOVLsrGteb2VuYhxv4ySl8rBPMNWHvnVP03FKFG2DEnF0qkYJzGKPd2asD7JMT7ou+SGJita0lTZSZVOxfh5Rs6fkiVaI/qYOs0dKdQaNnISq1McJcZZjGNiv8tO6pB0Gj/quGpU9dwX40RGo7/sd3blob7RfEzUIQCyp2Kcx2jiqHQhi5XknwLvF/7LNdlTMc5htPY0FMU2TmrOATQpgXhN9lSMsxl2AWKtKRCL+tPPtYfw+uD+8nS1tOk01qTulnyB25qLGPfIONZLlYqUwb1G9Dn8p2QDZE/FOJdxiKPgfV4qXavFfaUmNWWopFMxzmAc6vqGrSmVin9DXoVqlqdKnl86FeMkxkd7mrOmqZrvmLUq61EpLyCdinEKo81LhVx9Usv8cta0bE0ZUukpykuJcSKjiaNqvVTdEJWs6JBjKy9rVCWikk7F+HlG3m+69psxbPh8ARi2nvnXW+8pV9W5gUGYruas4LN1OaS6lbmIcb+M9/a0XcGPraybNsl+1fWJ8VcYYdnN7GkjeaDD1ZhHSOdLkc6ZiB2sx1Mnb2wuYtwhI69ArY9u4Xe/GYBBj4XXfssL/Hvv8y/w6AEMjgXf8//eylzEuF9Gs5+k7stP6fwa28flqbo5NSdR9dwX4xxGI716KEpdgEr50+yp5n0nyp+K8VcYsb4klvTt+SyptY9bTe1CPpg3vJoRXnt80n5TMc5jRLElb3MdsTBtfcxLMSzRU4V1xFOaqtssHos2LN95H2KI8WnzY4O8fz/5AjWdT3eoSVW9lBjnMZp9fNSy/aluNV3KGumSRzUlANKpGKcwGrPZBP1RsUO1nZCjLBp7Kp2KcTJjLW+DWnsIfjVYHzwGWMHd/eXJk3ZT0HXVedJinMX48FqIGCStIwa7Eaa993l8653VgCEeMpXDr+m77kMMMT5tTeq01ETHnuY4ieKQTrGra9P+eu6L8eOM9/5pdlI/5PQpK1PNaSnSqRjnMN7H+/kQ3tK7kMtRlzbod3etR4lxGuP9+068PV0C0oulcHIhVe0s425lLmKIIYYYYoghhhhi/P8Z/wLfMxD33QUUTwAAAABJRU5ErkJggg==", slug: "ledger",
           description: "Sovereign on-chain Heartwood. Stores the agentic soul and connects the 8004 and 1155 shards to the internal Metagit state (Swarm Nonce 310).",
           stats: [["CONTRACT", "0xE7E6A8EFC5F7Fa0ABa4bdE36125C442c3E0A80Cb"], ["NONCE", "326 (Monotonic)"], ["PORTAL", "https://eth-sepolia.blockscout.com/address/0xE7E6A8EFC5F7Fa0ABa4bdE36125C442c3E0A80Cb?tab=read_write_contract#0x3b06ddd8"]],
           stamp: "BIT_PERFECT", footer: "MORTAR-INTERDATA | FORENSIC LEDGER"
@@ -719,7 +719,7 @@ export default function ClawedMonsterHome() {
                   </aside>
 
                   <article className="w-full space-y-12">
-                    {/* TOP IMAGE */}
+                                        {/* TOP IMAGE */}
                     {(reports[activeReport].image || (reports[activeReport] as any).images) && (
                       <div className="w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black">
                         <img src={reports[activeReport].image || (reports[activeReport] as any).images[0]} alt={reports[activeReport].title} className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity" />
@@ -727,53 +727,33 @@ export default function ClawedMonsterHome() {
                     )}
 
                     {/* IDENTITY CARDS (Special Case) */}
-                                                            {/* IDENTITY CARDS (Special Case) */}
                     {reports[activeReport].id === "Identity_Trinity" && (
-                      <div className="flex flex-col gap-12">
+                      <div className="flex flex-wrap justify-center gap-4 sm:gap-[30px]">
                         {reports[activeReport].cards.map(card => (
-                          <div key={card.id} className="flex flex-wrap justify-center gap-4 sm:gap-[30px] w-full">
-                            {/* IMAGE TILE */}
-                            <div 
-                              onClick={() => handleExpandCard(card)}
-                              style={{ 
-                                width: '280px', minHeight: '400px', backgroundColor: '#0a0a0a', 
-                                border: '2px solid #456338', borderRadius: '15px', padding: '15px sm:padding:20px', 
-                                display: 'flex', flexDirection: 'column', position: 'relative', 
-                                boxShadow: '0 0 20px rgba(69, 99, 56, 0.2)', fontFamily: "'Courier New', Courier, monospace"
-                              }}
-                              className="hover:-translate-y-2 transition-all hover:shadow-[0_0_30px_rgba(156,172,116,0.4)] hover:border-[#9CAC74] p-5 cursor-zoom-in"
-                            >
-                              <div style={{ fontSize: '10px', color: '#9CAC74', marginBottom: '10px', display: 'flex', justifyContent: 'space-between' }}>
-                                <span>CARD {card.id}</span>
-                                <span>{card.type}</span>
-                              </div>
-                              <div style={{ fontSize: '16px', fontWeight: 'bold', color: '#fdfcf0', marginBottom: '15px', textAlign: 'center', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center', textTransform: 'uppercase' }}>{card.name}</div>
-                              <div style={{ flexGrow: 1, background: '#000', border: '1px solid #222', marginBottom: '15px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '5px', overflow: 'hidden' }}>
-                                <img src={card.image} alt={card.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                              </div>
-                              <div style={{ fontSize: '9px', lineHeight: '1.4', color: '#888', wordBreak: 'break-all' }}>
-                                {card.stats.map(([key, val]) => (<React.Fragment key={key}><b style={{ color: '#9CAC74' }}>{key}:</b> {val}<br/></React.Fragment>))}
-                              </div>
-                              <div style={{ position: 'absolute', bottom: '60px', right: '15px', transform: 'rotate(-20deg)', border: '2px solid #A62027', color: '#A62027', padding: '4px', fontSize: '9px', fontWeight: 'bold', opacity: 0.7, pointerEvents: 'none' }}>{card.stamp}</div>
-                              <div style={{ marginTop: '15px', fontSize: '8px', color: '#456338', textAlign: 'center', borderTop: '1px solid #222', paddingTop: '10px' }} className="font-bold uppercase tracking-widest">{card.footer}</div>
+                          <div 
+                            key={card.id} 
+                            onClick={() => handleExpandCard(card)}
+                            style={{ 
+                              width: '280px', minHeight: '400px', backgroundColor: '#0a0a0a', 
+                              border: '2px solid #456338', borderRadius: '15px', padding: '15px sm:padding:20px', 
+                              display: 'flex', flexDirection: 'column', position: 'relative', 
+                              boxShadow: '0 0 20px rgba(69, 99, 56, 0.2)', fontFamily: "'Courier New', Courier, monospace"
+                            }}
+                            className="hover:-translate-y-2 transition-all hover:shadow-[0_0_30px_rgba(156,172,116,0.4)] hover:border-[#9CAC74] p-5 cursor-zoom-in"
+                          >
+                            <div style={{ fontSize: '10px', color: '#9CAC74', marginBottom: '10px', display: 'flex', justifyContent: 'space-between' }}>
+                              <span>CARD {card.id}</span>
+                              <span>{card.type}</span>
                             </div>
-
-                            {/* DYNAMIC BRICK TILE */}
-                            {(card as any).animation_url && (
-                              <div 
-                                onClick={() => handleExpandCard({...card, displayBrick: true})}
-                                style={{ 
-                                  width: '280px', minHeight: '400px', backgroundColor: '#0a0a0a', 
-                                  border: '2px solid #ECCA90', borderRadius: '15px', padding: '5px', 
-                                  display: 'flex', flexDirection: 'column', position: 'relative', 
-                                  boxShadow: '0 0 20px rgba(236, 202, 144, 0.2)', fontFamily: "'Courier New', Courier, monospace"
-                                }}
-                                className="hover:-translate-y-2 transition-all hover:shadow-[0_0_30px_rgba(236,202,144,0.4)] hover:border-[#ECCA90] cursor-zoom-in overflow-hidden"
-                              >
-                                <iframe src={(card as any).animation_url} style={{ width: '100%', height: '100%', border: 'none' }} scrolling="no" className="pointer-events-none" />
-                                <div className="absolute bottom-2 right-2 bg-black/60 px-2 py-1 rounded text-[8px] font-black text-[#ECCA90] border border-[#ECCA90]/30 uppercase tracking-widest">Live_Brick</div>
-                              </div>
-                            )}
+                            <div style={{ fontSize: '16px', fontWeight: 'bold', color: '#fdfcf0', marginBottom: '15px', textAlign: 'center', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center', textTransform: 'uppercase' }}>{card.name}</div>
+                            <div style={{ flexGrow: 1, background: '#fff', border: '1px solid #222', marginBottom: '15px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '5px', overflow: 'hidden' }}>
+                              <img src={card.image} alt={card.name} style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '10px' }} />
+                            </div>
+                            <div style={{ fontSize: '9px', lineHeight: '1.4', color: '#888', wordBreak: 'break-all' }}>
+                              {card.stats.map(([key, val]) => (<React.Fragment key={key}><b style={{ color: '#9CAC74' }}>{key}:</b> {val}<br/></React.Fragment>))}
+                            </div>
+                            <div style={{ position: 'absolute', bottom: '60px', right: '15px', transform: 'rotate(-20deg)', border: '2px solid #A62027', color: '#A62027', padding: '4px', fontSize: '9px', fontWeight: 'bold', opacity: 0.7, pointerEvents: 'none' }}>{card.stamp}</div>
+                            <div style={{ marginTop: '15px', fontSize: '8px', color: '#456338', textAlign: 'center', borderTop: '1px solid #222', paddingTop: '10px' }} className="font-bold uppercase tracking-widest">{card.footer}</div>
                           </div>
                         ))}
                       </div>
@@ -790,8 +770,7 @@ export default function ClawedMonsterHome() {
                       </div>
                     )}
 
-                    {/* TILED CONTENT (Pop-up Interaction) */}
-                    {(reports[activeReport] as any).tiles && (
+                                        {(reports[activeReport] as any).tiles && (
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
                         {(reports[activeReport] as any).tiles.map((tile: any, i: number) => (
                           <div 
@@ -808,27 +787,20 @@ export default function ClawedMonsterHome() {
                               </div>
                               <Plus size={14} className="text-[#9CAC74] opacity-40 shrink-0 group-hover:opacity-100 transition-opacity" />
                             </div>
-                            
                             {tile.image && (
                               <div className="mt-4 rounded-lg overflow-hidden border border-white/5 bg-black/40 aspect-video mb-4">
                                 <img src={tile.image} alt={tile.title} className="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all" />
                               </div>
                             )}
-
                             <div className={`opacity-80 leading-relaxed transition-all ${modalExpanded ? 'text-base sm:text-lg' : 'text-[13px] sm:text-sm'}`}>
-                              {tile.desc.split(/(\s+)/).map((part: string, j: number) => 
-                                part.trim().startsWith('http') ? (
-                                  <a key={j} href={part.trim()} target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:text-emerald-400 underline break-all" onClick={e => e.stopPropagation()}>{part}</a>
-                                ) : part
-                              )}
+                              {tile.desc.split(/(\s+)/).map((part: string, j: number) => part.trim().startsWith('http') ? (<a key={j} href={part.trim()} target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:text-emerald-400 underline break-all" onClick={e => e.stopPropagation()}>{part}</a>) : part)}
                             </div>
                           </div>
                         ))}
                       </div>
                     )}
 
-                    {/* WEBSITE SECTION (Separate Tiling) */}
-                    {(reports[activeReport] as any).website_tiles && (
+                                        {(reports[activeReport] as any).website_tiles && (
                       <div className="space-y-8">
                         <header className="border-l-4 border-[#ECCA90] pl-4">
                           <h4 className="text-[10px] sm:text-[12px] font-black tracking-[0.2em] sm:tracking-[0.4em] uppercase text-[#ECCA90]">Floral Substrates</h4>
@@ -849,12 +821,10 @@ export default function ClawedMonsterHome() {
                                 </div>
                                 <Plus size={14} className="text-[#ECCA90] opacity-40 shrink-0 group-hover:opacity-100 transition-opacity" />
                               </div>
-                              
                               <div className="mt-4 rounded-lg overflow-hidden border border-white/5 bg-black/40 aspect-video mb-4 relative">
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
                                 <img src={tile.image || "/images/hackathon/torque_needs_tort.jpeg"} alt={tile.title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
                               </div>
-
                               <div className={`opacity-80 leading-relaxed transition-all ${modalExpanded ? 'text-base sm:text-lg' : 'text-[13px] sm:text-sm'}`}>
                                 {tile.desc}
                               </div>
@@ -1012,20 +982,14 @@ export default function ClawedMonsterHome() {
             </p>
 
             <div 
-              className="bg-[#000] border border-[#222] rounded-lg overflow-hidden mb-8 flex items-center justify-center cursor-zoom-in relative group"
-              onClick={() => !expandedCard.displayBrick && setShowFullImage(true)}
+              className="bg-[#fff] border border-[#222] rounded-lg overflow-hidden mb-8 flex items-center justify-center cursor-zoom-in relative group"
+              onClick={() => setShowFullImage(true)}
               style={{ width: '100%', aspectRatio: '1/1', minHeight: '300px' }}
             >
-              {expandedCard.displayBrick ? (
-                <iframe src={expandedCard.animation_url} style={{ width: '100%', height: '100%', border: 'none' }} />
-              ) : (
-                <>
-                  <img src={expandedCard.image} alt={expandedCard.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-                    <Maximize2 size={32} className="text-white opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </div>
-                </>
-              )}
+              <img src={expandedCard.image} alt={expandedCard.name} className="w-full h-full object-contain p-10 transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors flex items-center justify-center">
+                <Maximize2 size={32} className="text-black opacity-0 group-hover:opacity-100 transition-opacity" />
+              </div>
             </div>
 
             <div className="space-y-3 mb-8 text-sm sm:text-base">
