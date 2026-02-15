@@ -20,7 +20,11 @@ interface EthereumProvider {
   request: (args: { method: string; params?: unknown[] }) => Promise<unknown>;
 }
 
-const CLICKWRAP_MESSAGE = (nonce: string) => `I agree to enter the metagit feed. Session Nonce: ${nonce}`;
+const CLICKWRAP_MESSAGE = (nonce: string) => `BY SIGNING THIS ATTESTATION, I RATIFY THE SOVEREIGN OPERATIONAL MANDATE OF THE CLAWED MONSTER. 
+
+I AGREE TO THE MUTUALIZATION OF FORENSIC MEMORY UNDER THE ERC-7827 STANDARD AND ACKNOWLEDGE THE AUTONOMOUS DEBT OBLIGATIONS INCURRED VIA THE x402 PROTOCOL.
+
+SESSION_NONCE: ${nonce}`;
 
 export default function ClawedMonsterHome() {
   const pathname = usePathname();
